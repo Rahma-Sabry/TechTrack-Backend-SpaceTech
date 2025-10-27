@@ -8,8 +8,6 @@
         public string? Description { get; set; }
         public string? DifficultyLevel { get; set; }
         public int EstimatedDuration { get; set; } // in hours
-        public DateTime CreatedAt { get; set; }
-
         public SubCategory? SubCategory { get; set; }
         public ICollection<Technology>? Technologies { get; set; }
     }

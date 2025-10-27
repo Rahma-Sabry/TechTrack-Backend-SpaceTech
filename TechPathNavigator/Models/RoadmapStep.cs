@@ -7,8 +7,6 @@
         public string? StepTitle { get; set; }
         public string? StepDescription { get; set; }
         public int StepOrder { get; set; }
-        public DateTime CreatedAt { get; set; }
-
         public Roadmap? Roadmap { get; set; }
     }
 }

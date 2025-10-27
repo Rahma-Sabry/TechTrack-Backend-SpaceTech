@@ -12,8 +12,6 @@ namespace TechPathNavigator.Models
         public string? DifficultyLevel { get; set; }
         public string? QuestionType { get; set; } // behavioral, technical, etc.
         public string? SampleAnswer { get; set; }
-        public DateTime CreatedAt { get; set; }
-
         // Relationships
         public Technology? Technology { get; set; }
     }

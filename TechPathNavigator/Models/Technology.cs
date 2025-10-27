@@ -18,13 +18,8 @@ namespace TechPathNavigator.Models
 
         public string Description { get; set; }
 
-        public int? PopularityRating { get; set; }
-
-        [MaxLength(100)]
-        public string LearningCurve { get; set; }
-
         [MaxLength(500)]
-        public string DocumentationUrl { get; set; }
+        public string? VideoUrl { get; set; }
 
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
     }

@@ -1,6 +1,99 @@
-@TechPathNavigator_HostAddress = http://localhost:5067
+# Base URL
+@TechPathNavigator_HostAddress = http://localhost:5001
 
-GET {{TechPathNavigator_HostAddress}}/weatherforecast/
+### Categories - Get all
+GET {{TechPathNavigator_HostAddress}}/api/Categories
 Accept: application/json
 
-###
+### Categories - Get by ID
+GET {{TechPathNavigator_HostAddress}}/api/Categories/1
+Accept: application/json
+
+### Categories - Create
+POST {{TechPathNavigator_HostAddress}}/api/Categories
+Content-Type: application/json
+
+{
+  "categoryName": "Software",
+  "description": "All software development tracks"
+}
+
+### Categories - Update
+PUT {{TechPathNavigator_HostAddress}}/api/Categories/1
+Content-Type: application/json
+
+{
+  "categoryId": 1,
+  "categoryName": "Software Updated",
+  "description": "Updated description"
+}
+
+### Categories - Delete
+DELETE {{TechPathNavigator_HostAddress}}/api/Categories/1
+
+### SubCategories - Get all
+GET {{TechPathNavigator_HostAddress}}/api/SubCategories
+Accept: application/json
+
+### SubCategories - Create
+POST {{TechPathNavigator_HostAddress}}/api/SubCategories
+Content-Type: application/json
+
+{
+  "subCategoryId": 0,
+  "subCategoryName": "Web",
+  "description": "Web development track",
+  "difficultyLevel": "Medium",
+  "estimatedDuration": 120,
+  "categoryId": 1
+}
+
+### Tracks - Get all
+GET {{TechPathNavigator_HostAddress}}/api/Tracks
+Accept: application/json
+
+### Tracks - Create
+POST {{TechPathNavigator_HostAddress}}/api/Tracks
+Content-Type: application/json
+
+{
+  "trackId": 0,
+  "trackName": "Backend",
+  "description": "Backend development using .NET",
+  "difficultyLevel": "Hard",
+  "estimatedDuration": 150,
+  "subCategoryId": 1
+}
+
+### Technologies - Get all
+GET {{TechPathNavigator_HostAddress}}/api/Technologies
+Accept: application/json
+
+### Technologies - Create
+POST {{TechPathNavigator_HostAddress}}/api/Technologies
+Content-Type: application/json
+
+{
+  "technologyName": "ASP.NET Core",
+  "description": "Web API framework",
+  "popularityRating": 9,
+  "learningCurve": "Medium",
+  "documentationUrl": "https://learn.microsoft.com/aspnet/core/",
+  "trackId": 1
+}
+
+### InterviewQuestions - Get all
+GET {{TechPathNavigator_HostAddress}}/api/InterviewQuestions
+Accept: application/json
+
+### Companies - Get all
+GET {{TechPathNavigator_HostAddress}}/api/Companies
+Accept: application/json
+
+### CompanyTechnologies - Get all
+GET {{TechPathNavigator_HostAddress}}/api/CompanyTechnologies
+Accept: application/json
+
+### UserTechnologyReviews - Get all
+GET {{TechPathNavigator_HostAddress}}/api/UserTechnologyReviews
+Accept: application/json

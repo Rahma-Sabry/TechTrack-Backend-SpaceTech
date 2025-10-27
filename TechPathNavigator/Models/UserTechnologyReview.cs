@@ -11,9 +11,6 @@ namespace TechPathNavigator.Models
         public int TechnologyId { get; set; }
         public int Rating { get; set; }
         public string? ReviewText { get; set; }
-        public string? ExperienceLevel { get; set; }
-        public DateTime CreatedAt { get; set; }
-        public DateTime UpdatedAt { get; set; }
 
         // relationships
         public Technology? Technology { get; set; }
