@@ -1,0 +1,6 @@
+@TechPathNavigator_HostAddress = http://localhost:5067
+
+GET {{TechPathNavigator_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
