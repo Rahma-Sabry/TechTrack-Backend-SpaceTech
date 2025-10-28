@@ -20,6 +20,12 @@ namespace TechPathNavigator
             
             builder.Services.AddScoped<IRoadmapStepRepository, RoadmapStepRepository>();
             builder.Services.AddScoped<RoadmapStepService>();
+
+            builder.Services.AddScoped<IUserRepository, UserRepository>();
+            builder.Services.AddScoped<UserService>();
+
+            builder.Services.AddScoped<IUserTechnologyReviewRepository, UserTechnologyReviewRepository>();
+            builder.Services.AddScoped<UserTechnologyReviewService>();
             #endregion
 
 
