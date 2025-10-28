@@ -1,7 +1,10 @@
-﻿namespace TechPathNavigator.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace TechPathNavigator.Models
 {
     public class SubCategory
     {
+        [Key]
         public int SubCategoryId { get; set; }
         public int CategoryId { get; set; }
         public string? SubCategoryName { get; set; }

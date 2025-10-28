@@ -1,8 +1,12 @@
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using TechPathNavigator.DTOs;
 using TechPathNavigator.Models;
 
-namespace TechPathNavigator.Repositories
-    {
-    public interface ICategoryRepository
+
+namespace TechPathNavigator.Services
+{
+    public interface ICategoryService
     {
         Task<IEnumerable<Category>> GetAllAsync();
         Task<Category?> GetByIdAsync(int id);
