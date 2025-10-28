@@ -1,45 +1,133 @@
+using Microsoft.EntityFrameworkCore;
 using TechPathNavigator.Data;
 using TechPathNavigator.Models;
+using TechPathNavigator.DTOs;
 
 namespace TechPathNavigator.Services
 {
     public class CategoryService
     {
         private readonly ApplicationDbContext _context;
+
         public CategoryService(ApplicationDbContext context)
         {
             _context = context;
         }
-        public IEnumerable<Category> GetAllCategories()
+
+        // GET ALL - Returns list of CategoryGetDto
+        public async Task<IEnumerable<CategoryGetDto>> GetAllCategoriesAsync()
         {
-            return _context.Categories.ToList();
+            try
+            {
+                var categories = await _context.Categories.ToListAsync();
+
+                return categories.Select(c => new CategoryGetDto
+                {
+                    CategoryId = c.CategoryId,
+                    CategoryName = c.CategoryName,
+                    Description = c.Description
+                }).ToList();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Failed to retrieve categories from database", ex);
+            }
         }
-        public Category? GetCategoryById(int id)
+
+        // GET BY ID - Returns single CategoryGetDto or null
+        public async Task<CategoryGetDto?> GetCategoryByIdAsync(int id)
         {
-            return _context.Categories.Find(id);
+            try
+            {
+                var category = await _context.Categories.FindAsync(id);
+
+                if (category == null) return null;
+
+                return new CategoryGetDto
+                {
+                    CategoryId = category.CategoryId,
+                    CategoryName = category.CategoryName,
+                    Description = category.Description
+                };
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Failed to retrieve category with ID {id}", ex);
+            }
         }
-        public Category CreateCategory(Category category)
+
+        // CREATE - Takes CategoryPostDto, returns CategoryGetDto
+        public async Task<CategoryGetDto> CreateCategoryAsync(CategoryPostDto dto)
         {
-            _context.Categories.Add(category);
-            _context.SaveChanges();
-            return category;
+            try
+            {
+                var category = new Category
+                {
+                    CategoryName = dto.Name ?? string.Empty,
+                    Description = dto.Description ?? string.Empty
+                };
+
+                _context.Categories.Add(category);
+                await _context.SaveChangesAsync();
+
+                return new CategoryGetDto
+                {
+                    CategoryId = category.CategoryId,
+                    CategoryName = category.CategoryName,
+                    Description = category.Description
+                };
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Failed to create category", ex);
+            }
         }
-        public Category? UpdateCategory(int id, Category updated)
+
+        // UPDATE - Takes CategoryPostDto, returns updated CategoryGetDto or null
+        public async Task<CategoryGetDto?> UpdateCategoryAsync(int id, CategoryPostDto dto)
         {
-            var category = _context.Categories.Find(id);
-            if (category == null) return null;
-            category.CategoryName = updated.CategoryName;
-            category.Description = updated.Description;
-            _context.SaveChanges();
-            return category;
+            try
+            {
+                var category = await _context.Categories.FindAsync(id);
+
+                if (category == null) return null;
+
+                category.CategoryName = dto.Name ?? category.CategoryName;
+                category.Description = dto.Description ?? category.Description;
+
+                await _context.SaveChangesAsync();
+
+                return new CategoryGetDto
+                {
+                    CategoryId = category.CategoryId,
+                    CategoryName = category.CategoryName,
+                    Description = category.Description
+                };
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Failed to update category with ID {id}", ex);
+            }
         }
-        public bool DeleteCategory(int id)
+
+        // DELETE - Returns true if deleted, false if not found
+        public async Task<bool> DeleteCategoryAsync(int id)
         {
-            var category = _context.Categories.Find(id);
-            if (category == null) return false;
-            _context.Categories.Remove(category);
-            _context.SaveChanges();
-            return true;
+            try
+            {
+                var category = await _context.Categories.FindAsync(id);
+
+                if (category == null) return false;
+
+                _context.Categories.Remove(category);
+                await _context.SaveChangesAsync();
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Failed to delete category with ID {id}", ex);
+            }
         }
     }
 }

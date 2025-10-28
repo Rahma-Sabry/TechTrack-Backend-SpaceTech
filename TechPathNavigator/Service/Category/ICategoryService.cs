@@ -8,10 +8,10 @@ namespace TechPathNavigator.Services
 {
     public interface ICategoryService
     {
-        Task<IEnumerable<Category>> GetAllAsync();
-        Task<Category?> GetByIdAsync(int id);
-        Task<Category> AddAsync(Category category);
-        Task<Category?> UpdateAsync(Category category);
-        Task<bool> DeleteAsync(int id);
+        Task<IEnumerable<CategoryGetDto>> GetAllCategoriesAsync();
+        Task<CategoryGetDto?> GetCategoryByIdAsync(int id);
+        Task<CategoryGetDto> CreateCategoryAsync(CategoryPostDto dto);
+        Task<CategoryGetDto?> UpdateCategoryAsync(int id, CategoryPostDto dto);
+        Task<bool> DeleteCategoryAsync(int id);
     }
 }
