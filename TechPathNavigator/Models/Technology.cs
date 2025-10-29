@@ -21,6 +21,8 @@ namespace TechPathNavigator.Models
         [MaxLength(500)]
         public string? VideoUrl { get; set; }
 
+        public ICollection<Roadmap>? Roadmaps { get; set; }
+
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
     }
 }

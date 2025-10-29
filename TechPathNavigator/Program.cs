@@ -12,28 +12,38 @@ namespace TechPathNavigator
         {
             var builder = WebApplication.CreateBuilder(args);
 
+            // 💾 Database Connection
             builder.Services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-            #region Dependency Injection
+            #region Dependency Injection (DEV ONLY)
+            // 🧭 Roadmap & Steps
             builder.Services.AddScoped<IRoadmapRepository, RoadmapRepository>();
             builder.Services.AddScoped<RoadmapService>();
 
             builder.Services.AddScoped<IRoadmapStepRepository, RoadmapStepRepository>();
             builder.Services.AddScoped<RoadmapStepService>();
 
-            // ✅ Keep only dev branch services
+            // 👤 User Management
             builder.Services.AddScoped<IUserRepository, UserRepository>();
             builder.Services.AddScoped<UserService>();
 
+            // ⭐ User Reviews
             builder.Services.AddScoped<IUserTechnologyReviewRepository, UserTechnologyReviewRepository>();
             builder.Services.AddScoped<UserTechnologyReviewService>();
+
+            // 🧱 Track & Technology (NEW)
+            builder.Services.AddScoped<ITrackRepository, TrackRepository>();
+            builder.Services.AddScoped<TrackService>();
+
+            builder.Services.AddScoped<ITechnologyRepository, TechnologyRepository>();
+            builder.Services.AddScoped<TechnologyService>();
             #endregion
 
-            // Add services to the container.
+            // 🧩 Controllers
             builder.Services.AddControllers();
 
-            // Swagger/OpenAPI
+            // 🌐 Swagger/OpenAPI setup
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen(c =>
             {
@@ -41,11 +51,11 @@ namespace TechPathNavigator
                 {
                     Title = "TechPathNavigator API",
                     Version = "v1",
-                    Description = "API for managing users and technology reviews"
+                    Description = "API for managing technologies, tracks, users, and roadmaps"
                 });
             });
 
-            // CORS
+            // 🌍 CORS setup
             builder.Services.AddCors(options =>
             {
                 options.AddPolicy("AllowAll", policy =>
@@ -58,7 +68,7 @@ namespace TechPathNavigator
 
             var app = builder.Build();
 
-            // Swagger UI
+            // 🧭 Swagger UI
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
@@ -66,9 +76,14 @@ namespace TechPathNavigator
                 c.RoutePrefix = string.Empty;
             });
 
+            // 🔐 Middlewares
             app.UseHttpsRedirection();
             app.UseAuthorization();
+            app.UseCors("AllowAll");
+
+            // 🚀 Map Controllers
             app.MapControllers();
+
             app.Run();
         }
     }

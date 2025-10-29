@@ -1,98 +1,52 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using TechPathNavigator.Data;      // For ApplicationDbContext
-using TechPathNavigator.Models;    // For Track, SubCategory models
-using System.Collections.Generic;
-using System.Threading.Tasks;
+using TechPathNavigator.DTOs;
+using TechPathNavigator.Services;
 
 namespace TechPathNavigator.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
-    public class TracksController : ControllerBase
+    [Route("api/[controller]")]
+    public class TrackController : ControllerBase
     {
-        private readonly ApplicationDbContext _context;
+        private readonly TrackService _service;
 
-        public TracksController(ApplicationDbContext context)
+        public TrackController(TrackService service)
         {
-            _context = context;
+            _service = service;
         }
 
-        // GET: api/Tracks
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Track>>> GetTracks()
-        {
-            // Include related SubCategory info if available
-            return await _context.Tracks
-                                 .Include(t => t.SubCategory)
-                                 .ToListAsync();
-        }
+        public async Task<IActionResult> GetAll() => Ok(await _service.GetAllAsync());
 
-        // GET: api/Tracks/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Track>> GetTrack(int id)
+        public async Task<IActionResult> GetById(int id)
         {
-            var track = await _context.Tracks
-                                      .Include(t => t.SubCategory)
-                                      .FirstOrDefaultAsync(t => t.TrackId == id);
-
-            if (track == null)
-                return NotFound();
-
-            return track;
+            var track = await _service.GetByIdAsync(id);
+            if (track == null) return NotFound();
+            return Ok(track);
         }
 
-        // POST: api/Tracks
         [HttpPost]
-        public async Task<ActionResult<Track>> PostTrack(Track track)
+        public async Task<IActionResult> Create(TrackPostDto dto)
         {
-            _context.Tracks.Add(track);
-            await _context.SaveChangesAsync();
-
-            return CreatedAtAction(nameof(GetTrack), new { id = track.TrackId }, track);
+            var created = await _service.AddAsync(dto);
+            return CreatedAtAction(nameof(GetById), new { id = created.TrackId }, created);
         }
 
-        // PUT: api/Tracks/5
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutTrack(int id, Track track)
+        public async Task<IActionResult> Update(int id, TrackPostDto dto)
         {
-            if (id != track.TrackId)
-                return BadRequest();
-
-            _context.Entry(track).State = EntityState.Modified;
-
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!TrackExists(id))
-                    return NotFound();
-                else
-                    throw;
-            }
-
-            return NoContent();
+            var updated = await _service.UpdateAsync(id, dto);
+            if (updated == null) return NotFound();
+            return Ok(updated);
         }
 
-        // DELETE: api/Tracks/5
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteTrack(int id)
+        public async Task<IActionResult> Delete(int id)
         {
-            var track = await _context.Tracks.FindAsync(id);
-            if (track == null)
-                return NotFound();
-
-            _context.Tracks.Remove(track);
-            await _context.SaveChangesAsync();
-
+            var success = await _service.DeleteAsync(id);
+            if (!success) return NotFound();
             return NoContent();
-        }
-
-        private bool TrackExists(int id)
-        {
-            return _context.Tracks.Any(e => e.TrackId == id);
         }
     }
 }

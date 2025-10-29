@@ -1,65 +1,55 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using TechPathNavigator.Data;
-using TechPathNavigator.Models;
+using TechPathNavigator.DTOs;
+using TechPathNavigator.Services;
 
 namespace TechPathNavigator.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
+    [Route("api/[controller]")]
     public class TechnologyController : ControllerBase
     {
-        private readonly ApplicationDbContext _context;
+        private readonly TechnologyService _service;
 
-        public TechnologyController(ApplicationDbContext context)
+        public TechnologyController(TechnologyService service)
         {
-            _context = context;
+            _service = service;
         }
 
         [HttpGet]
-        public IActionResult GetAll()
+        public async Task<IActionResult> GetAll()
         {
-            var techs = _context.Technologies.ToList();
+            var techs = await _service.GetAllAsync();
             return Ok(techs);
         }
 
         [HttpGet("{id}")]
-        public IActionResult GetById(int id)
+        public async Task<IActionResult> GetById(int id)
         {
-            var tech = _context.Technologies.Find(id);
+            var tech = await _service.GetByIdAsync(id);
             if (tech == null) return NotFound();
             return Ok(tech);
         }
 
         [HttpPost]
-        public IActionResult Create(Technology tech)
+        public async Task<IActionResult> Create(TechnologyPostDto dto)
         {
-            _context.Technologies.Add(tech);
-            _context.SaveChanges();
-            return CreatedAtAction(nameof(GetById), new { id = tech.TechnologyId }, tech);
+            var created = await _service.AddAsync(dto);
+            return CreatedAtAction(nameof(GetById), new { id = created.TechnologyId }, created);
         }
 
         [HttpPut("{id}")]
-        public IActionResult Update(int id, Technology updated)
+        public async Task<IActionResult> Update(int id, TechnologyPostDto dto)
         {
-            var tech = _context.Technologies.Find(id);
-            if (tech == null) return NotFound();
-
-            tech.TechnologyName = updated.TechnologyName;
-            tech.Description = updated.Description;
-            _context.SaveChanges();
-
-            return Ok(tech);
+            var updated = await _service.UpdateAsync(id, dto);
+            if (updated == null) return NotFound();
+            return Ok(updated);
         }
 
         [HttpDelete("{id}")]
-        public IActionResult Delete(int id)
+        public async Task<IActionResult> Delete(int id)
         {
-            var tech = _context.Technologies.Find(id);
-            if (tech == null) return NotFound();
-
-            _context.Technologies.Remove(tech);
-            _context.SaveChanges();
-
+            var success = await _service.DeleteAsync(id);
+            if (!success) return NotFound();
             return NoContent();
         }
     }
