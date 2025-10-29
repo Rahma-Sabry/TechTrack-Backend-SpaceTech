@@ -11,30 +11,29 @@ namespace TechPathNavigator
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
-           
+
             builder.Services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
-            #region 
+
+            #region Dependency Injection
             builder.Services.AddScoped<IRoadmapRepository, RoadmapRepository>();
             builder.Services.AddScoped<RoadmapService>();
-            
+
             builder.Services.AddScoped<IRoadmapStepRepository, RoadmapStepRepository>();
             builder.Services.AddScoped<RoadmapStepService>();
 
-            builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
-            builder.Services.AddScoped<CategoryService>();
+            // ✅ Keep only dev branch services
+            builder.Services.AddScoped<IUserRepository, UserRepository>();
+            builder.Services.AddScoped<UserService>();
 
-            builder.Services.AddScoped<ISubCategoryRepository, SubCategoryRepository>();
-            builder.Services.AddScoped<SubCategoryService>();
+            builder.Services.AddScoped<IUserTechnologyReviewRepository, UserTechnologyReviewRepository>();
+            builder.Services.AddScoped<UserTechnologyReviewService>();
             #endregion
 
-
-
             // Add services to the container.
-
             builder.Services.AddControllers();
-            // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-            // ✅ Register Swagger services
+
+            // Swagger/OpenAPI
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen(c =>
             {
@@ -42,9 +41,11 @@ namespace TechPathNavigator
                 {
                     Title = "TechPathNavigator API",
                     Version = "v1",
-                    Description = "API for managing categories and subcategories"
+                    Description = "API for managing users and technology reviews"
                 });
             });
+
+            // CORS
             builder.Services.AddCors(options =>
             {
                 options.AddPolicy("AllowAll", policy =>
@@ -55,15 +56,14 @@ namespace TechPathNavigator
                 });
             });
 
-
             var app = builder.Build();
 
-            // Enable Swagger UI (remove Dev-only guard so it runs when you want to test)
+            // Swagger UI
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "TechPathNavigator API V1");
-                c.RoutePrefix = string.Empty; // 👈 important to open at root
+                c.RoutePrefix = string.Empty;
             });
 
             app.UseHttpsRedirection();
