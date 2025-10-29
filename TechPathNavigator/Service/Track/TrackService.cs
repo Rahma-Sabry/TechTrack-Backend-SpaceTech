@@ -1,97 +1,83 @@
-﻿using TechPathNavigator.DTOs;
+﻿using Microsoft.EntityFrameworkCore;
+using TechPathNavigator.Data;
+using TechPathNavigator.DTOs;
+using TechPathNavigator.Mappers;
 using TechPathNavigator.Models;
-using TechPathNavigator.Repositories;
 
 namespace TechPathNavigator.Services
 {
-    public class TrackService
+    public interface ITrackService
     {
-        private readonly ITrackRepository _repo;
+        Task<IEnumerable<TrackDto>> GetAllTracksAsync();
+        Task<TrackDto?> GetTrackByIdAsync(int id);
+        Task<TrackDto> CreateTrackAsync(TrackDto trackDto);
+        Task<TrackDto?> UpdateTrackAsync(int id, TrackDto trackDto);
+        Task<bool> DeleteTrackAsync(int id);
+    }
 
-        public TrackService(ITrackRepository repo)
+    public class TrackService : ITrackService
+    {
+        private readonly ApplicationDbContext _context;
+
+        public TrackService(ApplicationDbContext context)
         {
-            _repo = repo;
+            _context = context;
         }
 
-        public async Task<IEnumerable<TrackGetDto>> GetAllAsync()
+        // Get all tracks
+        public async Task<IEnumerable<TrackDto>> GetAllTracksAsync()
         {
-            var tracks = await _repo.GetAllAsync();
-            return tracks.Select(t => new TrackGetDto
-            {
-                TrackId = t.TrackId,
-                SubCategoryId = t.SubCategoryId,
-                TrackName = t.TrackName,
-                Description = t.Description,
-                DifficultyLevel = t.DifficultyLevel,
-                EstimatedDuration = t.EstimatedDuration
-            });
+            var tracks = await _context.Tracks
+                                       .Include(t => t.Technologies)
+                                       .Include(t => t.SubCategory)
+                                       .ToListAsync();
+
+            return tracks.Select(t => t.ToDto<Track, TrackDto>());
         }
 
-        public async Task<TrackGetDto?> GetByIdAsync(int id)
+        // Get track by id
+        public async Task<TrackDto?> GetTrackByIdAsync(int id)
         {
-            var t = await _repo.GetByIdAsync(id);
-            if (t == null) return null;
+            var track = await _context.Tracks
+                                      .Include(t => t.Technologies)
+                                      .Include(t => t.SubCategory)
+                                      .FirstOrDefaultAsync(t => t.TrackId == id);
 
-            return new TrackGetDto
-            {
-                TrackId = t.TrackId,
-                SubCategoryId = t.SubCategoryId,
-                TrackName = t.TrackName,
-                Description = t.Description,
-                DifficultyLevel = t.DifficultyLevel,
-                EstimatedDuration = t.EstimatedDuration
-            };
+            return track?.ToDto<Track, TrackDto>();
         }
 
-        public async Task<TrackGetDto> AddAsync(TrackPostDto dto)
+        // Create new track
+        public async Task<TrackDto> CreateTrackAsync(TrackDto trackDto)
         {
-            var entity = new Track
-            {
-                SubCategoryId = dto.SubCategoryId,
-                TrackName = dto.TrackName,
-                Description = dto.Description,
-                DifficultyLevel = dto.DifficultyLevel,
-                EstimatedDuration = dto.EstimatedDuration
-            };
-
-            var added = await _repo.AddAsync(entity);
-            return new TrackGetDto
-            {
-                TrackId = added.TrackId,
-                SubCategoryId = added.SubCategoryId,
-                TrackName = added.TrackName,
-                Description = added.Description,
-                DifficultyLevel = added.DifficultyLevel,
-                EstimatedDuration = added.EstimatedDuration
-            };
+            var track = trackDto.ToEntity<Track, TrackDto>();
+            _context.Tracks.Add(track);
+            await _context.SaveChangesAsync();
+            return track.ToDto<Track, TrackDto>();
         }
 
-        public async Task<TrackGetDto?> UpdateAsync(int id, TrackPostDto dto)
+        // Update existing track
+        public async Task<TrackDto?> UpdateTrackAsync(int id, TrackDto trackDto)
         {
-            var entity = new Track
-            {
-                TrackId = id,
-                SubCategoryId = dto.SubCategoryId,
-                TrackName = dto.TrackName,
-                Description = dto.Description,
-                DifficultyLevel = dto.DifficultyLevel,
-                EstimatedDuration = dto.EstimatedDuration
-            };
+            var existingTrack = await _context.Tracks.FindAsync(id);
+            if (existingTrack == null) return null;
 
-            var updated = await _repo.UpdateAsync(entity);
-            if (updated == null) return null;
+            var updatedTrack = trackDto.ToEntity<Track, TrackDto>(id);
 
-            return new TrackGetDto
-            {
-                TrackId = updated.TrackId,
-                SubCategoryId = updated.SubCategoryId,
-                TrackName = updated.TrackName,
-                Description = updated.Description,
-                DifficultyLevel = updated.DifficultyLevel,
-                EstimatedDuration = updated.EstimatedDuration
-            };
+            _context.Entry(existingTrack).CurrentValues.SetValues(updatedTrack);
+            await _context.SaveChangesAsync();
+
+            return updatedTrack.ToDto<Track, TrackDto>();
         }
 
-        public async Task<bool> DeleteAsync(int id) => await _repo.DeleteAsync(id);
+        // Delete track
+        public async Task<bool> DeleteTrackAsync(int id)
+        {
+            var track = await _context.Tracks.FindAsync(id);
+            if (track == null) return false;
+
+            _context.Tracks.Remove(track);
+            await _context.SaveChangesAsync();
+            return true;
+        }
     }
 }
