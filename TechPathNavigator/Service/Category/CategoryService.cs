@@ -1,17 +1,16 @@
-using Microsoft.EntityFrameworkCore;
-using TechPathNavigator.Data;
-using TechPathNavigator.Models;
 using TechPathNavigator.DTOs;
+using TechPathNavigator.Models;
+using TechPathNavigator.Repositories;
 
 namespace TechPathNavigator.Services
 {
-    public class CategoryService
+    public class CategoryService : ICategoryService
     {
-        private readonly ApplicationDbContext _context;
+        private readonly ICategoryRepository _repo;
 
-        public CategoryService(ApplicationDbContext context)
+        public CategoryService(ICategoryRepository repo)
         {
-            _context = context;
+            _repo = repo;
         }
 
         // GET ALL - Returns list of CategoryGetDto
@@ -19,7 +18,7 @@ namespace TechPathNavigator.Services
         {
             try
             {
-                var categories = await _context.Categories.ToListAsync();
+                var categories = await _repo.GetAllAsync();
 
                 return categories.Select(c => new CategoryGetDto
                 {
@@ -39,7 +38,7 @@ namespace TechPathNavigator.Services
         {
             try
             {
-                var category = await _context.Categories.FindAsync(id);
+                var category = await _repo.GetByIdAsync(id);
 
                 if (category == null) return null;
 
@@ -67,14 +66,13 @@ namespace TechPathNavigator.Services
                     Description = dto.Description ?? string.Empty
                 };
 
-                _context.Categories.Add(category);
-                await _context.SaveChangesAsync();
+                var createdCategory = await _repo.AddAsync(category);
 
                 return new CategoryGetDto
                 {
-                    CategoryId = category.CategoryId,
-                    CategoryName = category.CategoryName,
-                    Description = category.Description
+                    CategoryId = createdCategory.CategoryId,
+                    CategoryName = createdCategory.CategoryName,
+                    Description = createdCategory.Description
                 };
             }
             catch (Exception ex)
@@ -88,20 +86,22 @@ namespace TechPathNavigator.Services
         {
             try
             {
-                var category = await _context.Categories.FindAsync(id);
+                var existingCategory = await _repo.GetByIdAsync(id);
 
-                if (category == null) return null;
+                if (existingCategory == null) return null;
 
-                category.CategoryName = dto.Name ?? category.CategoryName;
-                category.Description = dto.Description ?? category.Description;
+                existingCategory.CategoryName = dto.Name ?? existingCategory.CategoryName;
+                existingCategory.Description = dto.Description ?? existingCategory.Description;
 
-                await _context.SaveChangesAsync();
+                var updatedCategory = await _repo.UpdateAsync(existingCategory);
+
+                if (updatedCategory == null) return null;
 
                 return new CategoryGetDto
                 {
-                    CategoryId = category.CategoryId,
-                    CategoryName = category.CategoryName,
-                    Description = category.Description
+                    CategoryId = updatedCategory.CategoryId,
+                    CategoryName = updatedCategory.CategoryName,
+                    Description = updatedCategory.Description
                 };
             }
             catch (Exception ex)
@@ -115,14 +115,7 @@ namespace TechPathNavigator.Services
         {
             try
             {
-                var category = await _context.Categories.FindAsync(id);
-
-                if (category == null) return false;
-
-                _context.Categories.Remove(category);
-                await _context.SaveChangesAsync();
-
-                return true;
+                return await _repo.DeleteAsync(id);
             }
             catch (Exception ex)
             {

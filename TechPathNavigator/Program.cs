@@ -20,6 +20,12 @@ namespace TechPathNavigator
             
             builder.Services.AddScoped<IRoadmapStepRepository, RoadmapStepRepository>();
             builder.Services.AddScoped<RoadmapStepService>();
+
+            builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+            builder.Services.AddScoped<CategoryService>();
+
+            builder.Services.AddScoped<ISubCategoryRepository, SubCategoryRepository>();
+            builder.Services.AddScoped<SubCategoryService>();
             #endregion
 
 
@@ -48,6 +54,7 @@ namespace TechPathNavigator
                           .AllowAnyHeader();
                 });
             });
+
 
             var app = builder.Build();
 

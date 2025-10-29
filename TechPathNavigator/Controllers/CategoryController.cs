@@ -1,69 +1,111 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using TechPathNavigator.Data;
-using TechPathNavigator.Models;
+using TechPathNavigator.DTOs;
+using TechPathNavigator.Services;
 
 namespace TechPathNavigator.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
+    [Route("api/[controller]")]
     public class CategoryController : ControllerBase
     {
-        private readonly ApplicationDbContext _context;
+        private readonly ICategoryService _service;
 
-        public CategoryController(ApplicationDbContext context)
+        public CategoryController(ICategoryService service)
         {
-            _context = context;
+            _service = service;
         }
 
-        // GET: api/Category
+        // GET: api/category
         [HttpGet]
-        public IActionResult GetCategories()
+        public async Task<ActionResult<IEnumerable<CategoryGetDto>>> GetAll()
         {
-            var categories = _context.Categories.ToList();
-            return Ok(categories);
+            try
+            {
+                var categories = await _service.GetAllCategoriesAsync();
+                return Ok(categories);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { message = "An error occurred while retrieving categories", error = ex.Message });
+            }
         }
 
-        // GET: api/Category/5
+        // GET: api/category/5
         [HttpGet("{id}")]
-        public IActionResult GetCategory(int id)
+        public async Task<ActionResult<CategoryGetDto>> GetById(int id)
         {
-            var category = _context.Categories.Find(id);
-            if (category == null) return NotFound();
-            return Ok(category);
+            try
+            {
+                var category = await _service.GetCategoryByIdAsync(id);
+
+                if (category == null)
+                    return NotFound(new { message = $"Category with ID {id} not found" });
+
+                return Ok(category);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { message = "An error occurred while retrieving the category", error = ex.Message });
+            }
         }
 
-        // POST: api/Category
+        // POST: api/category
         [HttpPost]
-        public IActionResult CreateCategory(Category category)
+        public async Task<ActionResult<CategoryGetDto>> Create([FromBody] CategoryPostDto dto)
         {
-            _context.Categories.Add(category);
-            _context.SaveChanges();
-            return CreatedAtAction(nameof(GetCategory), new { id = category.CategoryId }, category);
+            try
+            {
+                if (!ModelState.IsValid)
+                    return BadRequest(ModelState);
+
+                var createdCategory = await _service.CreateCategoryAsync(dto);
+                return CreatedAtAction(nameof(GetById), new { id = createdCategory.CategoryId }, createdCategory);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { message = "An error occurred while creating the category", error = ex.Message });
+            }
         }
 
-        // PUT: api/Category/5
+        // PUT: api/category/5
         [HttpPut("{id}")]
-        public IActionResult UpdateCategory(int id, Category updated)
+        public async Task<ActionResult<CategoryGetDto>> Update(int id, [FromBody] CategoryPostDto dto)
         {
-            var category = _context.Categories.Find(id);
-            if (category == null) return NotFound();
+            try
+            {
+                if (!ModelState.IsValid)
+                    return BadRequest(ModelState);
 
-            category.CategoryName = updated.CategoryName;
-            category.Description = updated.Description;
-            _context.SaveChanges();
-            return Ok(category);
+                var updatedCategory = await _service.UpdateCategoryAsync(id, dto);
+
+                if (updatedCategory == null)
+                    return NotFound(new { message = $"Category with ID {id} not found" });
+
+                return Ok(updatedCategory);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { message = "An error occurred while updating the category", error = ex.Message });
+            }
         }
 
-        // DELETE: api/Category/5
+        // DELETE: api/category/5
         [HttpDelete("{id}")]
-        public IActionResult DeleteCategory(int id)
+        public async Task<IActionResult> Delete(int id)
         {
-            var category = _context.Categories.Find(id);
-            if (category == null) return NotFound();
+            try
+            {
+                var result = await _service.DeleteCategoryAsync(id);
 
-            _context.Categories.Remove(category);
-            _context.SaveChanges();
-            return NoContent();
+                if (!result)
+                    return NotFound(new { message = $"Category with ID {id} not found" });
+
+                return NoContent();
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { message = "An error occurred while deleting the category", error = ex.Message });
+            }
         }
     }
 }

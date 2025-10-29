@@ -1,81 +1,152 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using TechPathNavigator.Data;      // Namespace for ApplicationDbContext
-using TechPathNavigator.Models;    // Namespace for your models
-using System.Collections.Generic;
-using System.Threading.Tasks;
+using TechPathNavigator.DTOs;
+using TechPathNavigator.Services;
 
 namespace TechPathNavigator.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
+    [Route("api/[controller]")]
     public class SubCategoriesController : ControllerBase
     {
-        private readonly ApplicationDbContext _context;
+        private readonly ISubCategoryService _service;
 
-        public SubCategoriesController(ApplicationDbContext context)
+        public SubCategoriesController(ISubCategoryService service)
         {
-            _context = context;
+            _service = service;
         }
 
         // GET: api/SubCategories
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<SubCategory>>> GetSubCategories()
+        public async Task<ActionResult<IEnumerable<SubCategoryGetDto>>> GetAll()
         {
-            return await _context.SubCategories
-                                 .Include(s => s.Category) // optional, if you want to include Category info
-                                 .ToListAsync();
+            try
+            {
+                var subCategories = await _service.GetAllAsync();
+                return Ok(subCategories);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new
+                {
+                    message = "An error occurred while retrieving subcategories",
+                    error = ex.Message
+                });
+            }
         }
 
         // GET: api/SubCategories/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<SubCategory>> GetSubCategory(int id)
+        public async Task<ActionResult<SubCategoryGetDto>> GetById(int id)
         {
-            var subCategory = await _context.SubCategories
-                                            .Include(s => s.Category)
-                                            .FirstOrDefaultAsync(s => s.SubCategoryId == id);
+            try
+            {
+                var subCategory = await _service.GetByIdAsync(id);
 
-            if (subCategory == null)
-                return NotFound();
+                if (subCategory == null)
+                    return NotFound(new { message = $"SubCategory with ID {id} not found" });
 
-            return subCategory;
+                return Ok(subCategory);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new
+                {
+                    message = "An error occurred while retrieving the subcategory",
+                    error = ex.Message
+                });
+            }
+        }
+
+        // GET: api/SubCategories/ByCategory/3
+        [HttpGet("ByCategory/{categoryId}")]
+        public async Task<ActionResult<IEnumerable<SubCategoryGetDto>>> GetByCategoryId(int categoryId)
+        {
+            try
+            {
+                var subCategories = await _service.GetByCategoryIdAsync(categoryId);
+                return Ok(subCategories);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new
+                {
+                    message = "An error occurred while retrieving subcategories for the category",
+                    error = ex.Message
+                });
+            }
         }
 
         // POST: api/SubCategories
         [HttpPost]
-        public async Task<ActionResult<SubCategory>> PostSubCategory(SubCategory subCategory)
+        public async Task<ActionResult<SubCategoryGetDto>> Create([FromBody] SubCategoryPostDto dto)
         {
-            _context.SubCategories.Add(subCategory);
-            await _context.SaveChangesAsync();
+            try
+            {
+                if (!ModelState.IsValid)
+                    return BadRequest(ModelState);
 
-            return CreatedAtAction(nameof(GetSubCategory), new { id = subCategory.SubCategoryId }, subCategory);
+                var createdSubCategory = await _service.AddAsync(dto);
+                return CreatedAtAction(nameof(GetById),
+                    new { id = createdSubCategory.SubCategoryId },
+                    createdSubCategory);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new
+                {
+                    message = "An error occurred while creating the subcategory",
+                    error = ex.Message
+                });
+            }
         }
 
         // PUT: api/SubCategories/5
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutSubCategory(int id, SubCategory subCategory)
+        public async Task<ActionResult<SubCategoryGetDto>> Update(int id, [FromBody] SubCategoryPostDto dto)
         {
-            if (id != subCategory.SubCategoryId)
-                return BadRequest();
+            try
+            {
+                if (!ModelState.IsValid)
+                    return BadRequest(ModelState);
 
-            _context.Entry(subCategory).State = EntityState.Modified;
-            await _context.SaveChangesAsync();
+                var updatedSubCategory = await _service.UpdateAsync(id, dto);
 
-            return NoContent();
+                if (updatedSubCategory == null)
+                    return NotFound(new { message = $"SubCategory with ID {id} not found" });
+
+                return Ok(updatedSubCategory);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new
+                {
+                    message = "An error occurred while updating the subcategory",
+                    error = ex.Message
+                });
+            }
         }
 
         // DELETE: api/SubCategories/5
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteSubCategory(int id)
+        public async Task<IActionResult> Delete(int id)
         {
-            var subCategory = await _context.SubCategories.FindAsync(id);
-            if (subCategory == null)
-                return NotFound();
+            try
+            {
+                var result = await _service.DeleteAsync(id);
 
-            _context.SubCategories.Remove(subCategory);
-            await _context.SaveChangesAsync();
+                if (!result)
+                    return NotFound(new { message = $"SubCategory with ID {id} not found" });
 
-            return NoContent();
+                return NoContent();
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new
+                {
+                    message = "An error occurred while deleting the subcategory",
+                    error = ex.Message
+                });
+            }
         }
     }
 }
