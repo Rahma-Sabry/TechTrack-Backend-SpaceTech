@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TechPathNavigator.Data;
 
@@ -11,9 +12,11 @@ using TechPathNavigator.Data;
 namespace TechPathNavigator.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20251030133905_SeedData")]
+    partial class SeedData
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -383,7 +386,7 @@ namespace TechPathNavigator.Migrations
                         new
                         {
                             TechnologyId = 1,
-                            CreatedAt = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreatedAt = new DateTime(2025, 10, 30, 13, 39, 4, 972, DateTimeKind.Utc).AddTicks(8540),
                             Description = "Language for .NET backend",
                             TechnologyName = "C#",
                             TrackId = 1
@@ -391,7 +394,7 @@ namespace TechPathNavigator.Migrations
                         new
                         {
                             TechnologyId = 2,
-                            CreatedAt = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreatedAt = new DateTime(2025, 10, 30, 13, 39, 4, 972, DateTimeKind.Utc).AddTicks(9120),
                             Description = "ORM for .NET",
                             TechnologyName = "Entity Framework Core",
                             TrackId = 1
@@ -399,7 +402,7 @@ namespace TechPathNavigator.Migrations
                         new
                         {
                             TechnologyId = 3,
-                            CreatedAt = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreatedAt = new DateTime(2025, 10, 30, 13, 39, 4, 972, DateTimeKind.Utc).AddTicks(9120),
                             Description = "JavaScript runtime",
                             TechnologyName = "Node.js",
                             TrackId = 2
@@ -407,7 +410,7 @@ namespace TechPathNavigator.Migrations
                         new
                         {
                             TechnologyId = 4,
-                            CreatedAt = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreatedAt = new DateTime(2025, 10, 30, 13, 39, 4, 972, DateTimeKind.Utc).AddTicks(9120),
                             Description = "Frontend library",
                             TechnologyName = "React",
                             TrackId = 3
