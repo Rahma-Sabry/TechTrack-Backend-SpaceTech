@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using TechPathNavigator.DTOs;
-using TechPathNavigator.Services;
+using TechPathNavigator.Service.SubCategory;
 
 namespace TechPathNavigator.Controllers
 {

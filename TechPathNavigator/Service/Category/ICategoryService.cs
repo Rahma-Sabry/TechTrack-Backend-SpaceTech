@@ -4,7 +4,7 @@ using TechPathNavigator.DTOs;
 using TechPathNavigator.Models;
 
 
-namespace TechPathNavigator.Services
+namespace TechPathNavigator.Service.Category
 {
     public interface ICategoryService
     {

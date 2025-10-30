@@ -1,6 +1,7 @@
 using TechPathNavigator.DTOs;
 using TechPathNavigator.Models;
 using TechPathNavigator.Repositories;
+using TechPathNavigator.Service.Category;
 
 namespace TechPathNavigator.Services
 {

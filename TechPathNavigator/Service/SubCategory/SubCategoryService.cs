@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using TechPathNavigator.DTOs;
 using TechPathNavigator.Models;
 using TechPathNavigator.Repositories;
+using TechPathNavigator.Service.SubCategory;
 
 namespace TechPathNavigator.Services
 {

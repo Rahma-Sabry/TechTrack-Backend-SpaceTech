@@ -1,100 +1,79 @@
-﻿using TechPathNavigator.DTOs;
+﻿using Microsoft.EntityFrameworkCore;
+using TechPathNavigator.Common;
+using TechPathNavigator.Data;
+using TechPathNavigator.DTOs;
+using TechPathNavigator.Mappers;
 using TechPathNavigator.Models;
-using TechPathNavigator.Repositories;
+using TechPathNavigator.Service.Technology;
+
+using EntityTechnology = TechPathNavigator.Models.Technology;
 
 namespace TechPathNavigator.Services
 {
-    public class TechnologyService
+    public class TechnologyService : ITechnologyService
     {
-        private readonly ITechnologyRepository _repo;
+        private readonly ApplicationDbContext _context;
 
-        public TechnologyService(ITechnologyRepository repo)
+        public TechnologyService(ApplicationDbContext context)
         {
-            _repo = repo;
+            _context = context;
         }
 
         public async Task<IEnumerable<TechnologyGetDto>> GetAllAsync()
         {
-            var techs = await _repo.GetAllAsync();
-
-            return techs.Select(t => new TechnologyGetDto
-            {
-                TechnologyId = t.TechnologyId,
-                TrackId = t.TrackId,
-                TechnologyName = t.TechnologyName,
-                Description = t.Description,
-                VideoUrl = t.VideoUrl,
-                CreatedAt = t.CreatedAt
-            });
+            var techs = await _context.Technologies.ToListAsync();
+            return techs.Select(t => t.ToDto<EntityTechnology, TechnologyGetDto>());
         }
 
         public async Task<TechnologyGetDto?> GetByIdAsync(int id)
         {
-            var t = await _repo.GetByIdAsync(id);
-            if (t == null) return null;
-
-            return new TechnologyGetDto
-            {
-                TechnologyId = t.TechnologyId,
-                TrackId = t.TrackId,
-                TechnologyName = t.TechnologyName,
-                Description = t.Description,
-                VideoUrl = t.VideoUrl,
-                CreatedAt = t.CreatedAt
-            };
+            var tech = await _context.Technologies.FindAsync(id);
+            return tech?.ToDto<EntityTechnology, TechnologyGetDto>();
         }
 
         public async Task<TechnologyGetDto> AddAsync(TechnologyPostDto dto)
         {
-            var entity = new Technology
-            {
-                TrackId = dto.TrackId,
-                TechnologyName = dto.TechnologyName,
-                Description = dto.Description,
-                VideoUrl = dto.VideoUrl
-            };
+            ValidateTechnology(dto);
 
-            var added = await _repo.AddAsync(entity);
+            var entity = dto.ToEntity<EntityTechnology, TechnologyPostDto>();
+            _context.Technologies.Add(entity);
+            await _context.SaveChangesAsync();
 
-            return new TechnologyGetDto
-            {
-                TechnologyId = added.TechnologyId,
-                TrackId = added.TrackId,
-                TechnologyName = added.TechnologyName,
-                Description = added.Description,
-                VideoUrl = added.VideoUrl,
-                CreatedAt = added.CreatedAt
-            };
+            return entity.ToDto<EntityTechnology, TechnologyGetDto>();
         }
 
         public async Task<TechnologyGetDto?> UpdateAsync(int id, TechnologyPostDto dto)
         {
-            var entity = new Technology
-            {
-                TechnologyId = id,
-                TrackId = dto.TrackId,
-                TechnologyName = dto.TechnologyName,
-                Description = dto.Description,
-                VideoUrl = dto.VideoUrl
-            };
+            var existing = await _context.Technologies.FindAsync(id);
+            if (existing == null) return null;
 
-            var updated = await _repo.UpdateAsync(entity);
-            if (updated == null) return null;
+            ValidateTechnology(dto);
 
-            return new TechnologyGetDto
-            {
-                TechnologyId = updated.TechnologyId,
-                TrackId = updated.TrackId,
-                TechnologyName = updated.TechnologyName,
-                Description = updated.Description,
-                VideoUrl = updated.VideoUrl,
-                CreatedAt = updated.CreatedAt
-            };
+            var updated = dto.ToEntity<EntityTechnology, TechnologyPostDto>(id);
+            _context.Entry(existing).CurrentValues.SetValues(updated);
+            await _context.SaveChangesAsync();
+
+            return updated.ToDto<EntityTechnology, TechnologyGetDto>();
         }
 
         public async Task<bool> DeleteAsync(int id)
         {
-            return await _repo.DeleteAsync(id);
+            var tech = await _context.Technologies.FindAsync(id);
+            if (tech == null) return false;
+
+            _context.Technologies.Remove(tech);
+            await _context.SaveChangesAsync();
+            return true;
+        }
+
+        // ✅ Validation logic
+        private void ValidateTechnology(TechnologyPostDto dto)
+        {
+            if (dto.TrackId <= 0)
+                throw new ArgumentException(AppConstants.TechnologyTrackIdRequired);
+
+            if (string.IsNullOrWhiteSpace(dto.TechnologyName))
+                throw new ArgumentException(AppConstants.TechnologyNameRequired);
         }
     }
 }

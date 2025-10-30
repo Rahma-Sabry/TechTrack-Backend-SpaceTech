@@ -3,18 +3,11 @@ using TechPathNavigator.Data;
 using TechPathNavigator.DTOs;
 using TechPathNavigator.Mappers;
 using TechPathNavigator.Models;
+using TechPathNavigator.Common;
+using TechPathNavigator.Service.Track;
 
 namespace TechPathNavigator.Services
 {
-    public interface ITrackService
-    {
-        Task<IEnumerable<TrackDto>> GetAllTracksAsync();
-        Task<TrackDto?> GetTrackByIdAsync(int id);
-        Task<TrackDto> CreateTrackAsync(TrackDto trackDto);
-        Task<TrackDto?> UpdateTrackAsync(int id, TrackDto trackDto);
-        Task<bool> DeleteTrackAsync(int id);
-    }
-
     public class TrackService : ITrackService
     {
         private readonly ApplicationDbContext _context;
@@ -24,52 +17,42 @@ namespace TechPathNavigator.Services
             _context = context;
         }
 
-        // Get all tracks
-        public async Task<IEnumerable<TrackDto>> GetAllTracksAsync()
+        public async Task<IEnumerable<TrackGetDto>> GetAllTracksAsync()
         {
-            var tracks = await _context.Tracks
-                                       .Include(t => t.Technologies)
-                                       .Include(t => t.SubCategory)
-                                       .ToListAsync();
-
-            return tracks.Select(t => t.ToDto<Track, TrackDto>());
+            var tracks = await _context.Tracks.ToListAsync();
+            return tracks.Select(t => t.ToDto<Track, TrackGetDto>());
         }
 
-        // Get track by id
-        public async Task<TrackDto?> GetTrackByIdAsync(int id)
+        public async Task<TrackGetDto?> GetTrackByIdAsync(int id)
         {
-            var track = await _context.Tracks
-                                      .Include(t => t.Technologies)
-                                      .Include(t => t.SubCategory)
-                                      .FirstOrDefaultAsync(t => t.TrackId == id);
-
-            return track?.ToDto<Track, TrackDto>();
+            var track = await _context.Tracks.FindAsync(id);
+            return track?.ToDto<Track, TrackGetDto>();
         }
 
-        // Create new track
-        public async Task<TrackDto> CreateTrackAsync(TrackDto trackDto)
+        public async Task<TrackGetDto> CreateTrackAsync(TrackPostDto trackDto)
         {
-            var track = trackDto.ToEntity<Track, TrackDto>();
+            ValidateTrackDto(trackDto);
+
+            var track = trackDto.ToEntity<Track, TrackPostDto>();
             _context.Tracks.Add(track);
             await _context.SaveChangesAsync();
-            return track.ToDto<Track, TrackDto>();
+            return track.ToDto<Track, TrackGetDto>();
         }
 
-        // Update existing track
-        public async Task<TrackDto?> UpdateTrackAsync(int id, TrackDto trackDto)
+        public async Task<TrackGetDto?> UpdateTrackAsync(int id, TrackPostDto trackDto)
         {
             var existingTrack = await _context.Tracks.FindAsync(id);
             if (existingTrack == null) return null;
 
-            var updatedTrack = trackDto.ToEntity<Track, TrackDto>(id);
+            ValidateTrackDto(trackDto);
 
+            var updatedTrack = trackDto.ToEntity<Track, TrackPostDto>(id);
             _context.Entry(existingTrack).CurrentValues.SetValues(updatedTrack);
             await _context.SaveChangesAsync();
 
-            return updatedTrack.ToDto<Track, TrackDto>();
+            return updatedTrack.ToDto<Track, TrackGetDto>();
         }
 
-        // Delete track
         public async Task<bool> DeleteTrackAsync(int id)
         {
             var track = await _context.Tracks.FindAsync(id);
@@ -78,6 +61,29 @@ namespace TechPathNavigator.Services
             _context.Tracks.Remove(track);
             await _context.SaveChangesAsync();
             return true;
+        }
+
+        // -------------------
+        // Validation logic using AppConstants
+        // -------------------
+        private void ValidateTrackDto(TrackPostDto trackDto)
+        {
+            if (trackDto.SubCategoryId <= 0)
+                throw new ArgumentException(AppConstants.TrackSubCategoryIdRequired);
+
+            if (string.IsNullOrWhiteSpace(trackDto.TrackName))
+                throw new ArgumentException(AppConstants.TrackNameRequired);
+
+            if (trackDto.EstimatedDuration <= 0)
+                throw new ArgumentException(AppConstants.TrackEstimatedDurationRequired);
+
+            if (!string.IsNullOrEmpty(trackDto.DifficultyLevel) &&
+                !AppConstants.TrackDifficultyLevels.Contains(trackDto.DifficultyLevel))
+            {
+                throw new ArgumentException(
+                    AppConstants.TrackDifficultyLevelInvalid + string.Join(", ", AppConstants.TrackDifficultyLevels)
+                );
+            }
         }
     }
 }

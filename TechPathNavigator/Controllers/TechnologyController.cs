@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using TechPathNavigator.DTOs;
-using TechPathNavigator.Services;
+using TechPathNavigator.Service.Technology;
 
 namespace TechPathNavigator.Controllers
 {
@@ -8,9 +8,9 @@ namespace TechPathNavigator.Controllers
     [Route("api/[controller]")]
     public class TechnologyController : ControllerBase
     {
-        private readonly TechnologyService _service;
+        private readonly ITechnologyService _service;
 
-        public TechnologyController(TechnologyService service)
+        public TechnologyController(ITechnologyService service)
         {
             _service = service;
         }
@@ -18,16 +18,13 @@ namespace TechPathNavigator.Controllers
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
-            var techs = await _service.GetAllAsync();
-            return Ok(techs);
+            return Ok(await _service.GetAllAsync());
         }
 
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(int id)
         {
-            var tech = await _service.GetByIdAsync(id);
-            if (tech == null) return NotFound();
-            return Ok(tech);
+            return Ok(await _service.GetByIdAsync(id));
         }
 
         [HttpPost]
@@ -40,16 +37,13 @@ namespace TechPathNavigator.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> Update(int id, TechnologyPostDto dto)
         {
-            var updated = await _service.UpdateAsync(id, dto);
-            if (updated == null) return NotFound();
-            return Ok(updated);
+            return Ok(await _service.UpdateAsync(id, dto));
         }
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
-            var success = await _service.DeleteAsync(id);
-            if (!success) return NotFound();
+            await _service.DeleteAsync(id);
             return NoContent();
         }
     }

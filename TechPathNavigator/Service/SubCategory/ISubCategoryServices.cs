@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using TechPathNavigator.DTOs;
 
-namespace TechPathNavigator.Services
+namespace TechPathNavigator.Service.SubCategory
 {
     public interface ISubCategoryService
     {
