@@ -17,27 +17,32 @@ namespace TechPathNavigator
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
             #region Dependency Injection (DEV ONLY)
-            // 🧭 Roadmap & Steps
+            // Roadmap & Steps
             builder.Services.AddScoped<IRoadmapRepository, RoadmapRepository>();
-            builder.Services.AddScoped<RoadmapService>();
-
+            builder.Services.AddScoped<IRoadmapService, RoadmapService>();
             builder.Services.AddScoped<IRoadmapStepRepository, RoadmapStepRepository>();
-            builder.Services.AddScoped<RoadmapStepService>();
-
-            // 👤 User Management
+            builder.Services.AddScoped<IRoadmapStepService, RoadmapStepService>();
+            // User Management
             builder.Services.AddScoped<IUserRepository, UserRepository>();
             builder.Services.AddScoped<UserService>();
-
-            // ⭐ User Reviews
+            // User Reviews
             builder.Services.AddScoped<IUserTechnologyReviewRepository, UserTechnologyReviewRepository>();
             builder.Services.AddScoped<UserTechnologyReviewService>();
-
-            // 🧱 Track & Technology (NEW)
+            // Track & Technology
             builder.Services.AddScoped<ITrackRepository, TrackRepository>();
             builder.Services.AddScoped<TrackService>();
-
             builder.Services.AddScoped<ITechnologyRepository, TechnologyRepository>();
             builder.Services.AddScoped<TechnologyService>();
+
+            // Category & Subcategory
+            builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+            builder.Services.AddScoped<ICategoryService, CategoryService>();
+            builder.Services.AddScoped<ISubCategoryRepository, SubCategoryRepository>();
+            builder.Services.AddScoped<ISubCategoryService, SubCategoryService>();
+
+            //Interview Questions
+            builder.Services.AddScoped<IInterviewQuestionRepository, InterviewQuestionRepository>();
+            builder.Services.AddScoped<InterviewQuestionService>();
             #endregion
 
             // 🧩 Controllers
