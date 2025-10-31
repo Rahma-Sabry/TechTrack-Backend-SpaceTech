@@ -108,10 +108,8 @@
               "RelativeDocumentMoniker": "TechPathNavigator\\Service\\SubCategory\\ISubCategoryServices.cs",
               "ToolTip": "C:\\Users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\My Compu\\SpaceTech Intern\\TechTrack\\TechTrack-Backend-SpaceTech\\TechPathNavigator\\Service\\SubCategory\\ISubCategoryServices.cs",
               "RelativeToolTip": "TechPathNavigator\\Service\\SubCategory\\ISubCategoryServices.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAgwA4AAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T12:41:58.359Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-28T12:41:58.359Z"
             },
             {
               "$type": "Document",
@@ -344,7 +342,7 @@
           ]
         },
         {
-          "DockedWidth": 616,
+          "DockedWidth": 1145,
           "SelectedChildIndex": -1,
           "Children": [
             {

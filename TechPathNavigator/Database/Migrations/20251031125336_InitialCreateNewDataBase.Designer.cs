@@ -12,8 +12,8 @@ using TechPathNavigator.Data;
 namespace TechPathNavigator.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20251029105736_RemoveTrackFromRoadmap")]
-    partial class RemoveTrackFromRoadmap
+    [Migration("20251031125336_InitialCreateNewDataBase")]
+    partial class InitialCreateNewDataBase
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\My Compu\\SpaceTech Intern\\TechTrack\\TechTrack-Backend-SpaceTech\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\My Compu\\SpaceTech Intern\\TechTrack\\TechTrack-Backend-SpaceTech\\TechPathNavigator\\Migrations\\20251031125336_InitialCreateNewDataBase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TechPathNavigator\\Migrations\\20251031125336_InitialCreateNewDataBase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{233D83B4-781C-6F4C-AC21-E4DC582AEB0D}|TechPathNavigator\\TechPathNavigator.csproj|c:\\users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\my compu\\spacetech intern\\techtrack\\techtrack-backend-spacetech\\techpathnavigator\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{233D83B4-781C-6F4C-AC21-E4DC582AEB0D}|TechPathNavigator\\TechPathNavigator.csproj|solutionrelative:techpathnavigator\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{233D83B4-781C-6F4C-AC21-E4DC582AEB0D}|TechPathNavigator\\TechPathNavigator.csproj|c:\\users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\my compu\\spacetech intern\\techtrack\\techtrack-backend-spacetech\\techpathnavigator\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{233D83B4-781C-6F4C-AC21-E4DC582AEB0D}|TechPathNavigator\\TechPathNavigator.csproj|solutionrelative:techpathnavigator\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -27,15 +35,37 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "20251031125336_InitialCreateNewDataBase.cs",
+              "DocumentMoniker": "C:\\Users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\My Compu\\SpaceTech Intern\\TechTrack\\TechTrack-Backend-SpaceTech\\TechPathNavigator\\Migrations\\20251031125336_InitialCreateNewDataBase.cs",
+              "RelativeDocumentMoniker": "TechPathNavigator\\Migrations\\20251031125336_InitialCreateNewDataBase.cs",
+              "ToolTip": "C:\\Users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\My Compu\\SpaceTech Intern\\TechTrack\\TechTrack-Backend-SpaceTech\\TechPathNavigator\\Migrations\\20251031125336_InitialCreateNewDataBase.cs",
+              "RelativeToolTip": "TechPathNavigator\\Migrations\\20251031125336_InitialCreateNewDataBase.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-31T12:53:36.722Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\My Compu\\SpaceTech Intern\\TechTrack\\TechTrack-Backend-SpaceTech\\TechPathNavigator\\appsettings.json",
+              "RelativeDocumentMoniker": "TechPathNavigator\\appsettings.json",
+              "ToolTip": "C:\\Users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\My Compu\\SpaceTech Intern\\TechTrack\\TechTrack-Backend-SpaceTech\\TechPathNavigator\\appsettings.json",
+              "RelativeToolTip": "TechPathNavigator\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-10-31T12:34:56.317Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\My Compu\\SpaceTech Intern\\TechTrack\\TechTrack-Backend-SpaceTech\\TechPathNavigator\\Program.cs",
               "RelativeDocumentMoniker": "TechPathNavigator\\Program.cs",
               "ToolTip": "C:\\Users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\My Compu\\SpaceTech Intern\\TechTrack\\TechTrack-Backend-SpaceTech\\TechPathNavigator\\Program.cs",
               "RelativeToolTip": "TechPathNavigator\\Program.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAQwCwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-31T09:12:15.201Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-31T09:12:15.201Z"
             }
           ]
         },

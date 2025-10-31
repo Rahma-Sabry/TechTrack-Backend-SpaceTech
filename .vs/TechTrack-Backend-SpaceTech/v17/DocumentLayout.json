@@ -35,10 +35,6 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TechPathNavigator\\Service\\RoadmapService.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\My Compu\\SpaceTech Intern\\TechTrack\\TechTrack-Backend-SpaceTech\\TechPathNavigator\\Dtos\u0027s\\Category\\CategoryGetDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TechPathNavigator\\Dtos\u0027s\\Category\\CategoryGetDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\My Compu\\SpaceTech Intern\\TechTrack\\TechTrack-Backend-SpaceTech\\TechPathNavigator\\Dtos\u0027s\\Category\\CategoryPostDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TechPathNavigator\\Dtos\u0027s\\Category\\CategoryPostDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -77,10 +73,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\My Compu\\SpaceTech Intern\\TechTrack\\TechTrack-Backend-SpaceTech\\TechPathNavigator\\Dtos\u0027s\\Roadmap\\RoadmapPostDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TechPathNavigator\\Dtos\u0027s\\Roadmap\\RoadmapPostDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\My Compu\\SpaceTech Intern\\TechTrack\\TechTrack-Backend-SpaceTech\\TechPathNavigator\\Dtos\u0027s\\Roadmap\\RoadmapGetDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:TechPathNavigator\\Dtos\u0027s\\Roadmap\\RoadmapGetDto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -173,7 +165,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 9,
               "Title": "ICategoryService.cs",
               "DocumentMoniker": "C:\\Users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\My Compu\\SpaceTech Intern\\TechTrack\\TechTrack-Backend-SpaceTech\\TechPathNavigator\\Service\\Category\\ICategoryService.cs",
               "RelativeDocumentMoniker": "TechPathNavigator\\Service\\Category\\ICategoryService.cs",
@@ -197,7 +189,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 11,
               "Title": "CategoryService.cs",
               "DocumentMoniker": "C:\\Users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\My Compu\\SpaceTech Intern\\TechTrack\\TechTrack-Backend-SpaceTech\\TechPathNavigator\\Service\\Category\\CategoryService.cs",
               "RelativeDocumentMoniker": "TechPathNavigator\\Service\\Category\\CategoryService.cs",
@@ -221,7 +213,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 14,
               "Title": "Category.cs",
               "DocumentMoniker": "C:\\Users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\My Compu\\SpaceTech Intern\\TechTrack\\TechTrack-Backend-SpaceTech\\TechPathNavigator\\Models\\Category.cs",
               "RelativeDocumentMoniker": "TechPathNavigator\\Models\\Category.cs",
@@ -233,7 +225,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 16,
               "Title": "CategoryController.cs",
               "DocumentMoniker": "C:\\Users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\My Compu\\SpaceTech Intern\\TechTrack\\TechTrack-Backend-SpaceTech\\TechPathNavigator\\Controllers\\CategoryController.cs",
               "RelativeDocumentMoniker": "TechPathNavigator\\Controllers\\CategoryController.cs",
@@ -245,7 +237,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 13,
               "Title": "RoadmapRepository.cs",
               "DocumentMoniker": "C:\\Users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\My Compu\\SpaceTech Intern\\TechTrack\\TechTrack-Backend-SpaceTech\\TechPathNavigator\\Repo\\Roadmap\\RoadmapRepository.cs",
               "RelativeDocumentMoniker": "TechPathNavigator\\Repo\\Roadmap\\RoadmapRepository.cs",
@@ -257,7 +249,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 15,
               "Title": "CatergoryRepository.cs",
               "DocumentMoniker": "C:\\Users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\My Compu\\SpaceTech Intern\\TechTrack\\TechTrack-Backend-SpaceTech\\TechPathNavigator\\Repo\\Category\\CatergoryRepository.cs",
               "RelativeDocumentMoniker": "TechPathNavigator\\Repo\\Category\\CatergoryRepository.cs",
@@ -269,7 +261,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 12,
               "Title": "IRoadmapRepository.cs",
               "DocumentMoniker": "C:\\Users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\My Compu\\SpaceTech Intern\\TechTrack\\TechTrack-Backend-SpaceTech\\TechPathNavigator\\Repo\\Roadmap\\IRoadmapRepository.cs",
               "RelativeDocumentMoniker": "TechPathNavigator\\Repo\\Roadmap\\IRoadmapRepository.cs",
@@ -281,7 +273,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 10,
               "Title": "ICatergoryRepository.cs",
               "DocumentMoniker": "C:\\Users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\My Compu\\SpaceTech Intern\\TechTrack\\TechTrack-Backend-SpaceTech\\TechPathNavigator\\Repo\\Category\\ICatergoryRepository.cs",
               "RelativeDocumentMoniker": "TechPathNavigator\\Repo\\Category\\ICatergoryRepository.cs",
@@ -293,7 +285,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 8,
               "Title": "CategoryPostDto.cs",
               "DocumentMoniker": "C:\\Users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\My Compu\\SpaceTech Intern\\TechTrack\\TechTrack-Backend-SpaceTech\\TechPathNavigator\\Dtos\u0027s\\Category\\CategoryPostDto.cs",
               "RelativeDocumentMoniker": "TechPathNavigator\\Dtos\u0027s\\Category\\CategoryPostDto.cs",
@@ -305,7 +297,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 17,
               "Title": "RoadmapPostDto.cs",
               "DocumentMoniker": "C:\\Users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\My Compu\\SpaceTech Intern\\TechTrack\\TechTrack-Backend-SpaceTech\\TechPathNavigator\\Dtos\u0027s\\Roadmap\\RoadmapPostDto.cs",
               "RelativeDocumentMoniker": "TechPathNavigator\\Dtos\u0027s\\Roadmap\\RoadmapPostDto.cs",
@@ -314,30 +306,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-28T11:26:58.69Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "CategoryGetDto.cs",
-              "DocumentMoniker": "C:\\Users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\My Compu\\SpaceTech Intern\\TechTrack\\TechTrack-Backend-SpaceTech\\TechPathNavigator\\Dtos\u0027s\\Category\\CategoryGetDto.cs",
-              "RelativeDocumentMoniker": "TechPathNavigator\\Dtos\u0027s\\Category\\CategoryGetDto.cs",
-              "ToolTip": "C:\\Users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\My Compu\\SpaceTech Intern\\TechTrack\\TechTrack-Backend-SpaceTech\\TechPathNavigator\\Dtos\u0027s\\Category\\CategoryGetDto.cs",
-              "RelativeToolTip": "TechPathNavigator\\Dtos\u0027s\\Category\\CategoryGetDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA7AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T11:26:07.292Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "RoadmapGetDto.cs",
-              "DocumentMoniker": "C:\\Users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\My Compu\\SpaceTech Intern\\TechTrack\\TechTrack-Backend-SpaceTech\\TechPathNavigator\\Dtos\u0027s\\Roadmap\\RoadmapGetDto.cs",
-              "RelativeDocumentMoniker": "TechPathNavigator\\Dtos\u0027s\\Roadmap\\RoadmapGetDto.cs",
-              "ToolTip": "C:\\Users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\My Compu\\SpaceTech Intern\\TechTrack\\TechTrack-Backend-SpaceTech\\TechPathNavigator\\Dtos\u0027s\\Roadmap\\RoadmapGetDto.cs",
-              "RelativeToolTip": "TechPathNavigator\\Dtos\u0027s\\Roadmap\\RoadmapGetDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T11:26:05.234Z"
             }
           ]
         },
