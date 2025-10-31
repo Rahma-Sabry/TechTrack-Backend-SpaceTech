@@ -1,94 +1,10 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\source\\repos\\TechTrack-Backend-SpaceTech\\",
+  "WorkspaceRootPath": "C:\\Users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\My Compu\\SpaceTech Intern\\TechTrack\\TechTrack-Backend-SpaceTech\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{233D83B4-781C-6F4C-AC21-E4DC582AEB0D}|TechPathNavigator\\TechPathNavigator.csproj|c:\\users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\source\\repos\\techtrack-backend-spacetech\\techpathnavigator\\controllers\\subcategoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{233D83B4-781C-6F4C-AC21-E4DC582AEB0D}|TechPathNavigator\\TechPathNavigator.csproj|solutionrelative:techpathnavigator\\controllers\\subcategoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{233D83B4-781C-6F4C-AC21-E4DC582AEB0D}|TechPathNavigator\\TechPathNavigator.csproj|c:\\users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\source\\repos\\techtrack-backend-spacetech\\techpathnavigator\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{233D83B4-781C-6F4C-AC21-E4DC582AEB0D}|TechPathNavigator\\TechPathNavigator.csproj|solutionrelative:techpathnavigator\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{233D83B4-781C-6F4C-AC21-E4DC582AEB0D}|TechPathNavigator\\TechPathNavigator.csproj|c:\\users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\source\\repos\\techtrack-backend-spacetech\\techpathnavigator\\controllers\\roadmapcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{233D83B4-781C-6F4C-AC21-E4DC582AEB0D}|TechPathNavigator\\TechPathNavigator.csproj|solutionrelative:techpathnavigator\\controllers\\roadmapcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{233D83B4-781C-6F4C-AC21-E4DC582AEB0D}|TechPathNavigator\\TechPathNavigator.csproj|c:\\users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\source\\repos\\techtrack-backend-spacetech\\techpathnavigator\\dtos\u0027s\\subcategory\\subcategorypostdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{233D83B4-781C-6F4C-AC21-E4DC582AEB0D}|TechPathNavigator\\TechPathNavigator.csproj|solutionrelative:techpathnavigator\\dtos\u0027s\\subcategory\\subcategorypostdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{233D83B4-781C-6F4C-AC21-E4DC582AEB0D}|TechPathNavigator\\TechPathNavigator.csproj|c:\\users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\source\\repos\\techtrack-backend-spacetech\\techpathnavigator\\dtos\u0027s\\subcategory\\subcategorygetdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{233D83B4-781C-6F4C-AC21-E4DC582AEB0D}|TechPathNavigator\\TechPathNavigator.csproj|solutionrelative:techpathnavigator\\dtos\u0027s\\subcategory\\subcategorygetdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{233D83B4-781C-6F4C-AC21-E4DC582AEB0D}|TechPathNavigator\\TechPathNavigator.csproj|c:\\users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\source\\repos\\techtrack-backend-spacetech\\techpathnavigator\\repo\\subcategory\\subcategoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{233D83B4-781C-6F4C-AC21-E4DC582AEB0D}|TechPathNavigator\\TechPathNavigator.csproj|solutionrelative:techpathnavigator\\repo\\subcategory\\subcategoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{233D83B4-781C-6F4C-AC21-E4DC582AEB0D}|TechPathNavigator\\TechPathNavigator.csproj|c:\\users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\source\\repos\\techtrack-backend-spacetech\\techpathnavigator\\service\\subcategory\\subcategoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{233D83B4-781C-6F4C-AC21-E4DC582AEB0D}|TechPathNavigator\\TechPathNavigator.csproj|solutionrelative:techpathnavigator\\service\\subcategory\\subcategoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{233D83B4-781C-6F4C-AC21-E4DC582AEB0D}|TechPathNavigator\\TechPathNavigator.csproj|c:\\users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\source\\repos\\techtrack-backend-spacetech\\techpathnavigator\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{233D83B4-781C-6F4C-AC21-E4DC582AEB0D}|TechPathNavigator\\TechPathNavigator.csproj|c:\\users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\my compu\\spacetech intern\\techtrack\\techtrack-backend-spacetech\\techpathnavigator\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{233D83B4-781C-6F4C-AC21-E4DC582AEB0D}|TechPathNavigator\\TechPathNavigator.csproj|solutionrelative:techpathnavigator\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{233D83B4-781C-6F4C-AC21-E4DC582AEB0D}|TechPathNavigator\\TechPathNavigator.csproj|c:\\users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\source\\repos\\techtrack-backend-spacetech\\techpathnavigator\\service\\category\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{233D83B4-781C-6F4C-AC21-E4DC582AEB0D}|TechPathNavigator\\TechPathNavigator.csproj|solutionrelative:techpathnavigator\\service\\category\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{233D83B4-781C-6F4C-AC21-E4DC582AEB0D}|TechPathNavigator\\TechPathNavigator.csproj|c:\\users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\source\\repos\\techtrack-backend-spacetech\\techpathnavigator\\repo\\category\\icatergoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{233D83B4-781C-6F4C-AC21-E4DC582AEB0D}|TechPathNavigator\\TechPathNavigator.csproj|solutionrelative:techpathnavigator\\repo\\category\\icatergoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{233D83B4-781C-6F4C-AC21-E4DC582AEB0D}|TechPathNavigator\\TechPathNavigator.csproj|c:\\users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\source\\repos\\techtrack-backend-spacetech\\techpathnavigator\\repo\\category\\catergoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{233D83B4-781C-6F4C-AC21-E4DC582AEB0D}|TechPathNavigator\\TechPathNavigator.csproj|solutionrelative:techpathnavigator\\repo\\category\\catergoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{233D83B4-781C-6F4C-AC21-E4DC582AEB0D}|TechPathNavigator\\TechPathNavigator.csproj|c:\\users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\source\\repos\\techtrack-backend-spacetech\\techpathnavigator\\service\\roadmapservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{233D83B4-781C-6F4C-AC21-E4DC582AEB0D}|TechPathNavigator\\TechPathNavigator.csproj|solutionrelative:techpathnavigator\\service\\roadmapservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{233D83B4-781C-6F4C-AC21-E4DC582AEB0D}|TechPathNavigator\\TechPathNavigator.csproj|c:\\users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\source\\repos\\techtrack-backend-spacetech\\techpathnavigator\\repo\\roadmap\\roadmaprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{233D83B4-781C-6F4C-AC21-E4DC582AEB0D}|TechPathNavigator\\TechPathNavigator.csproj|solutionrelative:techpathnavigator\\repo\\roadmap\\roadmaprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{233D83B4-781C-6F4C-AC21-E4DC582AEB0D}|TechPathNavigator\\TechPathNavigator.csproj|c:\\users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\source\\repos\\techtrack-backend-spacetech\\techpathnavigator\\repo\\roadmap\\iroadmaprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{233D83B4-781C-6F4C-AC21-E4DC582AEB0D}|TechPathNavigator\\TechPathNavigator.csproj|solutionrelative:techpathnavigator\\repo\\roadmap\\iroadmaprepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{233D83B4-781C-6F4C-AC21-E4DC582AEB0D}|TechPathNavigator\\TechPathNavigator.csproj|c:\\users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\source\\repos\\techtrack-backend-spacetech\\techpathnavigator\\service\\category\\icategoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{233D83B4-781C-6F4C-AC21-E4DC582AEB0D}|TechPathNavigator\\TechPathNavigator.csproj|solutionrelative:techpathnavigator\\service\\category\\icategoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{233D83B4-781C-6F4C-AC21-E4DC582AEB0D}|TechPathNavigator\\TechPathNavigator.csproj|c:\\users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\source\\repos\\techtrack-backend-spacetech\\techpathnavigator\\dtos\u0027s\\category\\categorypostdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{233D83B4-781C-6F4C-AC21-E4DC582AEB0D}|TechPathNavigator\\TechPathNavigator.csproj|solutionrelative:techpathnavigator\\dtos\u0027s\\category\\categorypostdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{233D83B4-781C-6F4C-AC21-E4DC582AEB0D}|TechPathNavigator\\TechPathNavigator.csproj|c:\\users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\source\\repos\\techtrack-backend-spacetech\\techpathnavigator\\dtos\u0027s\\category\\categorygetdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{233D83B4-781C-6F4C-AC21-E4DC582AEB0D}|TechPathNavigator\\TechPathNavigator.csproj|solutionrelative:techpathnavigator\\dtos\u0027s\\category\\categorygetdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{233D83B4-781C-6F4C-AC21-E4DC582AEB0D}|TechPathNavigator\\TechPathNavigator.csproj|c:\\users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\source\\repos\\techtrack-backend-spacetech\\techpathnavigator\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{233D83B4-781C-6F4C-AC21-E4DC582AEB0D}|TechPathNavigator\\TechPathNavigator.csproj|solutionrelative:techpathnavigator\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{233D83B4-781C-6F4C-AC21-E4DC582AEB0D}|TechPathNavigator\\TechPathNavigator.csproj|c:\\users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\source\\repos\\techtrack-backend-spacetech\\techpathnavigator\\models\\subcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{233D83B4-781C-6F4C-AC21-E4DC582AEB0D}|TechPathNavigator\\TechPathNavigator.csproj|solutionrelative:techpathnavigator\\models\\subcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{233D83B4-781C-6F4C-AC21-E4DC582AEB0D}|TechPathNavigator\\TechPathNavigator.csproj|c:\\users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\source\\repos\\techtrack-backend-spacetech\\techpathnavigator\\repo\\subcategory\\isubcategoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{233D83B4-781C-6F4C-AC21-E4DC582AEB0D}|TechPathNavigator\\TechPathNavigator.csproj|solutionrelative:techpathnavigator\\repo\\subcategory\\isubcategoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{233D83B4-781C-6F4C-AC21-E4DC582AEB0D}|TechPathNavigator\\TechPathNavigator.csproj|c:\\users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\source\\repos\\techtrack-backend-spacetech\\techpathnavigator\\service\\subcategory\\isubcategoryservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{233D83B4-781C-6F4C-AC21-E4DC582AEB0D}|TechPathNavigator\\TechPathNavigator.csproj|solutionrelative:techpathnavigator\\service\\subcategory\\isubcategoryservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{233D83B4-781C-6F4C-AC21-E4DC582AEB0D}|TechPathNavigator\\TechPathNavigator.csproj|c:\\users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\source\\repos\\techtrack-backend-spacetech\\techpathnavigator\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{233D83B4-781C-6F4C-AC21-E4DC582AEB0D}|TechPathNavigator\\TechPathNavigator.csproj|solutionrelative:techpathnavigator\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -97,300 +13,55 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "DockedWidth": 331,
+          "SelectedChildIndex": 2,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "CategoryService.cs",
-              "DocumentMoniker": "C:\\Users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\source\\repos\\TechTrack-Backend-SpaceTech\\TechPathNavigator\\Service\\Category\\CategoryService.cs",
-              "RelativeDocumentMoniker": "TechPathNavigator\\Service\\Category\\CategoryService.cs",
-              "ToolTip": "C:\\Users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\source\\repos\\TechTrack-Backend-SpaceTech\\TechPathNavigator\\Service\\Category\\CategoryService.cs",
-              "RelativeToolTip": "TechPathNavigator\\Service\\Category\\CategoryService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T13:06:03.208Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "ICategoryService.cs",
-              "DocumentMoniker": "C:\\Users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\source\\repos\\TechTrack-Backend-SpaceTech\\TechPathNavigator\\Service\\Category\\ICategoryService.cs",
-              "RelativeDocumentMoniker": "TechPathNavigator\\Service\\Category\\ICategoryService.cs",
-              "ToolTip": "C:\\Users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\source\\repos\\TechTrack-Backend-SpaceTech\\TechPathNavigator\\Service\\Category\\ICategoryService.cs",
-              "RelativeToolTip": "TechPathNavigator\\Service\\Category\\ICategoryService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAsAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T14:08:41.314Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "RoadmapController.cs",
-              "DocumentMoniker": "C:\\Users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\source\\repos\\TechTrack-Backend-SpaceTech\\TechPathNavigator\\Controllers\\RoadmapController.cs",
-              "RelativeDocumentMoniker": "TechPathNavigator\\Controllers\\RoadmapController.cs",
-              "ToolTip": "C:\\Users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\source\\repos\\TechTrack-Backend-SpaceTech\\TechPathNavigator\\Controllers\\RoadmapController.cs",
-              "RelativeToolTip": "TechPathNavigator\\Controllers\\RoadmapController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T17:58:05.854Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "SubCategoriesController.cs",
-              "DocumentMoniker": "C:\\Users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\source\\repos\\TechTrack-Backend-SpaceTech\\TechPathNavigator\\Controllers\\SubCategoriesController.cs",
-              "RelativeDocumentMoniker": "TechPathNavigator\\Controllers\\SubCategoriesController.cs",
-              "ToolTip": "C:\\Users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\source\\repos\\TechTrack-Backend-SpaceTech\\TechPathNavigator\\Controllers\\SubCategoriesController.cs",
-              "RelativeToolTip": "TechPathNavigator\\Controllers\\SubCategoriesController.cs",
-              "ViewState": "AgIAAGgAAAAAAAAAAAA5wJgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T17:41:38.08Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CategoryController.cs",
-              "DocumentMoniker": "C:\\Users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\source\\repos\\TechTrack-Backend-SpaceTech\\TechPathNavigator\\Controllers\\CategoryController.cs",
-              "RelativeDocumentMoniker": "TechPathNavigator\\Controllers\\CategoryController.cs",
-              "ToolTip": "C:\\Users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\source\\repos\\TechTrack-Backend-SpaceTech\\TechPathNavigator\\Controllers\\CategoryController.cs",
-              "RelativeToolTip": "TechPathNavigator\\Controllers\\CategoryController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T17:34:30.496Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "RoadmapRepository.cs",
-              "DocumentMoniker": "C:\\Users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\source\\repos\\TechTrack-Backend-SpaceTech\\TechPathNavigator\\Repo\\Roadmap\\RoadmapRepository.cs",
-              "RelativeDocumentMoniker": "TechPathNavigator\\Repo\\Roadmap\\RoadmapRepository.cs",
-              "ToolTip": "C:\\Users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\source\\repos\\TechTrack-Backend-SpaceTech\\TechPathNavigator\\Repo\\Roadmap\\RoadmapRepository.cs",
-              "RelativeToolTip": "TechPathNavigator\\Repo\\Roadmap\\RoadmapRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T17:12:43.902Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "IRoadmapRepository.cs",
-              "DocumentMoniker": "C:\\Users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\source\\repos\\TechTrack-Backend-SpaceTech\\TechPathNavigator\\Repo\\Roadmap\\IRoadmapRepository.cs",
-              "RelativeDocumentMoniker": "TechPathNavigator\\Repo\\Roadmap\\IRoadmapRepository.cs",
-              "ToolTip": "C:\\Users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\source\\repos\\TechTrack-Backend-SpaceTech\\TechPathNavigator\\Repo\\Roadmap\\IRoadmapRepository.cs",
-              "RelativeToolTip": "TechPathNavigator\\Repo\\Roadmap\\IRoadmapRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T17:12:41.399Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "RoadmapService.cs",
-              "DocumentMoniker": "C:\\Users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\source\\repos\\TechTrack-Backend-SpaceTech\\TechPathNavigator\\Service\\RoadmapService.cs",
-              "RelativeDocumentMoniker": "TechPathNavigator\\Service\\RoadmapService.cs",
-              "ToolTip": "C:\\Users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\source\\repos\\TechTrack-Backend-SpaceTech\\TechPathNavigator\\Service\\RoadmapService.cs",
-              "RelativeToolTip": "TechPathNavigator\\Service\\RoadmapService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T15:25:35.805Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "SubCategory.cs",
-              "DocumentMoniker": "C:\\Users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\source\\repos\\TechTrack-Backend-SpaceTech\\TechPathNavigator\\Models\\SubCategory.cs",
-              "RelativeDocumentMoniker": "TechPathNavigator\\Models\\SubCategory.cs",
-              "ToolTip": "C:\\Users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\source\\repos\\TechTrack-Backend-SpaceTech\\TechPathNavigator\\Models\\SubCategory.cs",
-              "RelativeToolTip": "TechPathNavigator\\Models\\SubCategory.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA0AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T14:38:43.306Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "CategoryGetDto.cs",
-              "DocumentMoniker": "C:\\Users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\source\\repos\\TechTrack-Backend-SpaceTech\\TechPathNavigator\\Dtos\u0027s\\Category\\CategoryGetDto.cs",
-              "RelativeDocumentMoniker": "TechPathNavigator\\Dtos\u0027s\\Category\\CategoryGetDto.cs",
-              "ToolTip": "C:\\Users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\source\\repos\\TechTrack-Backend-SpaceTech\\TechPathNavigator\\Dtos\u0027s\\Category\\CategoryGetDto.cs",
-              "RelativeToolTip": "TechPathNavigator\\Dtos\u0027s\\Category\\CategoryGetDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T14:36:12.624Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "ISubCategoryRepository.cs",
-              "DocumentMoniker": "C:\\Users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\source\\repos\\TechTrack-Backend-SpaceTech\\TechPathNavigator\\Repo\\SubCategory\\ISubCategoryRepository.cs",
-              "RelativeDocumentMoniker": "TechPathNavigator\\Repo\\SubCategory\\ISubCategoryRepository.cs",
-              "ToolTip": "C:\\Users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\source\\repos\\TechTrack-Backend-SpaceTech\\TechPathNavigator\\Repo\\SubCategory\\ISubCategoryRepository.cs",
-              "RelativeToolTip": "TechPathNavigator\\Repo\\SubCategory\\ISubCategoryRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T14:35:19.515Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "SubCategoryPostDto.cs",
-              "DocumentMoniker": "C:\\Users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\source\\repos\\TechTrack-Backend-SpaceTech\\TechPathNavigator\\Dtos\u0027s\\SubCategory\\SubCategoryPostDto.cs",
-              "RelativeDocumentMoniker": "TechPathNavigator\\Dtos\u0027s\\SubCategory\\SubCategoryPostDto.cs",
-              "ToolTip": "C:\\Users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\source\\repos\\TechTrack-Backend-SpaceTech\\TechPathNavigator\\Dtos\u0027s\\SubCategory\\SubCategoryPostDto.cs",
-              "RelativeToolTip": "TechPathNavigator\\Dtos\u0027s\\SubCategory\\SubCategoryPostDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T14:34:55.729Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "SubCategoryRepository.cs",
-              "DocumentMoniker": "C:\\Users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\source\\repos\\TechTrack-Backend-SpaceTech\\TechPathNavigator\\Repo\\SubCategory\\SubCategoryRepository.cs",
-              "RelativeDocumentMoniker": "TechPathNavigator\\Repo\\SubCategory\\SubCategoryRepository.cs",
-              "ToolTip": "C:\\Users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\source\\repos\\TechTrack-Backend-SpaceTech\\TechPathNavigator\\Repo\\SubCategory\\SubCategoryRepository.cs",
-              "RelativeToolTip": "TechPathNavigator\\Repo\\SubCategory\\SubCategoryRepository.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAcwDIAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T14:09:52.316Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ICatergoryRepository.cs",
-              "DocumentMoniker": "C:\\Users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\source\\repos\\TechTrack-Backend-SpaceTech\\TechPathNavigator\\Repo\\Category\\ICatergoryRepository.cs",
-              "RelativeDocumentMoniker": "TechPathNavigator\\Repo\\Category\\ICatergoryRepository.cs",
-              "ToolTip": "C:\\Users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\source\\repos\\TechTrack-Backend-SpaceTech\\TechPathNavigator\\Repo\\Category\\ICatergoryRepository.cs",
-              "RelativeToolTip": "TechPathNavigator\\Repo\\Category\\ICatergoryRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T14:08:54.156Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "CatergoryRepository.cs",
-              "DocumentMoniker": "C:\\Users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\source\\repos\\TechTrack-Backend-SpaceTech\\TechPathNavigator\\Repo\\Category\\CatergoryRepository.cs",
-              "RelativeDocumentMoniker": "TechPathNavigator\\Repo\\Category\\CatergoryRepository.cs",
-              "ToolTip": "C:\\Users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\source\\repos\\TechTrack-Backend-SpaceTech\\TechPathNavigator\\Repo\\Category\\CatergoryRepository.cs",
-              "RelativeToolTip": "TechPathNavigator\\Repo\\Category\\CatergoryRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA2AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T14:02:55.578Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "CategoryPostDto.cs",
-              "DocumentMoniker": "C:\\Users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\source\\repos\\TechTrack-Backend-SpaceTech\\TechPathNavigator\\Dtos\u0027s\\Category\\CategoryPostDto.cs",
-              "RelativeDocumentMoniker": "TechPathNavigator\\Dtos\u0027s\\Category\\CategoryPostDto.cs",
-              "ToolTip": "C:\\Users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\source\\repos\\TechTrack-Backend-SpaceTech\\TechPathNavigator\\Dtos\u0027s\\Category\\CategoryPostDto.cs",
-              "RelativeToolTip": "TechPathNavigator\\Dtos\u0027s\\Category\\CategoryPostDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAALAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T13:56:09.468Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\source\\repos\\TechTrack-Backend-SpaceTech\\TechPathNavigator\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\My Compu\\SpaceTech Intern\\TechTrack\\TechTrack-Backend-SpaceTech\\TechPathNavigator\\Program.cs",
               "RelativeDocumentMoniker": "TechPathNavigator\\Program.cs",
-              "ToolTip": "C:\\Users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\source\\repos\\TechTrack-Backend-SpaceTech\\TechPathNavigator\\Program.cs",
+              "ToolTip": "C:\\Users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\My Compu\\SpaceTech Intern\\TechTrack\\TechTrack-Backend-SpaceTech\\TechPathNavigator\\Program.cs",
               "RelativeToolTip": "TechPathNavigator\\Program.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAA5wBgAAAA6AAAAAAAAAA==",
+              "ViewState": "AgIAABkAAAAAAAAAAAAQwCwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T13:21:39.261Z",
+              "WhenOpened": "2025-10-31T09:12:15.201Z",
               "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 1145,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "SubCategoryGetDto.cs",
-              "DocumentMoniker": "C:\\Users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\source\\repos\\TechTrack-Backend-SpaceTech\\TechPathNavigator\\Dtos\u0027s\\SubCategory\\SubCategoryGetDto.cs",
-              "RelativeDocumentMoniker": "TechPathNavigator\\Dtos\u0027s\\SubCategory\\SubCategoryGetDto.cs",
-              "ToolTip": "C:\\Users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\source\\repos\\TechTrack-Backend-SpaceTech\\TechPathNavigator\\Dtos\u0027s\\SubCategory\\SubCategoryGetDto.cs",
-              "RelativeToolTip": "TechPathNavigator\\Dtos\u0027s\\SubCategory\\SubCategoryGetDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T13:19:22.853Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "Category.cs",
-              "DocumentMoniker": "C:\\Users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\source\\repos\\TechTrack-Backend-SpaceTech\\TechPathNavigator\\Models\\Category.cs",
-              "RelativeDocumentMoniker": "TechPathNavigator\\Models\\Category.cs",
-              "ToolTip": "C:\\Users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\source\\repos\\TechTrack-Backend-SpaceTech\\TechPathNavigator\\Models\\Category.cs",
-              "RelativeToolTip": "TechPathNavigator\\Models\\Category.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T13:14:27.406Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "ISubCategoryServices.cs",
-              "DocumentMoniker": "C:\\Users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\source\\repos\\TechTrack-Backend-SpaceTech\\TechPathNavigator\\Service\\SubCategory\\ISubCategoryServices.cs",
-              "RelativeDocumentMoniker": "TechPathNavigator\\Service\\SubCategory\\ISubCategoryServices.cs",
-              "ToolTip": "C:\\Users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\source\\repos\\TechTrack-Backend-SpaceTech\\TechPathNavigator\\Service\\SubCategory\\ISubCategoryServices.cs",
-              "RelativeToolTip": "TechPathNavigator\\Service\\SubCategory\\ISubCategoryServices.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T13:06:35.917Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\source\\repos\\TechTrack-Backend-SpaceTech\\TechPathNavigator\\Data\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "TechPathNavigator\\Data\\ApplicationDbContext.cs",
-              "ToolTip": "C:\\Users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\source\\repos\\TechTrack-Backend-SpaceTech\\TechPathNavigator\\Data\\ApplicationDbContext.cs",
-              "RelativeToolTip": "TechPathNavigator\\Data\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T13:05:43.247Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "SubCategoryService.cs",
-              "DocumentMoniker": "C:\\Users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\source\\repos\\TechTrack-Backend-SpaceTech\\TechPathNavigator\\Service\\SubCategory\\SubCategoryService.cs",
-              "RelativeDocumentMoniker": "TechPathNavigator\\Service\\SubCategory\\SubCategoryService.cs",
-              "ToolTip": "C:\\Users\\\u0631\u062D\u0645\u0647 \u0635\u0628\u0631\u0649\\source\\repos\\TechTrack-Backend-SpaceTech\\TechPathNavigator\\Service\\SubCategory\\SubCategoryService.cs",
-              "RelativeToolTip": "TechPathNavigator\\Service\\SubCategory\\SubCategoryService.cs",
-              "ViewState": "AgIAAFUAAAAAAAAAAAAYwGsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T13:14:45.462Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:5:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
             }
           ]
         }

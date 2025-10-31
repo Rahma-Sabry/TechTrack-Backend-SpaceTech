@@ -1,14 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\TechPathNavigator\\Controllers",
-    "\\TechPathNavigator\\Dtos's",
-    "\\TechPathNavigator\\Dtos's\\SubCategory",
-    "\\TechPathNavigator\\Models",
-    "\\TechPathNavigator\\Repo",
-    "\\TechPathNavigator\\Service",
-    "\\TechPathNavigator\\Service\\SubCategory"
+    "\\TechPathNavigator"
   ],
-  "SelectedNode": "\\TechPathNavigator.slnx",
+  "SelectedNode": "\\TechPathNavigator\\Program.cs",
   "PreviewInSolutionExplorer": false
 }

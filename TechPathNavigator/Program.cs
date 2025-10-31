@@ -16,7 +16,6 @@ namespace TechPathNavigator
             builder.Services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-            #region Dependency Injection (DEV ONLY)
             // Roadmap & Steps
             builder.Services.AddScoped<IRoadmapRepository, RoadmapRepository>();
             builder.Services.AddScoped<IRoadmapService, RoadmapService>();
@@ -43,7 +42,6 @@ namespace TechPathNavigator
             //Interview Questions
             builder.Services.AddScoped<IInterviewQuestionRepository, InterviewQuestionRepository>();
             builder.Services.AddScoped<InterviewQuestionService>();
-            #endregion
 
             // 🧩 Controllers
             builder.Services.AddControllers();
