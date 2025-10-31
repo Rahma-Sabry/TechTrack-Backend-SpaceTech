@@ -1,8 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.OpenApi.Models;
-using TechPathNavigator.Data;
-using TechPathNavigator.Repositories;
-using TechPathNavigator.Services;
+﻿using Microsoft.OpenApi.Models;
+using TechPathNavigator.Configurations;
+using TechPathNavigator.Middleware;
 
 namespace TechPathNavigator
 {
@@ -12,41 +10,18 @@ namespace TechPathNavigator
         {
             var builder = WebApplication.CreateBuilder(args);
 
-            // 💾 Database Connection
-            builder.Services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+            // ✅ Add application services using DI extension
+            builder.Services.AddApplicationServices(builder.Configuration);
 
-            // Roadmap & Steps
-            builder.Services.AddScoped<IRoadmapRepository, RoadmapRepository>();
-            builder.Services.AddScoped<IRoadmapService, RoadmapService>();
-            builder.Services.AddScoped<IRoadmapStepRepository, RoadmapStepRepository>();
-            builder.Services.AddScoped<IRoadmapStepService, RoadmapStepService>();
-            // User Management
-            builder.Services.AddScoped<IUserRepository, UserRepository>();
-            builder.Services.AddScoped<UserService>();
-            // User Reviews
-            builder.Services.AddScoped<IUserTechnologyReviewRepository, UserTechnologyReviewRepository>();
-            builder.Services.AddScoped<UserTechnologyReviewService>();
-            // Track & Technology
-            builder.Services.AddScoped<ITrackRepository, TrackRepository>();
-            builder.Services.AddScoped<TrackService>();
-            builder.Services.AddScoped<ITechnologyRepository, TechnologyRepository>();
-            builder.Services.AddScoped<TechnologyService>();
+            // 🧩 Add Controllers with JSON options
+            builder.Services.AddControllers()
+                .AddJsonOptions(options =>
+                {
+                    options.JsonSerializerOptions.ReferenceHandler =
+                        System.Text.Json.Serialization.ReferenceHandler.IgnoreCycles;
+                });
 
-            // Category & Subcategory
-            builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
-            builder.Services.AddScoped<ICategoryService, CategoryService>();
-            builder.Services.AddScoped<ISubCategoryRepository, SubCategoryRepository>();
-            builder.Services.AddScoped<ISubCategoryService, SubCategoryService>();
-
-            //Interview Questions
-            builder.Services.AddScoped<IInterviewQuestionRepository, InterviewQuestionRepository>();
-            builder.Services.AddScoped<InterviewQuestionService>();
-
-            // 🧩 Controllers
-            builder.Services.AddControllers();
-
-            // 🌐 Swagger/OpenAPI setup
+            // 🌐 Swagger/OpenAPI Configuration
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen(c =>
             {
@@ -54,11 +29,24 @@ namespace TechPathNavigator
                 {
                     Title = "TechPathNavigator API",
                     Version = "v1",
-                    Description = "API for managing technologies, tracks, users, and roadmaps"
+                    Description = "Enhanced API with validation and mapping",
+                    Contact = new OpenApiContact
+                    {
+                        Name = "TechPath Team",
+                        Email = "support@techpath.com"
+                    }
                 });
+
+                // Enable XML comments if available
+                var xmlFile = $"{System.Reflection.Assembly.GetExecutingAssembly().GetName().Name}.xml";
+                var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+                if (File.Exists(xmlPath))
+                {
+                    c.IncludeXmlComments(xmlPath);
+                }
             });
 
-            // 🌍 CORS setup
+            // 🌍 CORS Configuration
             builder.Services.AddCors(options =>
             {
                 options.AddPolicy("AllowAll", policy =>
@@ -71,20 +59,21 @@ namespace TechPathNavigator
 
             var app = builder.Build();
 
-            // 🧭 Swagger UI
-            app.UseSwagger();
-            app.UseSwaggerUI(c =>
+            // 🧭 Middleware Pipeline
+            if (app.Environment.IsDevelopment())
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "TechPathNavigator API V1");
-                c.RoutePrefix = string.Empty;
-            });
+                app.UseSwagger();
+                app.UseSwaggerUI(c =>
+                {
+                    c.SwaggerEndpoint("/swagger/v1/swagger.json", "TechPathNavigator API V1");
+                    c.RoutePrefix = string.Empty;
+                });
+            }
 
-            // 🔐 Middlewares
             app.UseHttpsRedirection();
-            app.UseAuthorization();
+            app.UseGlobalExceptionHandler();
             app.UseCors("AllowAll");
-
-            // 🚀 Map Controllers
+            app.UseAuthorization();
             app.MapControllers();
 
             app.Run();

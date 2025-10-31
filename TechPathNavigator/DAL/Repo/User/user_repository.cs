@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using TechPathNavigator.Data;
+using TechPathNavigator.DAL.Data;
 using TechPathNavigator.Models;
 
 namespace TechPathNavigator.Repositories

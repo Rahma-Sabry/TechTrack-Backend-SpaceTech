@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using TechPathNavigator.Models;
-using TechPathNavigator.Data;
+using TechPathNavigator.DAL.Data;
 
 namespace TechPathNavigator.Repositories
 {

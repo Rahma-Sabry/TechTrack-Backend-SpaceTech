@@ -1,7 +1,8 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿
+using Microsoft.EntityFrameworkCore;
 using TechPathNavigator.Models;
 
-namespace TechPathNavigator.Data
+namespace TechPathNavigator.DAL.Data
 {
     public class ApplicationDbContext : DbContext
     {

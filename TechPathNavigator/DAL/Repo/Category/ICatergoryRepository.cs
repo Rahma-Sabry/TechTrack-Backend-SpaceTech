@@ -1,13 +1,14 @@
+using TechPathNavigator.DAL.Repositories.Generic;
 using TechPathNavigator.Models;
 
 namespace TechPathNavigator.Repositories
+{
+    /// <summary>
+    /// Category repository interface
+    /// Extends generic repository with custom operations
+    /// </summary>
+    public interface ICategoryRepository : IGenericRepository<Category>
     {
-    public interface ICategoryRepository
-    {
-        Task<IEnumerable<Category>> GetAllAsync();
-        Task<Category?> GetByIdAsync(int id);
-        Task<Category> AddAsync(Category category);
-        Task<Category?> UpdateAsync(Category category);
-        Task<bool> DeleteAsync(int id);
+        Task<IEnumerable<Category>> GetCategoriesWithSubCategoryCountAsync();
     }
 }

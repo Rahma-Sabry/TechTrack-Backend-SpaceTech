@@ -1,60 +1,57 @@
 using Microsoft.EntityFrameworkCore;
-using TechPathNavigator.Data;
+using TechPathNavigator.DAL.Repositories.Generic;
+using TechPathNavigator.DAL.Data;
 using TechPathNavigator.Models;
 
 namespace TechPathNavigator.Repositories
 {
-    public class CategoryRepository : ICategoryRepository
+    /// <summary>
+    /// Category repository with custom operations
+    /// Inherits from GenericRepository for common CRUD
+    /// </summary>
+    public class CategoryRepository : GenericRepository<Category>, ICategoryRepository
     {
-        private readonly ApplicationDbContext _context;
-
-        public CategoryRepository(ApplicationDbContext context)
+        public CategoryRepository(ApplicationDbContext context) : base(context)
         {
-            _context = context;
         }
 
-        public async Task<IEnumerable<Category>> GetAllAsync()
+        /// <summary>
+        /// Override to include subcategories in the query
+        /// </summary>
+        public override async Task<IEnumerable<Category>> GetAllAsync()
         {
-            return await _context.Categories
+            return await _dbSet
                 .Include(c => c.SubCategories)
                 .AsNoTracking()
                 .ToListAsync();
         }
 
-        public async Task<Category?> GetByIdAsync(int id)
+        /// <summary>
+        /// Override to include subcategories when fetching by ID
+        /// </summary>
+        public override async Task<Category?> GetByIdAsync(int id)
         {
-            return await _context.Categories
+            return await _dbSet
                 .Include(c => c.SubCategories)
                 .FirstOrDefaultAsync(c => c.CategoryId == id);
         }
 
-        public async Task<Category> AddAsync(Category category)
+        /// <summary>
+        /// Custom method: Get categories with technology count
+        /// </summary>
+        public async Task<IEnumerable<Category>> GetCategoriesWithSubCategoryCountAsync()
         {
-            _context.Categories.Add(category);
-            await _context.SaveChangesAsync();
-            return category;
-        }
-
-        public async Task<Category?> UpdateAsync(Category category)
-        {
-            var existing = await _context.Categories.FindAsync(category.CategoryId);
-            if (existing == null) return null;
-
-            existing.CategoryName = category.CategoryName; // ? fixed
-            existing.Description = category.Description;   // ? fixed
-
-            await _context.SaveChangesAsync();
-            return existing;
-        }
-
-        public async Task<bool> DeleteAsync(int id)
-        {
-            var category = await _context.Categories.FindAsync(id);
-            if (category == null) return false;
-
-            _context.Categories.Remove(category);
-            await _context.SaveChangesAsync();
-            return true;
+            return await _dbSet
+                .Include(c => c.SubCategories)
+                .Select(c => new Category
+                {
+                    CategoryId = c.CategoryId,
+                    CategoryName = c.CategoryName,
+                    Description = c.Description,
+                    SubCategories = c.SubCategories
+                })
+                .AsNoTracking()
+                .ToListAsync();
         }
     }
 }

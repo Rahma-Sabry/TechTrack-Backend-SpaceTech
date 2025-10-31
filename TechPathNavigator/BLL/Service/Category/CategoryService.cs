@@ -1,126 +1,80 @@
+using AutoMapper;
+using FluentValidation;
 using TechPathNavigator.DTOs;
+using TechPathNavigator.Extensions;
 using TechPathNavigator.Models;
 using TechPathNavigator.Repositories;
 
 namespace TechPathNavigator.Services
 {
+    /// <summary>
+    /// Category service with AutoMapper and FluentValidation integration
+    /// Follows clean architecture principles
+    /// </summary>
     public class CategoryService : ICategoryService
     {
-        private readonly ICategoryRepository _repo;
+        private readonly ICategoryRepository _repository;
+        private readonly IMapper _mapper;
+        private readonly IValidator<CategoryPostDto> _validator;
 
-        public CategoryService(ICategoryRepository repo)
+        public CategoryService(
+            ICategoryRepository repository,
+            IMapper mapper,
+            IValidator<CategoryPostDto> validator)
         {
-            _repo = repo;
+            _repository = repository;
+            _mapper = mapper;
+            _validator = validator;
         }
 
-        // GET ALL - Returns list of CategoryGetDto
         public async Task<IEnumerable<CategoryGetDto>> GetAllCategoriesAsync()
         {
-            try
-            {
-                var categories = await _repo.GetAllAsync();
-
-                return categories.Select(c => new CategoryGetDto
-                {
-                    CategoryId = c.CategoryId,
-                    CategoryName = c.CategoryName,
-                    Description = c.Description
-                }).ToList();
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Failed to retrieve categories from database", ex);
-            }
+            var categories = await _repository.GetAllAsync();
+            return _mapper.MapList<Category, CategoryGetDto>(categories);
         }
 
-        // GET BY ID - Returns single CategoryGetDto or null
         public async Task<CategoryGetDto?> GetCategoryByIdAsync(int id)
         {
-            try
-            {
-                var category = await _repo.GetByIdAsync(id);
-
-                if (category == null) return null;
-
-                return new CategoryGetDto
-                {
-                    CategoryId = category.CategoryId,
-                    CategoryName = category.CategoryName,
-                    Description = category.Description
-                };
-            }
-            catch (Exception ex)
-            {
-                throw new Exception($"Failed to retrieve category with ID {id}", ex);
-            }
+            var category = await _repository.GetByIdAsync(id);
+            return _mapper.MapOrDefault<Category, CategoryGetDto>(category);
         }
 
-        // CREATE - Takes CategoryPostDto, returns CategoryGetDto
         public async Task<CategoryGetDto> CreateCategoryAsync(CategoryPostDto dto)
         {
-            try
+            // Validate using FluentValidation
+            var validationResult = await _validator.ValidateAsync(dto);
+            if (!validationResult.IsValid)
             {
-                var category = new Category
-                {
-                    CategoryName = dto.Name ?? string.Empty,
-                    Description = dto.Description ?? string.Empty
-                };
-
-                var createdCategory = await _repo.AddAsync(category);
-
-                return new CategoryGetDto
-                {
-                    CategoryId = createdCategory.CategoryId,
-                    CategoryName = createdCategory.CategoryName,
-                    Description = createdCategory.Description
-                };
+                throw new ValidationException(validationResult.Errors);
             }
-            catch (Exception ex)
-            {
-                throw new Exception("Failed to create category", ex);
-            }
+
+            // Map DTO to Entity using AutoMapper
+            var category = _mapper.Map<Category>(dto);
+
+            var created = await _repository.AddAsync(category);
+            return _mapper.Map<CategoryGetDto>(created);
         }
 
-        // UPDATE - Takes CategoryPostDto, returns updated CategoryGetDto or null
         public async Task<CategoryGetDto?> UpdateCategoryAsync(int id, CategoryPostDto dto)
         {
-            try
+            var validationResult = await _validator.ValidateAsync(dto);
+            if (!validationResult.IsValid)
             {
-                var existingCategory = await _repo.GetByIdAsync(id);
-
-                if (existingCategory == null) return null;
-
-                existingCategory.CategoryName = dto.Name ?? existingCategory.CategoryName;
-                existingCategory.Description = dto.Description ?? existingCategory.Description;
-
-                var updatedCategory = await _repo.UpdateAsync(existingCategory);
-
-                if (updatedCategory == null) return null;
-
-                return new CategoryGetDto
-                {
-                    CategoryId = updatedCategory.CategoryId,
-                    CategoryName = updatedCategory.CategoryName,
-                    Description = updatedCategory.Description
-                };
+                throw new ValidationException(validationResult.Errors);
             }
-            catch (Exception ex)
-            {
-                throw new Exception($"Failed to update category with ID {id}", ex);
-            }
+
+            var existing = await _repository.GetByIdAsync(id);
+            if (existing == null) return null;
+
+            _mapper.Map(dto, existing);
+            var updated = await _repository.UpdateAsync(existing);
+
+            return _mapper.MapOrDefault<Category, CategoryGetDto>(updated);
         }
 
-        // DELETE - Returns true if deleted, false if not found
         public async Task<bool> DeleteCategoryAsync(int id)
         {
-            try
-            {
-                return await _repo.DeleteAsync(id);
-            }
-            catch (Exception ex)
-            {
-                throw new Exception($"Failed to delete category with ID {id}", ex);
-            }
+            return await _repository.DeleteAsync(id);
         }
     }
 }
