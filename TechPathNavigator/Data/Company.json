@@ -1,0 +1,74 @@
+[
+  {
+    "CompanyName": "Google",
+    "Industry": "Web & Cloud",
+    "WebsiteUrl": "https://www.google.com",
+    "Description": "A global tech leader in search, cloud computing, AI, and web technologies."
+  },
+  {
+    "CompanyName": "Microsoft",
+    "Industry": "Software & Cloud",
+    "WebsiteUrl": "https://www.microsoft.com",
+    "Description": "Creator of Windows, Azure, and .NET — a pioneer in enterprise and cloud solutions."
+  },
+  {
+    "CompanyName": "Meta (Facebook)",
+    "Industry": "Web & Social",
+    "WebsiteUrl": "https://about.meta.com",
+    "Description": "Builds social platforms and invests heavily in React, VR, and the metaverse."
+  },
+  {
+    "CompanyName": "Apple",
+    "Industry": "Mobile & Hardware",
+    "WebsiteUrl": "https://www.apple.com",
+    "Description": "Designs iOS, macOS, and hardware like iPhone and Mac — a leader in mobile ecosystems."
+  },
+  {
+    "CompanyName": "Amazon",
+    "Industry": "Cloud & E-commerce",
+    "WebsiteUrl": "https://www.amazon.com",
+    "Description": "Runs AWS, the world’s largest cloud platform, and revolutionized online shopping."
+  },
+  {
+    "CompanyName": "IBM",
+    "Industry": "Data & AI",
+    "WebsiteUrl": "https://www.ibm.com",
+    "Description": "A historic innovator in data science, AI (Watson), and enterprise technology."
+  },
+  {
+    "CompanyName": "Unity Technologies",
+    "Industry": "Game Development",
+    "WebsiteUrl": "https://unity.com",
+    "Description": "The company behind Unity — the most popular engine for 2D and 3D game development."
+  },
+  {
+    "CompanyName": "CrowdStrike",
+    "Industry": "Cyber Security",
+    "WebsiteUrl": "https://www.crowdstrike.com",
+    "Description": "A leading cybersecurity company specializing in endpoint protection and threat intelligence."
+  },
+  {
+    "CompanyName": "Palantir",
+    "Industry": "Data & AI",
+    "WebsiteUrl": "https://www.palantir.com",
+    "Description": "Builds powerful data platforms for defense, healthcare, and finance industries."
+  },
+  {
+    "CompanyName": "Figma",
+    "Industry": "UI/UX Design",
+    "WebsiteUrl": "https://www.figma.com",
+    "Description": "The collaborative design tool used by teams worldwide to build user interfaces."
+  },
+  {
+    "CompanyName": "Netflix",
+    "Industry": "Web & Streaming",
+    "WebsiteUrl": "https://www.netflix.com",
+    "Description": "A tech-driven entertainment company known for its scalable backend and microservices."
+  },
+  {
+    "CompanyName": "GitHub",
+    "Industry": "DevOps & Development",
+    "WebsiteUrl": "https://github.com",
+    "Description": "The home for open-source projects and developer collaboration, owned by Microsoft."
+  }
+]

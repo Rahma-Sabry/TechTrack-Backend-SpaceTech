@@ -1,0 +1,18 @@
+[
+  {
+    "CategoryName": "Software Development",
+    "Description": "Learn to build applications and software using programming languages like C#, Python, and JavaScript."
+  },
+  {
+    "CategoryName": "DevOps & Infrastructure",
+    "Description": "Discover how to automate, deploy, and manage applications efficiently using cloud and CI/CD tools."
+  },
+  {
+    "CategoryName": "Data & AI",
+    "Description": "Explore data analysis, machine learning, and artificial intelligence to turn raw data into smart insights."
+  },
+  {
+    "CategoryName": "Design & User Experience",
+    "Description": "Create intuitive and engaging interfaces that make users love the products they interact with."
+  }
+]

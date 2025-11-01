@@ -1,0 +1,110 @@
+[
+  {
+    "TechnologyName": "HTML & CSS",
+    "Description": "The foundation of every website — structure with HTML and style with CSS.",
+    "VideoUrl": "",
+    "CreatedAt": ""
+  },
+  {
+    "TechnologyName": "JavaScript",
+    "Description": "Add interactivity to websites with the most popular web programming language.",
+    "VideoUrl": "",
+    "CreatedAt": ""
+  },
+  {
+    "TechnologyName": "React",
+    "Description": "Build dynamic user interfaces with this powerful JavaScript library by Facebook.",
+    "VideoUrl": "",
+    "CreatedAt": ""
+  },
+  {
+    "TechnologyName": ".NET Core",
+    "Description": "Microsoft's modern, cross-platform framework for building fast backend services.",
+    "VideoUrl": "",
+    "CreatedAt": ""
+  },
+  {
+    "TechnologyName": "Entity Framework Core",
+    "Description": "An ORM that lets you work with databases using C# objects — no SQL needed!",
+    "VideoUrl": "",
+    "CreatedAt": ""
+  },
+  {
+    "TechnologyName": "Kotlin",
+    "Description": "The modern programming language for Android app development.",
+    "VideoUrl": "",
+    "CreatedAt": ""
+  },
+  {
+    "TechnologyName": "Swift",
+    "Description": "Apple's powerful and intuitive language for iOS and macOS apps.",
+    "VideoUrl": "",
+    "CreatedAt": ""
+  },
+  {
+    "TechnologyName": "Flutter",
+    "Description": "Build beautiful, natively compiled apps for mobile, web, and desktop from a single codebase.",
+    "VideoUrl": "",
+    "CreatedAt": ""
+  },
+  {
+    "TechnologyName": "Unity",
+    "Description": "The leading platform for creating 2D and 3D games with C# scripting.",
+    "VideoUrl": "",
+    "CreatedAt": ""
+  },
+  {
+    "TechnologyName": "Wireshark",
+    "Description": "Analyze network traffic to detect security issues and understand data flow.",
+    "VideoUrl": "",
+    "CreatedAt": ""
+  },
+  {
+    "TechnologyName": "Nmap",
+    "Description": "Scan networks to discover hosts, services, and potential vulnerabilities.",
+    "VideoUrl": "",
+    "CreatedAt": ""
+  },
+  {
+    "TechnologyName": "SQL",
+    "Description": "The standard language for managing and querying relational databases.",
+    "VideoUrl": "",
+    "CreatedAt": ""
+  },
+  {
+    "TechnologyName": "Power BI",
+    "Description": "Transform data into stunning visual reports and dashboards.",
+    "VideoUrl": "",
+    "CreatedAt": ""
+  },
+  {
+    "TechnologyName": "Python (Pandas)",
+    "Description": "Clean, analyze, and manipulate data with Python's powerful Pandas library.",
+    "VideoUrl": "",
+    "CreatedAt": ""
+  },
+  {
+    "TechnologyName": "Scikit-learn",
+    "Description": "A simple and efficient tool for machine learning in Python.",
+    "VideoUrl": "",
+    "CreatedAt": ""
+  },
+  {
+    "TechnologyName": "Figma",
+    "Description": "Design, prototype, and collaborate on user interfaces in real time.",
+    "VideoUrl": "",
+    "CreatedAt": ""
+  },
+  {
+    "TechnologyName": "User Research",
+    "Description": "Understand user needs through interviews, surveys, and usability testing.",
+    "VideoUrl": "",
+    "CreatedAt": ""
+  },
+  {
+    "TechnologyName": "Node.js",
+    "Description": "Run JavaScript on the server to build fast and scalable backend services.",
+    "VideoUrl": "",
+    "CreatedAt": ""
+  }
+]

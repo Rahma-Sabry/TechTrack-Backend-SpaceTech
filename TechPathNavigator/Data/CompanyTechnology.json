@@ -1,0 +1,62 @@
+[
+  {
+    "UsageLevel": "primary",
+    "Notes": "Microsoft uses .NET Core for most of its backend services and Azure tools."
+  },
+  {
+    "UsageLevel": "primary",
+    "Notes": "Entity Framework Core is widely used in Microsoft's internal .NET applications."
+  },
+  {
+    "UsageLevel": "primary",
+    "Notes": "Meta created and maintains React for all its web interfaces (Facebook, Instagram)."
+  },
+  {
+    "UsageLevel": "primary",
+    "Notes": "Google uses JavaScript extensively across its web products like Gmail and Docs."
+  },
+  {
+    "UsageLevel": "primary",
+    "Notes": "Google uses Node.js for many of its scalable backend services."
+  },
+  {
+    "UsageLevel": "primary",
+    "Notes": "Apple uses Swift as the main language for all iOS and macOS app development."
+  },
+  {
+    "UsageLevel": "secondary",
+    "Notes": "Amazon uses .NET Core in some AWS services and enterprise solutions."
+  },
+  {
+    "UsageLevel": "primary",
+    "Notes": "Unity Technologies uses its own Unity engine to build and demo games."
+  },
+  {
+    "UsageLevel": "primary",
+    "Notes": "Figma is built with and designed using its own Figma tool."
+  },
+  {
+    "UsageLevel": "primary",
+    "Notes": "CrowdStrike uses Wireshark for deep network traffic analysis in threat detection."
+  },
+  {
+    "UsageLevel": "primary",
+    "Notes": "IBM uses Python and Pandas for data processing in its AI and analytics platforms."
+  },
+  {
+    "UsageLevel": "primary",
+    "Notes": "Palantir uses Scikit-learn for machine learning models in its data platforms."
+  },
+  {
+    "UsageLevel": "secondary",
+    "Notes": "Netflix uses React for parts of its frontend UI alongside other frameworks."
+  },
+  {
+    "UsageLevel": "primary",
+    "Notes": "GitHub's web interface relies heavily on JavaScript for dynamic interactions."
+  },
+  {
+    "UsageLevel": "primary",
+    "Notes": "Google uses SQL in BigQuery and many internal data systems."
+  }
+]

@@ -1,0 +1,62 @@
+[
+  {
+    "SubCategoryName": "Web Development",
+    "Description": "Build websites and web applications using HTML, CSS, JavaScript, and frameworks like React or .NET.",
+    "DifficultyLevel": "Beginner",
+    "EstimatedDuration": 250
+  },
+  {
+    "SubCategoryName": "Mobile Development",
+    "Description": "Create apps for iOS and Android using Flutter, React Native, or native tools like Swift and Kotlin.",
+    "DifficultyLevel": "Beginner",
+    "EstimatedDuration": 200
+  },
+  {
+    "SubCategoryName": "Game Development",
+    "Description": "Design and code interactive games using Unity or Unreal Engine with C# or C++.",
+    "DifficultyLevel": "Beginner",
+    "EstimatedDuration": 220
+  },
+  {
+    "SubCategoryName": "DevOps",
+    "Description": "Automate deployment, manage cloud infrastructure, and ensure smooth software delivery using Docker, Kubernetes, and CI/CD pipelines.",
+    "DifficultyLevel": "Intermediate",
+    "EstimatedDuration": 160
+  },
+  {
+    "SubCategoryName": "Cyber Security",
+    "Description": "Learn to protect systems, networks, and data from digital attacks using ethical hacking and security best practices.",
+    "DifficultyLevel": "Intermediate",
+    "EstimatedDuration": 200
+  },
+  {
+    "SubCategoryName": "Data Analysis",
+    "Description": "Turn raw data into insights using Excel, SQL, Python (Pandas), and visualization tools like Power BI.",
+    "DifficultyLevel": "Beginner",
+    "EstimatedDuration": 120
+  },
+  {
+    "SubCategoryName": "Data Science",
+    "Description": "Apply statistics and machine learning to solve real-world problems using Python, Scikit-learn, and Jupyter Notebooks.",
+    "DifficultyLevel": "Intermediate",
+    "EstimatedDuration": 240
+  },
+  {
+    "SubCategoryName": "Data Engineering",
+    "Description": "Build data pipelines and warehouses to collect, store, and process large-scale data using SQL, Spark, and cloud platforms.",
+    "DifficultyLevel": "Advanced",
+    "EstimatedDuration": 260
+  },
+  {
+    "SubCategoryName": "ML Engineering",
+    "Description": "Deploy and scale machine learning models in production using MLOps practices, APIs, and cloud services.",
+    "DifficultyLevel": "Advanced",
+    "EstimatedDuration": 280
+  },
+  {
+    "SubCategoryName": "UI/UX Design",
+    "Description": "Design user-friendly and visually appealing interfaces using Figma, user research, and design thinking principles.",
+    "DifficultyLevel": "Beginner",
+    "EstimatedDuration": 140
+  }
+]

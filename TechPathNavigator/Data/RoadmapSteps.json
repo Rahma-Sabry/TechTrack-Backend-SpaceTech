@@ -1,0 +1,313 @@
+[
+  {
+    "StepOrder": 1,
+    "StepTitle": "Learn HTML & CSS",
+    "StepDescription": "Start with the basics of web structure and styling."
+  },
+  {
+    "StepOrder": 2,
+    "StepTitle": "Master JavaScript",
+    "StepDescription": "Add interactivity and dynamic behavior to your websites."
+  },
+  {
+    "StepOrder": 3,
+    "StepTitle": "Responsive Design",
+    "StepDescription": "Make your websites look great on all devices using Flexbox and Grid."
+  },
+  {
+    "StepOrder": 4,
+    "StepTitle": "Learn React",
+    "StepDescription": "Build modern, component-based user interfaces with React."
+  },
+  {
+    "StepOrder": 5,
+    "StepTitle": "Build Projects",
+    "StepDescription": "Apply your skills by creating real-world projects like a portfolio or todo app."
+  },
+
+  {
+    "StepOrder": 1,
+    "StepTitle": "Learn C#",
+    "StepDescription": "Master the fundamentals of C# programming language."
+  },
+  {
+    "StepOrder": 2,
+    "StepTitle": "Understand .NET Core",
+    "StepDescription": "Build your first web APIs and console applications."
+  },
+  {
+    "StepOrder": 3,
+    "StepTitle": "Work with Databases",
+    "StepDescription": "Use Entity Framework Core to connect and manage data."
+  },
+  {
+    "StepOrder": 4,
+    "StepTitle": "Authentication & Authorization",
+    "StepDescription": "Secure your APIs with JWT and user roles."
+  },
+  {
+    "StepOrder": 5,
+    "StepTitle": "Deploy to Cloud",
+    "StepDescription": "Publish your backend to Azure or other cloud platforms."
+  },
+
+  {
+    "StepOrder": 1,
+    "StepTitle": "Frontend Basics",
+    "StepDescription": "HTML, CSS, JavaScript, and a framework like React."
+  },
+  {
+    "StepOrder": 2,
+    "StepTitle": "Backend with .NET",
+    "StepDescription": "Build RESTful APIs using C# and Entity Framework."
+  },
+  {
+    "StepOrder": 3,
+    "StepTitle": "Connect Frontend & Backend",
+    "StepDescription": "Use Axios or Fetch to communicate between client and server."
+  },
+  {
+    "StepOrder": 4,
+    "StepTitle": "Add Authentication",
+    "StepDescription": "Implement login and user sessions."
+  },
+  {
+    "StepOrder": 5,
+    "StepTitle": "Build a Full Project",
+    "StepDescription": "Create a complete app like a blog or task manager."
+  },
+
+  {
+    "StepOrder": 1,
+    "StepTitle": "Learn Kotlin Basics",
+    "StepDescription": "Understand variables, functions, and control flow."
+  },
+  {
+    "StepOrder": 2,
+    "StepTitle": "Android Studio Setup",
+    "StepDescription": "Install and navigate the official Android IDE."
+  },
+  {
+    "StepOrder": 3,
+    "StepTitle": "Build UI with XML",
+    "StepDescription": "Design screens using layouts and views."
+  },
+  {
+    "StepOrder": 4,
+    "StepTitle": "Handle User Input",
+    "StepDescription": "Respond to clicks, gestures, and navigation."
+  },
+  {
+    "StepOrder": 5,
+    "StepTitle": "Publish to Play Store",
+    "StepDescription": "Prepare and release your first Android app."
+  },
+
+  {
+    "StepOrder": 1,
+    "StepTitle": "Learn Swift",
+    "StepDescription": "Start with Apple’s modern programming language."
+  },
+  {
+    "StepOrder": 2,
+    "StepTitle": "Xcode Basics",
+    "StepDescription": "Use Apple’s IDE to build and test apps."
+  },
+  {
+    "StepOrder": 3,
+    "StepTitle": "UIKit & SwiftUI",
+    "StepDescription": "Design interfaces with Apple’s frameworks."
+  },
+  {
+    "StepOrder": 4,
+    "StepTitle": "Test on Simulator",
+    "StepDescription": "Run and debug your app on virtual iOS devices."
+  },
+  {
+    "StepOrder": 5,
+    "StepTitle": "Submit to App Store",
+    "StepDescription": "Follow Apple’s guidelines to publish your app."
+  },
+
+  {
+    "StepOrder": 1,
+    "StepTitle": "Dart Language",
+    "StepDescription": "Learn Dart basics — the language behind Flutter."
+  },
+  {
+    "StepOrder": 2,
+    "StepTitle": "Flutter Widgets",
+    "StepDescription": "Build UIs using Flutter’s rich widget library."
+  },
+  {
+    "StepOrder": 3,
+    "StepTitle": "Navigation & State",
+    "StepDescription": "Manage app flow and data changes."
+  },
+  {
+    "StepOrder": 4,
+    "StepTitle": "Connect to Backend",
+    "StepDescription": "Fetch data from APIs and display it."
+  },
+  {
+    "StepOrder": 5,
+    "StepTitle": "Deploy to Stores",
+    "StepDescription": "Publish your app to Google Play and App Store."
+  },
+
+  {
+    "StepOrder": 1,
+    "StepTitle": "Install Unity",
+    "StepDescription": "Set up Unity Hub and your first project."
+  },
+  {
+    "StepOrder": 2,
+    "StepTitle": "Learn C# for Games",
+    "StepDescription": "Write scripts to control game objects."
+  },
+  {
+    "StepOrder": 3,
+    "StepTitle": "Physics & Collisions",
+    "StepDescription": "Make objects move, jump, and interact."
+  },
+  {
+    "StepOrder": 4,
+    "StepTitle": "UI & Menus",
+    "StepDescription": "Add start screens, scoreboards, and buttons."
+  },
+  {
+    "StepOrder": 5,
+    "StepTitle": "Build & Share",
+    "StepDescription": "Export your game for PC or mobile."
+  },
+
+  {
+    "StepOrder": 1,
+    "StepTitle": "Networking Basics",
+    "StepDescription": "Understand how data moves across networks."
+  },
+  {
+    "StepOrder": 2,
+    "StepTitle": "Linux Fundamentals",
+    "StepDescription": "Learn command line and system administration."
+  },
+  {
+    "StepOrder": 3,
+    "StepTitle": "Use Security Tools",
+    "StepDescription": "Practice with Wireshark, Nmap, and Metasploit."
+  },
+  {
+    "StepOrder": 4,
+    "StepTitle": "Ethical Hacking",
+    "StepDescription": "Learn penetration testing methodologies."
+  },
+  {
+    "StepOrder": 5,
+    "StepTitle": "Get Certified",
+    "StepDescription": "Prepare for certifications like CEH or CompTIA Security+."
+  },
+
+  {
+    "StepOrder": 1,
+    "StepTitle": "Excel & Google Sheets",
+    "StepDescription": "Master formulas, pivot tables, and charts."
+  },
+  {
+    "StepOrder": 2,
+    "StepTitle": "Learn SQL",
+    "StepDescription": "Query databases to extract insights."
+  },
+  {
+    "StepOrder": 3,
+    "StepTitle": "Data Visualization",
+    "StepDescription": "Create dashboards with Power BI or Tableau."
+  },
+  {
+    "StepOrder": 4,
+    "StepTitle": "Basic Statistics",
+    "StepDescription": "Understand averages, distributions, and correlations."
+  },
+  {
+    "StepOrder": 5,
+    "StepTitle": "Tell Data Stories",
+    "StepDescription": "Present findings clearly to non-technical teams."
+  },
+
+  {
+    "StepOrder": 1,
+    "StepTitle": "Python Basics",
+    "StepDescription": "Learn syntax, loops, and functions."
+  },
+  {
+    "StepOrder": 2,
+    "StepTitle": "Pandas & NumPy",
+    "StepDescription": "Clean and manipulate data efficiently."
+  },
+  {
+    "StepOrder": 3,
+    "StepTitle": "Machine Learning",
+    "StepDescription": "Train models using Scikit-learn."
+  },
+  {
+    "StepOrder": 4,
+    "StepTitle": "Model Evaluation",
+    "StepDescription": "Measure accuracy, precision, and recall."
+  },
+  {
+    "StepOrder": 5,
+    "StepTitle": "Deploy a Model",
+    "StepDescription": "Use Flask or cloud APIs to share your model."
+  },
+
+  {
+    "StepOrder": 1,
+    "StepTitle": "Design Principles",
+    "StepDescription": "Learn contrast, alignment, spacing, and typography."
+  },
+  {
+    "StepOrder": 2,
+    "StepTitle": "Master Figma",
+    "StepDescription": "Create wireframes, mockups, and prototypes."
+  },
+  {
+    "StepOrder": 3,
+    "StepTitle": "UI Components",
+    "StepDescription": "Design buttons, forms, and navigation bars."
+  },
+  {
+    "StepOrder": 4,
+    "StepTitle": "Design Systems",
+    "StepDescription": "Build reusable libraries for consistency."
+  },
+  {
+    "StepOrder": 5,
+    "StepTitle": "Portfolio Project",
+    "StepDescription": "Redesign a popular app or create your own."
+  },
+
+  {
+    "StepOrder": 1,
+    "StepTitle": "User Empathy",
+    "StepDescription": "Learn to see problems from the user’s perspective."
+  },
+  {
+    "StepOrder": 2,
+    "StepTitle": "Research Methods",
+    "StepDescription": "Conduct interviews, surveys, and usability tests."
+  },
+  {
+    "StepOrder": 3,
+    "StepTitle": "Personas & Journey Maps",
+    "StepDescription": "Visualize user needs and pain points."
+  },
+  {
+    "StepOrder": 4,
+    "StepTitle": "Wireframing",
+    "StepDescription": "Sketch low-fidelity solutions quickly."
+  },
+  {
+    "StepOrder": 5,
+    "StepTitle": "Test & Iterate",
+    "StepDescription": "Refine designs based on real user feedback."
+  }
+]

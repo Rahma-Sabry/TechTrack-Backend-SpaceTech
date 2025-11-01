@@ -1,0 +1,22 @@
+[
+  {
+    "UserName": "Layla",
+    "Email": "layla@example.com",
+    "PasswordHash": "hashed_password_1"
+  },
+  {
+    "UserName": "Ahmed",
+    "Email": "ahmed@example.com",
+    "PasswordHash": "hashed_password_2"
+  },
+  {
+    "UserName": "Nora",
+    "Email": "nora@example.com",
+    "PasswordHash": "hashed_password_3"
+  },
+  {
+    "UserName": "Omar",
+    "Email": "omar@example.com",
+    "PasswordHash": "hashed_password_4"
+  }
+]

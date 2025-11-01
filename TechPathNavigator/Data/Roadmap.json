@@ -1,0 +1,50 @@
+[
+  {
+    "Title": "Frontend Development Roadmap",
+    "Description": "A step-by-step guide to become a frontend developer, from HTML to advanced React."
+  },
+  {
+    "Title": ".NET Backend Developer Roadmap",
+    "Description": "Master backend development with C#, .NET Core, and Entity Framework."
+  },
+  {
+    "Title": "Full Stack Web Developer Roadmap",
+    "Description": "Combine frontend and backend skills to build complete web applications."
+  },
+  {
+    "Title": "Android Developer Roadmap",
+    "Description": "Learn Kotlin and Android Studio to build native Android apps."
+  },
+  {
+    "Title": "iOS Developer Roadmap",
+    "Description": "Start with Swift and Xcode to create beautiful iOS applications."
+  },
+  {
+    "Title": "Cross-Platform Mobile Developer Roadmap",
+    "Description": "Build apps for both Android and iOS using Flutter."
+  },
+  {
+    "Title": "Game Developer Roadmap (Unity)",
+    "Description": "Create 2D/3D games using Unity and C# scripting."
+  },
+  {
+    "Title": "Cybersecurity Analyst Roadmap",
+    "Description": "Learn ethical hacking, network security, and defensive techniques."
+  },
+  {
+    "Title": "Data Analyst Roadmap",
+    "Description": "Go from Excel to SQL and Power BI to tell stories with data."
+  },
+  {
+    "Title": "Data Scientist Roadmap",
+    "Description": "Master Python, statistics, and machine learning to solve real-world problems."
+  },
+  {
+    "Title": "UI Designer Roadmap",
+    "Description": "Learn visual design, typography, and Figma to create stunning interfaces."
+  },
+  {
+    "Title": "UX Researcher Roadmap",
+    "Description": "Understand users, conduct research, and design human-centered experiences."
+  }
+]
