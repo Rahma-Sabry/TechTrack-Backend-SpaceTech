@@ -1,6 +1,11 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using TechPathNavigator.DTOs;
-using TechPathNavigator.Models;
+using TechPathNavigator.Extensions;
 using TechPathNavigator.Repositories;
+using TechPathNavigator.Common.Errors;
 
 namespace TechPathNavigator.Services
 {
@@ -10,117 +15,51 @@ namespace TechPathNavigator.Services
 
         public CategoryService(ICategoryRepository repo)
         {
-            _repo = repo;
+            _repo = repo ?? throw new ArgumentNullException(nameof(repo));
         }
 
-        // GET ALL - Returns list of CategoryGetDto
+        // Get all categories
         public async Task<IEnumerable<CategoryGetDto>> GetAllCategoriesAsync()
         {
-            try
-            {
-                var categories = await _repo.GetAllAsync();
-
-                return categories.Select(c => new CategoryGetDto
-                {
-                    CategoryId = c.CategoryId,
-                    CategoryName = c.CategoryName,
-                    Description = c.Description
-                }).ToList();
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Failed to retrieve categories from database", ex);
-            }
+            var categories = await _repo.GetAllAsync();
+            return categories.Select(c => c.ToGetDto());
         }
 
-        // GET BY ID - Returns single CategoryGetDto or null
+        // Get category by ID
         public async Task<CategoryGetDto?> GetCategoryByIdAsync(int id)
         {
-            try
-            {
-                var category = await _repo.GetByIdAsync(id);
-
-                if (category == null) return null;
-
-                return new CategoryGetDto
-                {
-                    CategoryId = category.CategoryId,
-                    CategoryName = category.CategoryName,
-                    Description = category.Description
-                };
-            }
-            catch (Exception ex)
-            {
-                throw new Exception($"Failed to retrieve category with ID {id}", ex);
-            }
+            var category = await _repo.GetByIdAsync(id);
+            return category?.ToGetDto();
         }
 
-        // CREATE - Takes CategoryPostDto, returns CategoryGetDto
+        // Create a new category
         public async Task<CategoryGetDto> CreateCategoryAsync(CategoryPostDto dto)
         {
-            try
-            {
-                var category = new Category
-                {
-                    CategoryName = dto.Name ?? string.Empty,
-                    Description = dto.Description ?? string.Empty
-                };
+            if (string.IsNullOrWhiteSpace(dto.Name))
+                throw new ArgumentException(ErrorMessages.Company_NameRequired);
 
-                var createdCategory = await _repo.AddAsync(category);
-
-                return new CategoryGetDto
-                {
-                    CategoryId = createdCategory.CategoryId,
-                    CategoryName = createdCategory.CategoryName,
-                    Description = createdCategory.Description
-                };
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Failed to create category", ex);
-            }
+            var entity = dto.ToEntity();
+            var created = await _repo.AddAsync(entity);
+            return created.ToGetDto();
         }
 
-        // UPDATE - Takes CategoryPostDto, returns updated CategoryGetDto or null
+        // Update an existing category
         public async Task<CategoryGetDto?> UpdateCategoryAsync(int id, CategoryPostDto dto)
         {
-            try
-            {
-                var existingCategory = await _repo.GetByIdAsync(id);
+            var existing = await _repo.GetByIdAsync(id);
+            if (existing == null) return null;
 
-                if (existingCategory == null) return null;
+            existing.CategoryName = dto.Name ?? existing.CategoryName;
+            existing.Description = dto.Description ?? existing.Description;
 
-                existingCategory.CategoryName = dto.Name ?? existingCategory.CategoryName;
-                existingCategory.Description = dto.Description ?? existingCategory.Description;
-
-                var updatedCategory = await _repo.UpdateAsync(existingCategory);
-
-                if (updatedCategory == null) return null;
-
-                return new CategoryGetDto
-                {
-                    CategoryId = updatedCategory.CategoryId,
-                    CategoryName = updatedCategory.CategoryName,
-                    Description = updatedCategory.Description
-                };
-            }
-            catch (Exception ex)
-            {
-                throw new Exception($"Failed to update category with ID {id}", ex);
-            }
+            var updated = await _repo.UpdateAsync(existing);
+            return updated?.ToGetDto();
         }
 
-        // DELETE - Returns true if deleted, false if not found
+        // Delete a category
         public async Task<bool> DeleteCategoryAsync(int id)
         {
-            try
-            {
-                return await _repo.DeleteAsync(id);
-            }
-            catch (Exception ex)
-            {
-                throw new Exception($"Failed to delete category with ID {id}", ex);
-            }
+            return await _repo.DeleteAsync(id);
         }
     }
 }

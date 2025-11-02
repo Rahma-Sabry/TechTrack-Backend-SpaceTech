@@ -1,4 +1,6 @@
 ﻿using TechPathNavigator.Models;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace TechPathNavigator.Repositories
 {
@@ -6,9 +8,9 @@ namespace TechPathNavigator.Repositories
     {
         Task<IEnumerable<Technology>> GetAllAsync();
         Task<Technology?> GetByIdAsync(int id);
-        Task<IEnumerable<Technology>> GetBySubCategoryIdAsync(int subCategoryId);
-        Task<Technology> AddAsync(Technology technology);
-        Task<Technology?> UpdateAsync(Technology technology);
+        Task<IEnumerable<Technology>> GetByTrackIdAsync(int trackId); // added
+        Task<Technology> AddAsync(Technology entity);
+        Task<Technology?> UpdateAsync(Technology entity);
         Task<bool> DeleteAsync(int id);
     }
 }

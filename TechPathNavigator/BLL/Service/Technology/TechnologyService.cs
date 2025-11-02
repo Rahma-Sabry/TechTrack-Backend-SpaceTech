@@ -1,4 +1,10 @@
-﻿using TechPathNavigator.DTOs;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using TechPathNavigator.Common.Errors;
+using TechPathNavigator.DTOs;
+using TechPathNavigator.Extensions;
 using TechPathNavigator.Models;
 using TechPathNavigator.Repositories;
 using TechPathNavigator.Service.Technology;
@@ -11,101 +17,49 @@ namespace TechPathNavigator.Services
 
         public TechnologyService(ITechnologyRepository repo)
         {
-            _repo = repo;
+            _repo = repo ?? throw new ArgumentNullException(nameof(repo));
         }
 
         public async Task<IEnumerable<TechnologyGetDto>> GetAllAsync()
         {
             var techs = await _repo.GetAllAsync();
-
-            return techs.Select(t => new TechnologyGetDto
-            {
-                TechnologyId = t.TechnologyId,
-                TrackId = t.TrackId,
-                TechnologyName = t.TechnologyName,
-                Description = t.Description,
-                VideoUrl = t.VideoUrl,
-                CreatedAt = t.CreatedAt
-            });
+            return techs.Select(t => t.ToGetDto());
         }
 
         public async Task<TechnologyGetDto?> GetByIdAsync(int id)
         {
-            var t = await _repo.GetByIdAsync(id);
-            if (t == null) return null;
-
-            return new TechnologyGetDto
-            {
-                TechnologyId = t.TechnologyId,
-                TrackId = t.TrackId,
-                TechnologyName = t.TechnologyName,
-                Description = t.Description,
-                VideoUrl = t.VideoUrl,
-                CreatedAt = t.CreatedAt
-            };
+            var tech = await _repo.GetByIdAsync(id);
+            return tech?.ToGetDto();
         }
 
-        public async Task<IEnumerable<TechnologyGetDto>> GetBySubCategoryIdAsync(int subCategoryId)
+        public async Task<IEnumerable<TechnologyGetDto>> GetByTrackIdAsync(int trackId)
         {
-            var techs = await _repo.GetBySubCategoryIdAsync(subCategoryId);
-
-            return techs.Select(t => new TechnologyGetDto
-            {
-                TechnologyId = t.TechnologyId,
-                TrackId = t.TrackId,
-                TechnologyName = t.TechnologyName,
-                Description = t.Description,
-                VideoUrl = t.VideoUrl,
-                CreatedAt = t.CreatedAt
-            });
+            var techs = await _repo.GetByTrackIdAsync(trackId);
+            return techs.Select(t => t.ToGetDto());
         }
 
         public async Task<TechnologyGetDto> AddAsync(TechnologyPostDto dto)
         {
-            var entity = new Technology
-            {
-                TrackId = dto.TrackId,
-                TechnologyName = dto.TechnologyName,
-                Description = dto.Description,
-                VideoUrl = dto.VideoUrl
-            };
+            if (string.IsNullOrWhiteSpace(dto.TechnologyName))
+                throw new ArgumentException(ErrorMessages.Technology_NameRequired);
 
+            var entity = dto.ToEntity();
             var added = await _repo.AddAsync(entity);
-
-            return new TechnologyGetDto
-            {
-                TechnologyId = added.TechnologyId,
-                TrackId = added.TrackId,
-                TechnologyName = added.TechnologyName,
-                Description = added.Description,
-                VideoUrl = added.VideoUrl,
-                CreatedAt = added.CreatedAt
-            };
+            return added.ToGetDto();
         }
 
         public async Task<TechnologyGetDto?> UpdateAsync(int id, TechnologyPostDto dto)
         {
-            var entity = new Technology
-            {
-                TechnologyId = id,
-                TrackId = dto.TrackId,
-                TechnologyName = dto.TechnologyName,
-                Description = dto.Description,
-                VideoUrl = dto.VideoUrl
-            };
+            var existing = await _repo.GetByIdAsync(id);
+            if (existing == null) return null;
 
-            var updated = await _repo.UpdateAsync(entity);
-            if (updated == null) return null;
+            existing.TrackId = dto.TrackId;
+            existing.TechnologyName = dto.TechnologyName ?? existing.TechnologyName;
+            existing.Description = dto.Description ?? existing.Description;
+            existing.VideoUrl = dto.VideoUrl ?? existing.VideoUrl;
 
-            return new TechnologyGetDto
-            {
-                TechnologyId = updated.TechnologyId,
-                TrackId = updated.TrackId,
-                TechnologyName = updated.TechnologyName,
-                Description = updated.Description,
-                VideoUrl = updated.VideoUrl,
-                CreatedAt = updated.CreatedAt
-            };
+            var updated = await _repo.UpdateAsync(existing);
+            return updated?.ToGetDto();
         }
 
         public async Task<bool> DeleteAsync(int id)

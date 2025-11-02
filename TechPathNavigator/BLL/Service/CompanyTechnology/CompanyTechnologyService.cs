@@ -1,4 +1,6 @@
+using Microsoft.AspNetCore.Http.HttpResults;
 using TechPathNavigator.Common.Errors;
+using TechPathNavigator.Common.Messages;
 using TechPathNavigator.Common.Results;
 using TechPathNavigator.DTOs;
 using TechPathNavigator.Extensions;
@@ -8,13 +10,14 @@ namespace TechPathNavigator.Services
 {
     public class CompanyTechnologyService : ICompanyTechnologyService
     {
-        private static readonly HashSet<string> AllowedUsage = new(StringComparer.OrdinalIgnoreCase) { "Primary", "Secondary", "Experimental" };
+        private static readonly HashSet<string> AllowedUsage = new(StringComparer.OrdinalIgnoreCase)
+            { "Primary", "Secondary", "Experimental" };
 
         private readonly ICompanyTechnologyRepository _repo;
 
         public CompanyTechnologyService(ICompanyTechnologyRepository repo)
         {
-            _repo = repo;
+            _repo = repo ?? throw new ArgumentNullException(nameof(repo));
         }
 
         public async Task<IEnumerable<CompanyTechnologyGetDto>> GetAllAsync()
@@ -31,8 +34,9 @@ namespace TechPathNavigator.Services
 
         public async Task<ServiceResult<CompanyTechnologyGetDto>> CreateAsync(CompanyTechnologyPostDto dto)
         {
-            var errors = await Validate(dto, checkDuplicate: true);
-            if (errors.Any()) return ServiceResult<CompanyTechnologyGetDto>.Fail(errors);
+            var errors = await ValidateAsync(dto, checkDuplicate: true);
+            if (errors.Any())
+                return ServiceResult<CompanyTechnologyGetDto>.Fail(errors);
 
             var created = await _repo.AddAsync(dto.ToEntity());
             return ServiceResult<CompanyTechnologyGetDto>.Ok(created.ToGetDto());
@@ -40,20 +44,32 @@ namespace TechPathNavigator.Services
 
         public async Task<ServiceResult<CompanyTechnologyGetDto>> UpdateAsync(int id, CompanyTechnologyPostDto dto)
         {
-            var errors = await Validate(dto, checkDuplicate: false);
-            if (errors.Any()) return ServiceResult<CompanyTechnologyGetDto>.Fail(errors);
+            var errors = await ValidateAsync(dto, checkDuplicate: false);
+            if (errors.Any())
+                return ServiceResult<CompanyTechnologyGetDto>.Fail(errors);
 
-            var updated = await _repo.UpdateAsync(dto.ToEntity(id));
-            if (updated == null) return ServiceResult<CompanyTechnologyGetDto>.Fail("CompanyTechnology not found.");
+            var existing = await _repo.GetByIdAsync(id);
+            if (existing == null)
+                return ServiceResult<CompanyTechnologyGetDto>.Fail(ApiMessages.CompanyTechnologyNotFound);
+
+            existing.CompanyId = dto.CompanyId;
+            existing.TechnologyId = dto.TechnologyId;
+            existing.UsageLevel = dto.UsageLevel;
+
+            var updated = await _repo.UpdateAsync(existing);
+            if (updated == null)
+                return ServiceResult<CompanyTechnologyGetDto>.Fail(ApiMessages.CompanyTechnologyNotFound);
+
             return ServiceResult<CompanyTechnologyGetDto>.Ok(updated.ToGetDto());
         }
 
         public async Task<bool> DeleteAsync(int id)
         {
-            return await _repo.DeleteAsync(id);
+            var deleted = await _repo.DeleteAsync(id);
+            return deleted;
         }
 
-        private async Task<List<string>> Validate(CompanyTechnologyPostDto dto, bool checkDuplicate)
+        private async Task<List<string>> ValidateAsync(CompanyTechnologyPostDto dto, bool checkDuplicate)
         {
             var errors = new List<string>();
 
@@ -81,5 +97,3 @@ namespace TechPathNavigator.Services
         }
     }
 }
-
-

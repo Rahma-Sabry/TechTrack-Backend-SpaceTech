@@ -37,6 +37,16 @@ namespace TechPathNavigator.Repositories
                 .ToListAsync();
         }
 
+        // ← Add this method to satisfy the interface
+        public async Task<IEnumerable<Technology>> GetByTrackIdAsync(int trackId)
+        {
+            return await _context.Technologies
+                .Include(t => t.Track)
+                .Where(t => t.TrackId == trackId)
+                .AsNoTracking()
+                .ToListAsync();
+        }
+
         public async Task<Technology> AddAsync(Technology technology)
         {
             _context.Technologies.Add(technology);
@@ -68,4 +78,5 @@ namespace TechPathNavigator.Repositories
             return true;
         }
     }
+
 }

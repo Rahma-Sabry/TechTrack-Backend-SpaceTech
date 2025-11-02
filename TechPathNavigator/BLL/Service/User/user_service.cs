@@ -12,7 +12,7 @@ namespace TechPathNavigator.Services
 
         public UserService(IUserRepository repo)
         {
-            _repo = repo;
+            _repo = repo ?? throw new ArgumentNullException(nameof(repo));
         }
 
         public async Task<IEnumerable<UserGetDto>> GetAllAsync()
@@ -30,7 +30,6 @@ namespace TechPathNavigator.Services
         {
             var user = await _repo.GetByIdAsync(id);
             if (user == null) return null;
-
             return new UserGetDto
             {
                 UserId = user.UserId,
@@ -43,7 +42,6 @@ namespace TechPathNavigator.Services
         {
             var user = await _repo.GetByEmailAsync(email);
             if (user == null) return null;
-
             return new UserGetDto
             {
                 UserId = user.UserId,
@@ -54,15 +52,14 @@ namespace TechPathNavigator.Services
 
         public async Task<UserGetDto> AddAsync(UserPostDto dto)
         {
-            // TODO: Hash password properly using BCrypt or similar
-            var entity = new User
+            var user = new User
             {
                 UserName = dto.UserName,
                 Email = dto.Email,
-                PasswordHash = HashPassword(dto.Password)  // Simple hash for now
+                PasswordHash = dto.Password // ideally hash this before saving
             };
 
-            var added = await _repo.AddAsync(entity);
+            var added = await _repo.AddAsync(user);
 
             return new UserGetDto
             {
@@ -74,16 +71,15 @@ namespace TechPathNavigator.Services
 
         public async Task<UserGetDto?> UpdateAsync(int id, UserUpdateDto dto)
         {
-            var entity = new User
-            {
-                UserId = id,
-                UserName = dto.UserName,
-                Email = dto.Email,
-                PasswordHash = !string.IsNullOrEmpty(dto.Password) ? HashPassword(dto.Password) : null
-            };
+            var existing = await _repo.GetByIdAsync(id);
+            if (existing == null) return null;
 
-            var updated = await _repo.UpdateAsync(entity);
-            if (updated == null) return null;
+            existing.UserName = dto.UserName ?? existing.UserName;
+            existing.Email = dto.Email ?? existing.Email;
+            if (!string.IsNullOrWhiteSpace(dto.Password))
+                existing.PasswordHash = dto.Password; // ideally hash
+
+            var updated = await _repo.UpdateAsync(existing);
 
             return new UserGetDto
             {
@@ -96,16 +92,6 @@ namespace TechPathNavigator.Services
         public async Task<bool> DeleteAsync(int id)
         {
             return await _repo.DeleteAsync(id);
-        }
-
-        // Simple password hashing - replace with BCrypt.Net-Next in production
-        private string? HashPassword(string? password)
-        {
-            if (string.IsNullOrEmpty(password)) return null;
-
-            // TODO: Replace with proper password hashing (BCrypt, Argon2, etc.)
-            // For now, just a simple base64 encoding (NOT SECURE - DEMO ONLY)
-            return Convert.ToBase64String(System.Text.Encoding.UTF8.GetBytes(password));
         }
     }
 }

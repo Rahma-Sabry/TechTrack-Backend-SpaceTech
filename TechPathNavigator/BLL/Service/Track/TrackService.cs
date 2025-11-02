@@ -1,4 +1,10 @@
-﻿using TechPathNavigator.DTOs;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+using TechPathNavigator.Common.Errors;
+using TechPathNavigator.DTOs;
+using TechPathNavigator.Extensions;
 using TechPathNavigator.Models;
 using TechPathNavigator.Repositories;
 using TechPathNavigator.Service.Track;
@@ -11,88 +17,46 @@ namespace TechPathNavigator.Services
 
         public TrackService(ITrackRepository repo)
         {
-            _repo = repo;
+            _repo = repo ?? throw new ArgumentNullException(nameof(repo));
         }
 
         public async Task<IEnumerable<TrackGetDto>> GetAllAsync()
         {
             var tracks = await _repo.GetAllAsync();
-            return tracks.Select(t => new TrackGetDto
-            {
-                TrackId = t.TrackId,
-                SubCategoryId = t.SubCategoryId,
-                TrackName = t.TrackName,
-                Description = t.Description,
-                DifficultyLevel = t.DifficultyLevel,
-                EstimatedDuration = t.EstimatedDuration
-            });
+            return tracks.Select(t => t.ToGetDto());
         }
 
         public async Task<TrackGetDto?> GetByIdAsync(int id)
         {
-            var t = await _repo.GetByIdAsync(id);
-            if (t == null) return null;
-
-            return new TrackGetDto
-            {
-                TrackId = t.TrackId,
-                SubCategoryId = t.SubCategoryId,
-                TrackName = t.TrackName,
-                Description = t.Description,
-                DifficultyLevel = t.DifficultyLevel,
-                EstimatedDuration = t.EstimatedDuration
-            };
+            var track = await _repo.GetByIdAsync(id);
+            return track?.ToGetDto();
         }
 
         public async Task<TrackGetDto> AddAsync(TrackPostDto dto)
         {
-            var entity = new Track
-            {
-                SubCategoryId = dto.SubCategoryId,
-                TrackName = dto.TrackName,
-                Description = dto.Description,
-                DifficultyLevel = dto.DifficultyLevel,
-                EstimatedDuration = dto.EstimatedDuration
-            };
+            if (string.IsNullOrWhiteSpace(dto.TrackName))
+                throw new ArgumentException(ErrorMessages.Track_NameRequired);
 
+            var entity = dto.ToEntity();
             var added = await _repo.AddAsync(entity);
-            return new TrackGetDto
-            {
-                TrackId = added.TrackId,
-                SubCategoryId = added.SubCategoryId,
-                TrackName = added.TrackName,
-                Description = added.Description,
-                DifficultyLevel = added.DifficultyLevel,
-                EstimatedDuration = added.EstimatedDuration
-            };
+            return added.ToGetDto();
         }
 
         public async Task<TrackGetDto?> UpdateAsync(int id, TrackPostDto dto)
         {
-            var entity = new Track
-            {
-                TrackId = id,
-                SubCategoryId = dto.SubCategoryId,
-                TrackName = dto.TrackName,
-                Description = dto.Description,
-                DifficultyLevel = dto.DifficultyLevel,
-                EstimatedDuration = dto.EstimatedDuration
-            };
+            var existing = await _repo.GetByIdAsync(id);
+            if (existing == null) return null;
 
-            var updated = await _repo.UpdateAsync(entity);
-            if (updated == null) return null;
+            existing.TrackName = dto.TrackName ?? existing.TrackName;
+            existing.Description = dto.Description ?? existing.Description;
 
-            return new TrackGetDto
-            {
-                TrackId = updated.TrackId,
-                SubCategoryId = updated.SubCategoryId,
-                TrackName = updated.TrackName,
-                Description = updated.Description,
-                DifficultyLevel = updated.DifficultyLevel,
-                EstimatedDuration = updated.EstimatedDuration
-            };
+            var updated = await _repo.UpdateAsync(existing);
+            return updated?.ToGetDto();
         }
 
-        public async Task<bool> DeleteAsync(int id) => await _repo.DeleteAsync(id);
+        public async Task<bool> DeleteAsync(int id)
+        {
+            return await _repo.DeleteAsync(id);
+        }
     }
 }

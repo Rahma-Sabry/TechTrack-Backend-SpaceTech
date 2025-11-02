@@ -1,8 +1,7 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using TechPathNavigator.Common.Errors;
+using TechPathNavigator.Common.Messages;
 using TechPathNavigator.DTOs;
+using TechPathNavigator.Extensions;
 using TechPathNavigator.Models;
 using TechPathNavigator.Repositories;
 
@@ -14,76 +13,41 @@ namespace TechPathNavigator.Services
 
         public SubCategoryService(ISubCategoryRepository subCategoryRepository)
         {
-            _subCategoryRepository = subCategoryRepository;
+            _subCategoryRepository = subCategoryRepository ?? throw new ArgumentNullException(nameof(subCategoryRepository));
         }
 
         public async Task<IEnumerable<SubCategoryGetDto>> GetAllAsync()
         {
             var subCategories = await _subCategoryRepository.GetAllAsync();
-
-            return subCategories.Select(sc => new SubCategoryGetDto
-            {
-                SubCategoryId = sc.SubCategoryId,
-                SubCategoryName = sc.SubCategoryName,
-                Description = sc.Description,
-                CategoryId = sc.CategoryId
-            });
+            return subCategories.Select(sc => sc.ToGetDto());
         }
 
         public async Task<SubCategoryGetDto?> GetByIdAsync(int id)
         {
             var sc = await _subCategoryRepository.GetByIdAsync(id);
-            if (sc == null) return null;
-
-            return new SubCategoryGetDto
-            {
-                SubCategoryId = sc.SubCategoryId,
-                SubCategoryName = sc.SubCategoryName,
-                Description = sc.Description,
-                CategoryId = sc.CategoryId
-            };
+            return sc?.ToGetDto();
         }
 
-        public async Task<SubCategoryGetDto> AddAsync(SubCategoryPostDto subCategoryDto)
+        public async Task<SubCategoryGetDto> AddAsync(SubCategoryPostDto dto)
         {
-            var subCategory = new SubCategory
-            {
-                SubCategoryName = subCategoryDto.SubCategoryName,
-                Description = subCategoryDto.Description,
-                CategoryId = subCategoryDto.CategoryId
-            };
+            if (string.IsNullOrWhiteSpace(dto.SubCategoryName))
+                throw new ArgumentException(ErrorMessages.SubCategory_NameRequired);
 
-            var added = await _subCategoryRepository.AddAsync(subCategory);
-
-            return new SubCategoryGetDto
-            {
-                SubCategoryId = added.SubCategoryId,
-                SubCategoryName = added.SubCategoryName,
-                Description = added.Description,
-                CategoryId = added.CategoryId
-            };
+            var entity = dto.ToEntity();
+            var added = await _subCategoryRepository.AddAsync(entity);
+            return added.ToGetDto(); // Not nullable because AddAsync guarantees a result
         }
 
-        public async Task<SubCategoryGetDto?> UpdateAsync(int id, SubCategoryPostDto subCategoryDto)
+        public async Task<SubCategoryGetDto?> UpdateAsync(int id, SubCategoryPostDto dto)
         {
-            var subCategory = new SubCategory
-            {
-                SubCategoryId = id,
-                SubCategoryName = subCategoryDto.SubCategoryName,
-                Description = subCategoryDto.Description,
-                CategoryId = subCategoryDto.CategoryId
-            };
+            var existing = await _subCategoryRepository.GetByIdAsync(id);
+            if (existing == null) return null;
 
-            var updated = await _subCategoryRepository.UpdateAsync(subCategory);
-            if (updated == null) return null;
+            existing.SubCategoryName = dto.SubCategoryName ?? existing.SubCategoryName;
+            existing.CategoryId = dto.CategoryId != 0 ? dto.CategoryId : existing.CategoryId;
 
-            return new SubCategoryGetDto
-            {
-                SubCategoryId = updated.SubCategoryId,
-                SubCategoryName = updated.SubCategoryName,
-                Description = updated.Description,
-                CategoryId = updated.CategoryId
-            };
+            var updated = await _subCategoryRepository.UpdateAsync(existing);
+            return updated?.ToGetDto(); // Nullable because update might fail
         }
 
         public async Task<bool> DeleteAsync(int id)
@@ -94,14 +58,7 @@ namespace TechPathNavigator.Services
         public async Task<IEnumerable<SubCategoryGetDto>> GetByCategoryIdAsync(int categoryId)
         {
             var subCategories = await _subCategoryRepository.GetByCategoryIdAsync(categoryId);
-
-            return subCategories.Select(sc => new SubCategoryGetDto
-            {
-                SubCategoryId = sc.SubCategoryId,
-                SubCategoryName = sc.SubCategoryName,
-                Description = sc.Description,
-                CategoryId = sc.CategoryId
-            });
+            return subCategories.Select(sc => sc.ToGetDto());
         }
     }
 }
