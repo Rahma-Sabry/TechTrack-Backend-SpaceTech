@@ -1,311 +1,371 @@
 [
   {
+    "RoadmapId": 1,
     "StepOrder": 1,
     "StepTitle": "Learn HTML & CSS",
     "StepDescription": "Start with the basics of web structure and styling."
   },
   {
+    "RoadmapId": 1,
     "StepOrder": 2,
     "StepTitle": "Master JavaScript",
     "StepDescription": "Add interactivity and dynamic behavior to your websites."
   },
   {
+    "RoadmapId": 1,
     "StepOrder": 3,
     "StepTitle": "Responsive Design",
     "StepDescription": "Make your websites look great on all devices using Flexbox and Grid."
   },
   {
+    "RoadmapId": 1,
     "StepOrder": 4,
     "StepTitle": "Learn React",
     "StepDescription": "Build modern, component-based user interfaces with React."
   },
   {
+    "RoadmapId": 1,
     "StepOrder": 5,
     "StepTitle": "Build Projects",
     "StepDescription": "Apply your skills by creating real-world projects like a portfolio or todo app."
   },
 
   {
+    "RoadmapId": 2,
     "StepOrder": 1,
     "StepTitle": "Learn C#",
     "StepDescription": "Master the fundamentals of C# programming language."
   },
   {
+    "RoadmapId": 2,
     "StepOrder": 2,
     "StepTitle": "Understand .NET Core",
     "StepDescription": "Build your first web APIs and console applications."
   },
   {
+    "RoadmapId": 2,
     "StepOrder": 3,
     "StepTitle": "Work with Databases",
     "StepDescription": "Use Entity Framework Core to connect and manage data."
   },
   {
+    "RoadmapId": 2,
     "StepOrder": 4,
     "StepTitle": "Authentication & Authorization",
     "StepDescription": "Secure your APIs with JWT and user roles."
   },
   {
+    "RoadmapId": 2,
     "StepOrder": 5,
     "StepTitle": "Deploy to Cloud",
     "StepDescription": "Publish your backend to Azure or other cloud platforms."
   },
 
   {
+    "RoadmapId": 3,
     "StepOrder": 1,
     "StepTitle": "Frontend Basics",
     "StepDescription": "HTML, CSS, JavaScript, and a framework like React."
   },
   {
+    "RoadmapId": 3,
     "StepOrder": 2,
     "StepTitle": "Backend with .NET",
     "StepDescription": "Build RESTful APIs using C# and Entity Framework."
   },
   {
+    "RoadmapId": 3,
     "StepOrder": 3,
     "StepTitle": "Connect Frontend & Backend",
     "StepDescription": "Use Axios or Fetch to communicate between client and server."
   },
   {
+    "RoadmapId": 3,
     "StepOrder": 4,
     "StepTitle": "Add Authentication",
     "StepDescription": "Implement login and user sessions."
   },
   {
+    "RoadmapId": 3,
     "StepOrder": 5,
     "StepTitle": "Build a Full Project",
     "StepDescription": "Create a complete app like a blog or task manager."
   },
 
   {
+    "RoadmapId": 4,
     "StepOrder": 1,
     "StepTitle": "Learn Kotlin Basics",
     "StepDescription": "Understand variables, functions, and control flow."
   },
   {
+    "RoadmapId": 4,
     "StepOrder": 2,
     "StepTitle": "Android Studio Setup",
     "StepDescription": "Install and navigate the official Android IDE."
   },
   {
+    "RoadmapId": 4,
     "StepOrder": 3,
     "StepTitle": "Build UI with XML",
     "StepDescription": "Design screens using layouts and views."
   },
   {
+    "RoadmapId": 4,
     "StepOrder": 4,
     "StepTitle": "Handle User Input",
     "StepDescription": "Respond to clicks, gestures, and navigation."
   },
   {
+    "RoadmapId": 4,
     "StepOrder": 5,
     "StepTitle": "Publish to Play Store",
     "StepDescription": "Prepare and release your first Android app."
   },
 
   {
+    "RoadmapId": 5,
     "StepOrder": 1,
     "StepTitle": "Learn Swift",
     "StepDescription": "Start with Apple’s modern programming language."
   },
   {
+    "RoadmapId": 5,
     "StepOrder": 2,
     "StepTitle": "Xcode Basics",
     "StepDescription": "Use Apple’s IDE to build and test apps."
   },
   {
+    "RoadmapId": 5,
     "StepOrder": 3,
     "StepTitle": "UIKit & SwiftUI",
     "StepDescription": "Design interfaces with Apple’s frameworks."
   },
   {
+    "RoadmapId": 5,
     "StepOrder": 4,
     "StepTitle": "Test on Simulator",
     "StepDescription": "Run and debug your app on virtual iOS devices."
   },
   {
+    "RoadmapId": 5,
     "StepOrder": 5,
     "StepTitle": "Submit to App Store",
     "StepDescription": "Follow Apple’s guidelines to publish your app."
   },
 
   {
+    "RoadmapId": 6,
     "StepOrder": 1,
     "StepTitle": "Dart Language",
     "StepDescription": "Learn Dart basics — the language behind Flutter."
   },
   {
+    "RoadmapId": 6,
     "StepOrder": 2,
     "StepTitle": "Flutter Widgets",
     "StepDescription": "Build UIs using Flutter’s rich widget library."
   },
   {
+    "RoadmapId": 6,
     "StepOrder": 3,
     "StepTitle": "Navigation & State",
     "StepDescription": "Manage app flow and data changes."
   },
   {
+    "RoadmapId": 6,
     "StepOrder": 4,
     "StepTitle": "Connect to Backend",
     "StepDescription": "Fetch data from APIs and display it."
   },
   {
+    "RoadmapId": 6,
     "StepOrder": 5,
     "StepTitle": "Deploy to Stores",
     "StepDescription": "Publish your app to Google Play and App Store."
   },
 
   {
+    "RoadmapId": 7,
     "StepOrder": 1,
     "StepTitle": "Install Unity",
     "StepDescription": "Set up Unity Hub and your first project."
   },
   {
+    "RoadmapId": 7,
     "StepOrder": 2,
     "StepTitle": "Learn C# for Games",
     "StepDescription": "Write scripts to control game objects."
   },
   {
+    "RoadmapId": 7,
     "StepOrder": 3,
     "StepTitle": "Physics & Collisions",
     "StepDescription": "Make objects move, jump, and interact."
   },
   {
+    "RoadmapId": 7,
     "StepOrder": 4,
     "StepTitle": "UI & Menus",
     "StepDescription": "Add start screens, scoreboards, and buttons."
   },
   {
+    "RoadmapId": 7,
     "StepOrder": 5,
     "StepTitle": "Build & Share",
     "StepDescription": "Export your game for PC or mobile."
   },
 
   {
+    "RoadmapId": 8,
     "StepOrder": 1,
     "StepTitle": "Networking Basics",
     "StepDescription": "Understand how data moves across networks."
   },
   {
+    "RoadmapId": 8,
     "StepOrder": 2,
     "StepTitle": "Linux Fundamentals",
     "StepDescription": "Learn command line and system administration."
   },
   {
+    "RoadmapId": 8,
     "StepOrder": 3,
     "StepTitle": "Use Security Tools",
     "StepDescription": "Practice with Wireshark, Nmap, and Metasploit."
   },
   {
+    "RoadmapId": 8,
     "StepOrder": 4,
     "StepTitle": "Ethical Hacking",
     "StepDescription": "Learn penetration testing methodologies."
   },
   {
+    "RoadmapId": 8,
     "StepOrder": 5,
     "StepTitle": "Get Certified",
     "StepDescription": "Prepare for certifications like CEH or CompTIA Security+."
   },
 
   {
+    "RoadmapId": 9,
     "StepOrder": 1,
     "StepTitle": "Excel & Google Sheets",
     "StepDescription": "Master formulas, pivot tables, and charts."
   },
   {
+    "RoadmapId": 9,
     "StepOrder": 2,
     "StepTitle": "Learn SQL",
     "StepDescription": "Query databases to extract insights."
   },
   {
+    "RoadmapId": 9,
     "StepOrder": 3,
     "StepTitle": "Data Visualization",
     "StepDescription": "Create dashboards with Power BI or Tableau."
   },
   {
+    "RoadmapId": 9,
     "StepOrder": 4,
     "StepTitle": "Basic Statistics",
     "StepDescription": "Understand averages, distributions, and correlations."
   },
   {
+    "RoadmapId": 9,
     "StepOrder": 5,
     "StepTitle": "Tell Data Stories",
     "StepDescription": "Present findings clearly to non-technical teams."
   },
 
   {
+    "RoadmapId": 10,
     "StepOrder": 1,
     "StepTitle": "Python Basics",
     "StepDescription": "Learn syntax, loops, and functions."
   },
   {
+    "RoadmapId": 10,
     "StepOrder": 2,
     "StepTitle": "Pandas & NumPy",
     "StepDescription": "Clean and manipulate data efficiently."
   },
   {
+    "RoadmapId": 10,
     "StepOrder": 3,
     "StepTitle": "Machine Learning",
     "StepDescription": "Train models using Scikit-learn."
   },
   {
+    "RoadmapId": 10,
     "StepOrder": 4,
     "StepTitle": "Model Evaluation",
     "StepDescription": "Measure accuracy, precision, and recall."
   },
   {
+    "RoadmapId": 10,
     "StepOrder": 5,
     "StepTitle": "Deploy a Model",
     "StepDescription": "Use Flask or cloud APIs to share your model."
   },
 
   {
+    "RoadmapId": 11,
     "StepOrder": 1,
     "StepTitle": "Design Principles",
     "StepDescription": "Learn contrast, alignment, spacing, and typography."
   },
   {
+    "RoadmapId": 11,
     "StepOrder": 2,
     "StepTitle": "Master Figma",
     "StepDescription": "Create wireframes, mockups, and prototypes."
   },
   {
+    "RoadmapId": 11,
     "StepOrder": 3,
     "StepTitle": "UI Components",
     "StepDescription": "Design buttons, forms, and navigation bars."
   },
   {
+    "RoadmapId": 11,
     "StepOrder": 4,
     "StepTitle": "Design Systems",
     "StepDescription": "Build reusable libraries for consistency."
   },
   {
+    "RoadmapId": 11,
     "StepOrder": 5,
     "StepTitle": "Portfolio Project",
     "StepDescription": "Redesign a popular app or create your own."
   },
 
   {
+    "RoadmapId": 12,
     "StepOrder": 1,
     "StepTitle": "User Empathy",
     "StepDescription": "Learn to see problems from the user’s perspective."
   },
   {
+    "RoadmapId": 12,
     "StepOrder": 2,
     "StepTitle": "Research Methods",
     "StepDescription": "Conduct interviews, surveys, and usability tests."
   },
   {
+    "RoadmapId": 12,
     "StepOrder": 3,
     "StepTitle": "Personas & Journey Maps",
     "StepDescription": "Visualize user needs and pain points."
   },
   {
+    "RoadmapId": 12,
     "StepOrder": 4,
     "StepTitle": "Wireframing",
     "StepDescription": "Sketch low-fidelity solutions quickly."
   },
   {
+    "RoadmapId": 12,
     "StepOrder": 5,
     "StepTitle": "Test & Iterate",
     "StepDescription": "Refine designs based on real user feedback."

@@ -1,49 +1,61 @@
 [
   {
+    "TrackId": 1,
     "Title": "Frontend Development Roadmap",
     "Description": "A step-by-step guide to become a frontend developer, from HTML to advanced React."
   },
   {
+    "TrackId": 2,
     "Title": ".NET Backend Developer Roadmap",
     "Description": "Master backend development with C#, .NET Core, and Entity Framework."
   },
   {
+    "TrackId": 3,
     "Title": "Full Stack Web Developer Roadmap",
     "Description": "Combine frontend and backend skills to build complete web applications."
   },
   {
+    "TrackId": 4,
     "Title": "Android Developer Roadmap",
     "Description": "Learn Kotlin and Android Studio to build native Android apps."
   },
   {
+    "TrackId": 5,
     "Title": "iOS Developer Roadmap",
     "Description": "Start with Swift and Xcode to create beautiful iOS applications."
   },
   {
+    "TrackId": 6,
     "Title": "Cross-Platform Mobile Developer Roadmap",
     "Description": "Build apps for both Android and iOS using Flutter."
   },
   {
+    "TrackId": 7,
     "Title": "Game Developer Roadmap (Unity)",
     "Description": "Create 2D/3D games using Unity and C# scripting."
   },
   {
+    "TrackId": 13,
     "Title": "Cybersecurity Analyst Roadmap",
     "Description": "Learn ethical hacking, network security, and defensive techniques."
   },
   {
+    "TrackId": 16,
     "Title": "Data Analyst Roadmap",
     "Description": "Go from Excel to SQL and Power BI to tell stories with data."
   },
   {
+    "TrackId": 17,
     "Title": "Data Scientist Roadmap",
     "Description": "Master Python, statistics, and machine learning to solve real-world problems."
   },
   {
+    "TrackId": 20,
     "Title": "UI Designer Roadmap",
     "Description": "Learn visual design, typography, and Figma to create stunning interfaces."
   },
   {
+    "TrackId": 21,
     "Title": "UX Researcher Roadmap",
     "Description": "Understand users, conduct research, and design human-centered experiences."
   }

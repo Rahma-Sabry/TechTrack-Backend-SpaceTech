@@ -1,8 +1,9 @@
 using TechPathNavigator.DTOs;
 using TechPathNavigator.Models;
 using TechPathNavigator.Repositories;
-
+using TechPathNavigator.Helpers;
 namespace TechPathNavigator.Services
+
 {
     public class CategoryService : ICategoryService
     {
@@ -29,7 +30,7 @@ namespace TechPathNavigator.Services
             }
             catch (Exception ex)
             {
-                throw new Exception("Failed to retrieve categories from database", ex);
+                throw new Exception(ErrorMessages.Category_FetchFailed, ex);
             }
         }
 
@@ -51,7 +52,7 @@ namespace TechPathNavigator.Services
             }
             catch (Exception ex)
             {
-                throw new Exception($"Failed to retrieve category with ID {id}", ex);
+                throw new Exception(ErrorMessages.Category_FetchByIdFailed, ex);
             }
         }
 
@@ -77,7 +78,7 @@ namespace TechPathNavigator.Services
             }
             catch (Exception ex)
             {
-                throw new Exception("Failed to create category", ex);
+                throw new Exception(ErrorMessages.Category_CreateFailed, ex);
             }
         }
 
@@ -106,7 +107,7 @@ namespace TechPathNavigator.Services
             }
             catch (Exception ex)
             {
-                throw new Exception($"Failed to update category with ID {id}", ex);
+                throw new Exception(ErrorMessages.Category_UpdateFailed, ex);
             }
         }
 
@@ -119,7 +120,7 @@ namespace TechPathNavigator.Services
             }
             catch (Exception ex)
             {
-                throw new Exception($"Failed to delete category with ID {id}", ex);
+                throw new Exception(ErrorMessages.Category_DeleteFailed, ex);
             }
         }
     }

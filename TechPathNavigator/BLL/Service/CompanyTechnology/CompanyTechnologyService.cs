@@ -44,7 +44,9 @@ namespace TechPathNavigator.Services
             if (errors.Any()) return ServiceResult<CompanyTechnologyGetDto>.Fail(errors);
 
             var updated = await _repo.UpdateAsync(dto.ToEntity(id));
-            if (updated == null) return ServiceResult<CompanyTechnologyGetDto>.Fail("CompanyTechnology not found.");
+            if (updated == null)
+                return ServiceResult<CompanyTechnologyGetDto>.Fail(ErrorMessages.CompanyTechnology_NotFound);
+                
             return ServiceResult<CompanyTechnologyGetDto>.Ok(updated.ToGetDto());
         }
 

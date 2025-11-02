@@ -1,131 +1,153 @@
 [
   {
+    "SubCategoryId": 1,
     "TrackName": "Frontend Development",
     "Description": "Learn to build user interfaces with HTML, CSS, JavaScript, and frameworks like React or Angular.",
     "DifficultyLevel": "Beginner",
     "EstimatedDuration": 100
   },
   {
+    "SubCategoryId": 1,
     "TrackName": "Backend Development",
     "Description": "Master server-side logic, databases, and APIs using .NET, Node.js, or Python.",
     "DifficultyLevel": "Intermediate",
     "EstimatedDuration": 150
   },
   {
+    "SubCategoryId": 1,
     "TrackName": "Full Stack Development",
     "Description": "Combine frontend and backend skills to build complete web applications from scratch.",
     "DifficultyLevel": "Intermediate",
     "EstimatedDuration": 250
   },
   {
+    "SubCategoryId": 2,
     "TrackName": "Android Development",
     "Description": "Build native Android apps using Kotlin or Java with Android Studio.",
     "DifficultyLevel": "Beginner",
     "EstimatedDuration": 120
   },
   {
+    "SubCategoryId": 2,
     "TrackName": "iOS Development",
     "Description": "Create iOS apps using Swift and Xcode for Apple devices.",
     "DifficultyLevel": "Beginner",
     "EstimatedDuration": 120
   },
   {
+    "SubCategoryId": 2,
     "TrackName": "Cross-Platform Mobile",
     "Description": "Develop apps for both Android and iOS using Flutter or React Native.",
     "DifficultyLevel": "Beginner",
     "EstimatedDuration": 140
   },
   {
+    "SubCategoryId": 3,
     "TrackName": "Desktop Game Development",
     "Description": "Build PC games using Unity or Unreal Engine with C# or C++.",
     "DifficultyLevel": "Intermediate",
     "EstimatedDuration": 180
   },
   {
+    "SubCategoryId": 3,
     "TrackName": "Mobile Game Development",
     "Description": "Create games for smartphones using Unity or Godot with touch controls and mobile optimization.",
     "DifficultyLevel": "Intermediate",
     "EstimatedDuration": 160
   },
   {
+    "SubCategoryId": 3,
     "TrackName": "Web Game Development",
     "Description": "Design browser-based games using HTML5, JavaScript, and WebGL.",
     "DifficultyLevel": "Beginner",
     "EstimatedDuration": 100
   },
   {
+    "SubCategoryId": 4,
     "TrackName": "Platform Engineer",
     "Description": "Design and maintain cloud platforms and infrastructure for development teams.",
     "DifficultyLevel": "Advanced",
     "EstimatedDuration": 200
   },
   {
+    "SubCategoryId": 4,
     "TrackName": "CI/CD Automation",
     "Description": "Automate testing and deployment pipelines using GitHub Actions, Jenkins, or GitLab CI.",
     "DifficultyLevel": "Intermediate",
     "EstimatedDuration": 140
   },
   {
+    "SubCategoryId": 4,
     "TrackName": "DevOps Engineer",
     "Description": "Bridge development and operations by managing infrastructure as code and monitoring systems.",
     "DifficultyLevel": "Advanced",
     "EstimatedDuration": 220
   },
   {
+    "SubCategoryId": 5,
     "TrackName": "Defensive Security",
     "Description": "Protect systems by identifying vulnerabilities and implementing security controls.",
     "DifficultyLevel": "Intermediate",
     "EstimatedDuration": 160
   },
   {
+    "SubCategoryId": 5,
     "TrackName": "Offensive Security",
     "Description": "Ethically hack systems to find weaknesses before attackers do.",
     "DifficultyLevel": "Advanced",
     "EstimatedDuration": 180
   },
   {
+    "SubCategoryId": 5,
     "TrackName": "Full Spectrum Security Analyst",
     "Description": "Combine defensive and offensive techniques to become a well-rounded cybersecurity professional.",
     "DifficultyLevel": "Advanced",
     "EstimatedDuration": 240
   },
   {
+    "SubCategoryId": 6,
     "TrackName": "Data Analyst",
     "Description": "Clean, analyze, and visualize data to support business decisions using SQL and Excel.",
     "DifficultyLevel": "Beginner",
     "EstimatedDuration": 120
   },
   {
+    "SubCategoryId": 7,
     "TrackName": "Data Scientist",
     "Description": "Apply machine learning and statistics to extract insights from complex datasets.",
     "DifficultyLevel": "Intermediate",
     "EstimatedDuration": 240
   },
   {
+    "SubCategoryId": 8,
     "TrackName": "Data Engineer",
     "Description": "Build scalable data pipelines and warehouses using SQL, Spark, and cloud tools.",
     "DifficultyLevel": "Advanced",
     "EstimatedDuration": 260
   },
   {
+    "SubCategoryId": 9,
     "TrackName": "ML Engineer",
     "Description": "Deploy and optimize machine learning models in production environments.",
     "DifficultyLevel": "Advanced",
     "EstimatedDuration": 280
   },
   {
+    "SubCategoryId": 10,
     "TrackName": "UI Designer",
     "Description": "Focus on visual design, layout, and branding to create beautiful interfaces.",
     "DifficultyLevel": "Beginner",
     "EstimatedDuration": 100
   },
   {
+    "SubCategoryId": 10,
     "TrackName": "UX Designer",
     "Description": "Research user needs and design intuitive experiences that solve real problems.",
     "DifficultyLevel": "Beginner",
     "EstimatedDuration": 120
   },
   {
+    "SubCategoryId": 10,
     "TrackName": "Product Designer (Full UI/UX)",
     "Description": "Combine UI and UX skills to lead the design of entire products from concept to launch.",
     "DifficultyLevel": "Intermediate",

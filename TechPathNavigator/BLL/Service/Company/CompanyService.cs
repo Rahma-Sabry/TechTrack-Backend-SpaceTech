@@ -4,6 +4,7 @@ using TechPathNavigator.Common.Results;
 using TechPathNavigator.DTOs;
 using TechPathNavigator.Extensions;
 using TechPathNavigator.Repositories;
+using TechPathNavigator.Helpers;
 
 namespace TechPathNavigator.Services
 {
@@ -43,7 +44,9 @@ namespace TechPathNavigator.Services
             if (errors.Any()) return ServiceResult<CompanyGetDto>.Fail(errors);
 
             var updated = await _repo.UpdateAsync(dto.ToEntity(id));
-            if (updated == null) return ServiceResult<CompanyGetDto>.Fail("Company not found.");
+            if (updated == null)
+                return ServiceResult<CompanyGetDto>.Fail(ErrorMessages.Company_NotFound);
+
 
             return ServiceResult<CompanyGetDto>.Ok(updated.ToGetDto());
         }
