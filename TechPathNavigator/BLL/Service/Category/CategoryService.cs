@@ -25,7 +25,8 @@ namespace TechPathNavigator.Services
                 {
                     CategoryId = c.CategoryId,
                     CategoryName = c.CategoryName,
-                    Description = c.Description
+                    Description = c.Description,
+                    ImageUrl = c.ImageUrl
                 }).ToList();
             }
             catch (Exception ex)
@@ -47,7 +48,8 @@ namespace TechPathNavigator.Services
                 {
                     CategoryId = category.CategoryId,
                     CategoryName = category.CategoryName,
-                    Description = category.Description
+                    Description = category.Description,
+                    ImageUrl = category.ImageUrl
                 };
             }
             catch (Exception ex)
@@ -64,7 +66,8 @@ namespace TechPathNavigator.Services
                 var category = new Category
                 {
                     CategoryName = dto.Name ?? string.Empty,
-                    Description = dto.Description ?? string.Empty
+                    Description = dto.Description ?? string.Empty,
+                    ImageUrl = dto.ImageUrl
                 };
 
                 var createdCategory = await _repo.AddAsync(category);
@@ -73,7 +76,8 @@ namespace TechPathNavigator.Services
                 {
                     CategoryId = createdCategory.CategoryId,
                     CategoryName = createdCategory.CategoryName,
-                    Description = createdCategory.Description
+                    Description = createdCategory.Description,
+                    ImageUrl = createdCategory.ImageUrl
                 };
             }
             catch (Exception ex)
@@ -93,6 +97,7 @@ namespace TechPathNavigator.Services
 
                 existingCategory.CategoryName = dto.Name ?? existingCategory.CategoryName;
                 existingCategory.Description = dto.Description ?? existingCategory.Description;
+                existingCategory.ImageUrl = dto.ImageUrl ?? existingCategory.ImageUrl;
 
                 var updatedCategory = await _repo.UpdateAsync(existingCategory);
 
@@ -102,7 +107,8 @@ namespace TechPathNavigator.Services
                 {
                     CategoryId = updatedCategory.CategoryId,
                     CategoryName = updatedCategory.CategoryName,
-                    Description = updatedCategory.Description
+                    Description = updatedCategory.Description,
+                    ImageUrl = updatedCategory.ImageUrl
                 };
             }
             catch (Exception ex)

@@ -26,7 +26,10 @@ namespace TechPathNavigator.Services
                 SubCategoryId = sc.SubCategoryId,
                 SubCategoryName = sc.SubCategoryName,
                 Description = sc.Description,
-                CategoryId = sc.CategoryId
+                CategoryId = sc.CategoryId,
+                DifficultyLevel = sc.DifficultyLevel,
+                EstimatedDuration = sc.EstimatedDuration,
+                ImageUrl = sc.ImageUrl
             });
         }
 
@@ -40,7 +43,10 @@ namespace TechPathNavigator.Services
                 SubCategoryId = sc.SubCategoryId,
                 SubCategoryName = sc.SubCategoryName,
                 Description = sc.Description,
-                CategoryId = sc.CategoryId
+                CategoryId = sc.CategoryId,
+                DifficultyLevel = sc.DifficultyLevel,
+                EstimatedDuration = sc.EstimatedDuration,
+                ImageUrl = sc.ImageUrl
             };
         }
 
@@ -50,7 +56,10 @@ namespace TechPathNavigator.Services
             {
                 SubCategoryName = subCategoryDto.SubCategoryName,
                 Description = subCategoryDto.Description,
-                CategoryId = subCategoryDto.CategoryId
+                CategoryId = subCategoryDto.CategoryId,
+                DifficultyLevel = subCategoryDto.DifficultyLevel,
+                EstimatedDuration = subCategoryDto.EstimatedDuration,
+                ImageUrl = subCategoryDto.ImageUrl
             };
 
             var added = await _subCategoryRepository.AddAsync(subCategory);
@@ -60,7 +69,10 @@ namespace TechPathNavigator.Services
                 SubCategoryId = added.SubCategoryId,
                 SubCategoryName = added.SubCategoryName,
                 Description = added.Description,
-                CategoryId = added.CategoryId
+                CategoryId = added.CategoryId,
+                DifficultyLevel = added.DifficultyLevel,
+                EstimatedDuration = added.EstimatedDuration,
+                ImageUrl = added.ImageUrl
             };
         }
 
@@ -71,7 +83,10 @@ namespace TechPathNavigator.Services
                 SubCategoryId = id,
                 SubCategoryName = subCategoryDto.SubCategoryName,
                 Description = subCategoryDto.Description,
-                CategoryId = subCategoryDto.CategoryId
+                CategoryId = subCategoryDto.CategoryId,
+                DifficultyLevel = subCategoryDto.DifficultyLevel,
+                EstimatedDuration = subCategoryDto.EstimatedDuration,
+                ImageUrl = subCategoryDto.ImageUrl
             };
 
             var updated = await _subCategoryRepository.UpdateAsync(subCategory);
@@ -82,7 +97,10 @@ namespace TechPathNavigator.Services
                 SubCategoryId = updated.SubCategoryId,
                 SubCategoryName = updated.SubCategoryName,
                 Description = updated.Description,
-                CategoryId = updated.CategoryId
+                CategoryId = updated.CategoryId,
+                DifficultyLevel = updated.DifficultyLevel,
+                EstimatedDuration = updated.EstimatedDuration,
+                ImageUrl = updated.ImageUrl
             };
         }
 
@@ -100,7 +118,10 @@ namespace TechPathNavigator.Services
                 SubCategoryId = sc.SubCategoryId,
                 SubCategoryName = sc.SubCategoryName,
                 Description = sc.Description,
-                CategoryId = sc.CategoryId
+                CategoryId = sc.CategoryId,
+                DifficultyLevel = sc.DifficultyLevel,
+                EstimatedDuration = sc.EstimatedDuration,
+                ImageUrl = sc.ImageUrl
             });
         }
     }
