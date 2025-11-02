@@ -1,6 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using TechPathNavigator.DTOs;
 using TechPathNavigator.Services;
+<<<<<<< HEAD
+=======
+using TechPathNavigator.Common.Messages;
+>>>>>>> osama
 
 namespace TechPathNavigator.Controllers
 {
@@ -19,6 +23,7 @@ namespace TechPathNavigator.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<CategoryGetDto>>> GetAll()
         {
+<<<<<<< HEAD
             try
             {
                 var categories = await _service.GetAllCategoriesAsync();
@@ -28,12 +33,17 @@ namespace TechPathNavigator.Controllers
             {
                 return StatusCode(500, new { message = "An error occurred while retrieving categories", error = ex.Message });
             }
+=======
+            var categories = await _service.GetAllCategoriesAsync();
+            return Ok(categories);
+>>>>>>> osama
         }
 
         // GET: api/category/5
         [HttpGet("{id}")]
         public async Task<ActionResult<CategoryGetDto>> GetById(int id)
         {
+<<<<<<< HEAD
             try
             {
                 var category = await _service.GetCategoryByIdAsync(id);
@@ -47,12 +57,19 @@ namespace TechPathNavigator.Controllers
             {
                 return StatusCode(500, new { message = "An error occurred while retrieving the category", error = ex.Message });
             }
+=======
+            var category = await _service.GetCategoryByIdAsync(id);
+            if (category == null)
+                return NotFound(new { message = ApiMessages.CategoryNotFound });
+            return Ok(category);
+>>>>>>> osama
         }
 
         // POST: api/category
         [HttpPost]
         public async Task<ActionResult<CategoryGetDto>> Create([FromBody] CategoryPostDto dto)
         {
+<<<<<<< HEAD
             try
             {
                 if (!ModelState.IsValid)
@@ -65,12 +82,20 @@ namespace TechPathNavigator.Controllers
             {
                 return StatusCode(500, new { message = "An error occurred while creating the category", error = ex.Message });
             }
+=======
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            var createdCategory = await _service.CreateCategoryAsync(dto);
+            return CreatedAtAction(nameof(GetById), new { id = createdCategory.CategoryId }, createdCategory);
+>>>>>>> osama
         }
 
         // PUT: api/category/5
         [HttpPut("{id}")]
         public async Task<ActionResult<CategoryGetDto>> Update(int id, [FromBody] CategoryPostDto dto)
         {
+<<<<<<< HEAD
             try
             {
                 if (!ModelState.IsValid)
@@ -87,12 +112,22 @@ namespace TechPathNavigator.Controllers
             {
                 return StatusCode(500, new { message = "An error occurred while updating the category", error = ex.Message });
             }
+=======
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            var updatedCategory = await _service.UpdateCategoryAsync(id, dto);
+            if (updatedCategory == null)
+                return NotFound(new { message = ApiMessages.CategoryNotFound });
+            return Ok(updatedCategory);
+>>>>>>> osama
         }
 
         // DELETE: api/category/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
         {
+<<<<<<< HEAD
             try
             {
                 var result = await _service.DeleteCategoryAsync(id);
@@ -106,6 +141,12 @@ namespace TechPathNavigator.Controllers
             {
                 return StatusCode(500, new { message = "An error occurred while deleting the category", error = ex.Message });
             }
+=======
+            var result = await _service.DeleteCategoryAsync(id);
+            if (!result)
+                return NotFound(new { message = ApiMessages.CategoryNotFound });
+            return NoContent();
+>>>>>>> osama
         }
     }
 }

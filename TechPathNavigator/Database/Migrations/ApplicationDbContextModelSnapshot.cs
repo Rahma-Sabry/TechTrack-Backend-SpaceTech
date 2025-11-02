@@ -42,6 +42,7 @@ namespace TechPathNavigator.Migrations
                     b.HasKey("CategoryId");
 
                     b.ToTable("Categories");
+<<<<<<< HEAD
 
                     b.HasData(
                         new
@@ -62,6 +63,8 @@ namespace TechPathNavigator.Migrations
                             CategoryName = "Mobile Development",
                             Description = "Building mobile applications"
                         });
+=======
+>>>>>>> osama
                 });
 
             modelBuilder.Entity("TechPathNavigator.Models.Company", b =>
@@ -87,6 +90,7 @@ namespace TechPathNavigator.Migrations
                     b.HasKey("CompanyId");
 
                     b.ToTable("Companies");
+<<<<<<< HEAD
 
                     b.HasData(
                         new
@@ -105,6 +109,8 @@ namespace TechPathNavigator.Migrations
                             Industry = "Technology",
                             WebsiteUrl = "https://google.com"
                         });
+=======
+>>>>>>> osama
                 });
 
             modelBuilder.Entity("TechPathNavigator.Models.CompanyTechnology", b =>
@@ -134,6 +140,7 @@ namespace TechPathNavigator.Migrations
                     b.HasIndex("TechnologyId");
 
                     b.ToTable("CompanyTechnologies");
+<<<<<<< HEAD
 
                     b.HasData(
                         new
@@ -152,6 +159,8 @@ namespace TechPathNavigator.Migrations
                             TechnologyId = 3,
                             UsageLevel = "primary"
                         });
+=======
+>>>>>>> osama
                 });
 
             modelBuilder.Entity("TechPathNavigator.Models.InterviewQuestion", b =>
@@ -182,6 +191,7 @@ namespace TechPathNavigator.Migrations
                     b.HasIndex("TechnologyId");
 
                     b.ToTable("InterviewQuestions");
+<<<<<<< HEAD
 
                     b.HasData(
                         new
@@ -202,6 +212,8 @@ namespace TechPathNavigator.Migrations
                             SampleAnswer = "It manages asynchronous operations in Node.js runtime.",
                             TechnologyId = 3
                         });
+=======
+>>>>>>> osama
                 });
 
             modelBuilder.Entity("TechPathNavigator.Models.Roadmap", b =>
@@ -231,6 +243,7 @@ namespace TechPathNavigator.Migrations
                     b.HasIndex("TrackId");
 
                     b.ToTable("Roadmaps");
+<<<<<<< HEAD
 
                     b.HasData(
                         new
@@ -240,6 +253,8 @@ namespace TechPathNavigator.Migrations
                             Title = "Backend Developer Roadmap",
                             TrackId = 1
                         });
+=======
+>>>>>>> osama
                 });
 
             modelBuilder.Entity("TechPathNavigator.Models.RoadmapStep", b =>
@@ -267,6 +282,7 @@ namespace TechPathNavigator.Migrations
                     b.HasIndex("RoadmapId");
 
                     b.ToTable("RoadmapSteps");
+<<<<<<< HEAD
 
                     b.HasData(
                         new
@@ -285,6 +301,8 @@ namespace TechPathNavigator.Migrations
                             StepOrder = 2,
                             StepTitle = "Learn ASP.NET Web API"
                         });
+=======
+>>>>>>> osama
                 });
 
             modelBuilder.Entity("TechPathNavigator.Models.SubCategory", b =>
@@ -315,6 +333,7 @@ namespace TechPathNavigator.Migrations
                     b.HasIndex("CategoryId");
 
                     b.ToTable("SubCategories");
+<<<<<<< HEAD
 
                     b.HasData(
                         new
@@ -344,6 +363,8 @@ namespace TechPathNavigator.Migrations
                             EstimatedDuration = 90,
                             SubCategoryName = "React"
                         });
+=======
+>>>>>>> osama
                 });
 
             modelBuilder.Entity("TechPathNavigator.Models.Technology", b =>
@@ -378,6 +399,7 @@ namespace TechPathNavigator.Migrations
                     b.HasIndex("TrackId");
 
                     b.ToTable("Technologies");
+<<<<<<< HEAD
 
                     b.HasData(
                         new
@@ -412,6 +434,8 @@ namespace TechPathNavigator.Migrations
                             TechnologyName = "React",
                             TrackId = 3
                         });
+=======
+>>>>>>> osama
                 });
 
             modelBuilder.Entity("TechPathNavigator.Models.Track", b =>
@@ -442,6 +466,7 @@ namespace TechPathNavigator.Migrations
                     b.HasIndex("SubCategoryId");
 
                     b.ToTable("Tracks");
+<<<<<<< HEAD
 
                     b.HasData(
                         new
@@ -471,6 +496,8 @@ namespace TechPathNavigator.Migrations
                             SubCategoryId = 3,
                             TrackName = "React Basics"
                         });
+=======
+>>>>>>> osama
                 });
 
             modelBuilder.Entity("TechPathNavigator.Models.User", b =>
@@ -493,6 +520,7 @@ namespace TechPathNavigator.Migrations
                     b.HasKey("UserId");
 
                     b.ToTable("Users");
+<<<<<<< HEAD
 
                     b.HasData(
                         new
@@ -502,6 +530,8 @@ namespace TechPathNavigator.Migrations
                             PasswordHash = "CHANGE_ME_HASH",
                             UserName = "admin"
                         });
+=======
+>>>>>>> osama
                 });
 
             modelBuilder.Entity("TechPathNavigator.Models.UserTechnologyReview", b =>
@@ -531,6 +561,7 @@ namespace TechPathNavigator.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("UserTechnologyReviews");
+<<<<<<< HEAD
 
                     b.HasData(
                         new
@@ -541,6 +572,8 @@ namespace TechPathNavigator.Migrations
                             TechnologyId = 1,
                             UserId = 1
                         });
+=======
+>>>>>>> osama
                 });
 
             modelBuilder.Entity("TechPathNavigator.Models.CompanyTechnology", b =>

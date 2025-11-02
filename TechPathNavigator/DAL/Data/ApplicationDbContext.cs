@@ -39,7 +39,10 @@ namespace TechPathNavigator.Data
                 .HasOne(t => t.Track)
                 .WithMany(tr => tr.Technologies)
                 .HasForeignKey(t => t.TrackId);
+<<<<<<< HEAD
 
+=======
+>>>>>>> osama
         }
     }
 }

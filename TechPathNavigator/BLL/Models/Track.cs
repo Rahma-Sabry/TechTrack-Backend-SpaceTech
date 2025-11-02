@@ -11,4 +11,8 @@
         public SubCategory? SubCategory { get; set; }
         public ICollection<Technology>? Technologies { get; set; }
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> osama
