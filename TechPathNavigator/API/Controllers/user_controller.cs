@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
-using TechPathNavigator.DTOs;
 using TechPathNavigator.DTOs.User;
 using TechPathNavigator.Services;
-using TechPathNavigator.Common.Messages;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace TechPathNavigator.Controllers
 {
@@ -18,59 +18,39 @@ namespace TechPathNavigator.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAll()
+        public async Task<IEnumerable<UserGetDto>> GetAll()
         {
-            var users = await _service.GetAllAsync();
-            return Ok(users);
+            return await _service.GetAllAsync();
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetById(int id)
+        public async Task<UserGetDto> GetById(int id)
         {
-            var user = await _service.GetByIdAsync(id);
-            if (user == null)
-                return NotFound(new { message = ApiMessages.UserNotFound });
-            return Ok(user);
+            return await _service.GetByIdAsync(id);
         }
 
         [HttpGet("email/{email}")]
-        public async Task<IActionResult> GetByEmail(string email)
+        public async Task<UserGetDto> GetByEmail(string email)
         {
-            var user = await _service.GetByEmailAsync(email);
-            if (user == null)
-                return NotFound(new { message = ApiMessages.UserNotFound });
-            return Ok(user);
+            return await _service.GetByEmailAsync(email);
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create(UserPostDto dto)
+        public async Task<UserGetDto> Create([FromBody] UserPostDto dto)
         {
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
-
-            var created = await _service.AddAsync(dto);
-            return CreatedAtAction(nameof(GetById), new { id = created.UserId }, created);
+            return await _service.AddAsync(dto);
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(int id, UserUpdateDto dto)
+        public async Task<UserGetDto> Update(int id, [FromBody] UserUpdateDto dto)
         {
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
-
-            var updated = await _service.UpdateAsync(id, dto);
-            if (updated == null)
-                return NotFound(new { message = ApiMessages.UserNotFound });
-            return Ok(updated);
+            return await _service.UpdateAsync(id, dto);
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete(int id)
+        public async Task Delete(int id)
         {
-            var success = await _service.DeleteAsync(id);
-            if (!success)
-                return NotFound(new { message = ApiMessages.UserNotFound });
-            return NoContent();
+            await _service.DeleteAsync(id);
         }
     }
 }

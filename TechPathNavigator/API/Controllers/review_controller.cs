@@ -1,9 +1,8 @@
-using System;
 using Microsoft.AspNetCore.Mvc;
-using TechPathNavigator.DTOs;
 using TechPathNavigator.DTOs.Review;
 using TechPathNavigator.Services;
-using TechPathNavigator.Common.Messages;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace TechPathNavigator.Controllers
 {
@@ -19,73 +18,47 @@ namespace TechPathNavigator.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAll()
+        public async Task<IEnumerable<UserTechnologyReviewGetDto>> GetAll()
         {
-            var reviews = await _service.GetAllAsync();
-            return Ok(reviews);
+            return await _service.GetAllAsync();
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetById(int id)
+        public async Task<UserTechnologyReviewGetDto> GetById(int id)
         {
-            var review = await _service.GetByIdAsync(id);
-            if (review == null)
-                return NotFound(new { message = ApiMessages.ReviewNotFound });
-            return Ok(review);
+            return await _service.GetByIdAsync(id);
         }
 
         [HttpGet("user/{userId}")]
-        public async Task<IActionResult> GetByUserId(int userId)
+        public async Task<IEnumerable<UserTechnologyReviewGetDto>> GetByUserId(int userId)
         {
-            var reviews = await _service.GetByUserIdAsync(userId);
-            return Ok(reviews);
+            return await _service.GetByUserIdAsync(userId);
         }
 
         [HttpGet("technology/{technologyId}")]
-        public async Task<IActionResult> GetByTechnologyId(int technologyId)
+        public async Task<IEnumerable<UserTechnologyReviewGetDto>> GetByTechnologyId(int technologyId)
         {
-            var reviews = await _service.GetByTechnologyIdAsync(technologyId);
-            return Ok(reviews);
+            return await _service.GetByTechnologyIdAsync(technologyId);
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create(UserTechnologyReviewPostDto dto)
+        public async Task<UserTechnologyReviewGetDto> Create([FromBody] UserTechnologyReviewPostDto dto)
         {
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
-
             var result = await _service.AddAsync(dto);
-            if (!result.Success)
-                return BadRequest(new { errors = result.Errors });
-
-            return CreatedAtAction(nameof(GetById), new { id = result.Data!.ReviewId }, result.Data);
+            return result.Data!;
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(int id, UserTechnologyReviewPostDto dto)
+        public async Task<UserTechnologyReviewGetDto> Update(int id, [FromBody] UserTechnologyReviewPostDto dto)
         {
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
-
             var result = await _service.UpdateAsync(id, dto);
-            if (!result.Success)
-            {
-                if (result.Errors.Count == 1 &&
-                    result.Errors[0].Contains("not found", StringComparison.OrdinalIgnoreCase))
-                    return NotFound(new { message = ApiMessages.ReviewNotFound });
-
-                return BadRequest(new { errors = result.Errors });
-            }
-            return Ok(result.Data);
+            return result.Data!;
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete(int id)
+        public async Task Delete(int id)
         {
-            var success = await _service.DeleteAsync(id);
-            if (!success)
-                return NotFound(new { message = ApiMessages.ReviewNotFound });
-            return NoContent();
+            await _service.DeleteAsync(id);
         }
     }
 }

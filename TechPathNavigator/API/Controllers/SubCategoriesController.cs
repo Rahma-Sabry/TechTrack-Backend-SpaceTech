@@ -1,7 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 using TechPathNavigator.DTOs;
 using TechPathNavigator.Services;
-using TechPathNavigator.Common.Messages;
 
 namespace TechPathNavigator.Controllers
 {
@@ -17,59 +18,39 @@ namespace TechPathNavigator.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<SubCategoryGetDto>>> GetAll()
+        public async Task<IEnumerable<SubCategoryGetDto>> GetAll()
         {
-            var subCategories = await _service.GetAllAsync();
-            return Ok(subCategories);
+            return await _service.GetAllAsync();
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<SubCategoryGetDto>> GetById(int id)
+        public async Task<SubCategoryGetDto> GetById(int id)
         {
-            var subCategory = await _service.GetByIdAsync(id);
-            if (subCategory == null)
-                return NotFound(new { message = ApiMessages.SubCategoryNotFound });
-            return Ok(subCategory);
+            return await _service.GetByIdAsync(id);
         }
 
         [HttpGet("ByCategory/{categoryId}")]
-        public async Task<ActionResult<IEnumerable<SubCategoryGetDto>>> GetByCategoryId(int categoryId)
+        public async Task<IEnumerable<SubCategoryGetDto>> GetByCategoryId(int categoryId)
         {
-            var subCategories = await _service.GetByCategoryIdAsync(categoryId);
-            return Ok(subCategories);
+            return await _service.GetByCategoryIdAsync(categoryId);
         }
 
         [HttpPost]
-        public async Task<ActionResult<SubCategoryGetDto>> Create([FromBody] SubCategoryPostDto dto)
+        public async Task<SubCategoryGetDto> Create([FromBody] SubCategoryPostDto dto)
         {
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
-
-            var createdSubCategory = await _service.AddAsync(dto);
-            return CreatedAtAction(nameof(GetById),
-                new { id = createdSubCategory.SubCategoryId },
-                createdSubCategory);
+            return await _service.AddAsync(dto);
         }
 
         [HttpPut("{id}")]
-        public async Task<ActionResult<SubCategoryGetDto>> Update(int id, [FromBody] SubCategoryPostDto dto)
+        public async Task<SubCategoryGetDto> Update(int id, [FromBody] SubCategoryPostDto dto)
         {
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
-
-            var updatedSubCategory = await _service.UpdateAsync(id, dto);
-            if (updatedSubCategory == null)
-                return NotFound(new { message = ApiMessages.SubCategoryNotFound });
-            return Ok(updatedSubCategory);
+            return await _service.UpdateAsync(id, dto);
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete(int id)
+        public async Task Delete(int id)
         {
-            var result = await _service.DeleteAsync(id);
-            if (!result)
-                return NotFound(new { message = ApiMessages.SubCategoryNotFound });
-            return NoContent();
+            await _service.DeleteAsync(id);
         }
     }
 }

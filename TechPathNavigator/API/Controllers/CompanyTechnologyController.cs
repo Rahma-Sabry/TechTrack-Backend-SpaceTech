@@ -1,8 +1,8 @@
-using System;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 using TechPathNavigator.DTOs;
 using TechPathNavigator.Services;
-using TechPathNavigator.Common.Messages;
 
 namespace TechPathNavigator.Controllers
 {
@@ -18,57 +18,35 @@ namespace TechPathNavigator.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAll()
+        public async Task<IEnumerable<CompanyTechnologyGetDto>> GetAll()
         {
-            var items = await _service.GetAllAsync();
-            return Ok(items);
+            return await _service.GetAllAsync();
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetById(int id)
+        public async Task<CompanyTechnologyGetDto> GetById(int id)
         {
-            var item = await _service.GetByIdAsync(id);
-            if (item == null)
-                return NotFound(new { message = ApiMessages.CompanyTechnologyNotFound });
-            return Ok(item);
+            return await _service.GetByIdAsync(id);
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create(CompanyTechnologyPostDto dto)
+        public async Task<CompanyTechnologyGetDto> Create([FromBody] CompanyTechnologyPostDto dto)
         {
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
-
             var result = await _service.CreateAsync(dto);
-            if (!result.Success)
-                return BadRequest(new { errors = result.Errors });
-            return CreatedAtAction(nameof(GetById), new { id = result.Data!.CompanyTechnologyId }, result.Data);
+            return result.Data!;
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(int id, CompanyTechnologyPostDto dto)
+        public async Task<CompanyTechnologyGetDto> Update(int id, [FromBody] CompanyTechnologyPostDto dto)
         {
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
-
             var result = await _service.UpdateAsync(id, dto);
-            if (!result.Success)
-            {
-                if (result.Errors.Count == 1 &&
-                    result.Errors[0].Contains("not found", StringComparison.OrdinalIgnoreCase))
-                    return NotFound(new { message = ApiMessages.CompanyTechnologyNotFound });
-                return BadRequest(new { errors = result.Errors });
-            }
-            return Ok(result.Data);
+            return result.Data!;
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete(int id)
+        public async Task Delete(int id)
         {
-            var success = await _service.DeleteAsync(id);
-            if (!success)
-                return NotFound(new { message = ApiMessages.CompanyTechnologyNotFound });
-            return NoContent();
+            await _service.DeleteAsync(id);
         }
     }
 }

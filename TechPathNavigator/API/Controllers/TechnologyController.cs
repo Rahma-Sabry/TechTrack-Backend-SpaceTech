@@ -1,7 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 using TechPathNavigator.DTOs;
-using TechPathNavigator.Services;
-using TechPathNavigator.Common.Messages;
+using TechPathNavigator.Service.Technology;
 
 namespace TechPathNavigator.Controllers
 {
@@ -9,58 +10,41 @@ namespace TechPathNavigator.Controllers
     [Route("api/[controller]")]
     public class TechnologyController : ControllerBase
     {
-        private readonly TechnologyService _service;
+        private readonly ITechnologyService _service;
 
-        public TechnologyController(TechnologyService service)
+        public TechnologyController(ITechnologyService service)
         {
             _service = service;
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAll()
+        public async Task<IEnumerable<TechnologyGetDto>> GetAll()
         {
-            var techs = await _service.GetAllAsync();
-            return Ok(techs);
+            return await _service.GetAllAsync();
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetById(int id)
+        public async Task<TechnologyGetDto> GetById(int id)
         {
-            var tech = await _service.GetByIdAsync(id);
-            if (tech == null)
-                return NotFound(new { message = ApiMessages.TechnologyNotFound });
-            return Ok(tech);
+            return await _service.GetByIdAsync(id);
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create(TechnologyPostDto dto)
+        public async Task<TechnologyGetDto> Create([FromBody] TechnologyPostDto dto)
         {
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
-
-            var created = await _service.AddAsync(dto);
-            return CreatedAtAction(nameof(GetById), new { id = created.TechnologyId }, created);
+            return await _service.AddAsync(dto);
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(int id, TechnologyPostDto dto)
+        public async Task<TechnologyGetDto> Update(int id, [FromBody] TechnologyPostDto dto)
         {
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
-
-            var updated = await _service.UpdateAsync(id, dto);
-            if (updated == null)
-                return NotFound(new { message = ApiMessages.TechnologyNotFound });
-            return Ok(updated);
+            return await _service.UpdateAsync(id, dto);
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete(int id)
+        public async Task Delete(int id)
         {
-            var success = await _service.DeleteAsync(id);
-            if (!success)
-                return NotFound(new { message = ApiMessages.TechnologyNotFound });
-            return NoContent();
+            await _service.DeleteAsync(id);
         }
     }
 }

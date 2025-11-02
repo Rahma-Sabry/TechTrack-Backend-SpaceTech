@@ -1,7 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 using TechPathNavigator.DTOs;
-using TechPathNavigator.Services;
-using TechPathNavigator.Common.Messages;
+using TechPathNavigator.Service.Track;
 
 namespace TechPathNavigator.Controllers
 {
@@ -9,57 +10,41 @@ namespace TechPathNavigator.Controllers
     [Route("api/[controller]")]
     public class TrackController : ControllerBase
     {
-        private readonly TrackService _service;
+        private readonly ITrackService _service;
 
-        public TrackController(TrackService service)
+        public TrackController(ITrackService service)
         {
             _service = service;
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAll()
+        public async Task<IEnumerable<TrackGetDto>> GetAll()
         {
-            return Ok(await _service.GetAllAsync());
+            return await _service.GetAllAsync();
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetById(int id)
+        public async Task<TrackGetDto> GetById(int id)
         {
-            var track = await _service.GetByIdAsync(id);
-            if (track == null)
-                return NotFound(new { message = ApiMessages.TrackNotFound });
-            return Ok(track);
+            return await _service.GetByIdAsync(id);
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create(TrackPostDto dto)
+        public async Task<TrackGetDto> Create([FromBody] TrackPostDto dto)
         {
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
-
-            var created = await _service.AddAsync(dto);
-            return CreatedAtAction(nameof(GetById), new { id = created.TrackId }, created);
+            return await _service.AddAsync(dto);
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(int id, TrackPostDto dto)
+        public async Task<TrackGetDto> Update(int id, [FromBody] TrackPostDto dto)
         {
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
-
-            var updated = await _service.UpdateAsync(id, dto);
-            if (updated == null)
-                return NotFound(new { message = ApiMessages.TrackNotFound });
-            return Ok(updated);
+            return await _service.UpdateAsync(id, dto);
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete(int id)
+        public async Task Delete(int id)
         {
-            var success = await _service.DeleteAsync(id);
-            if (!success)
-                return NotFound(new { message = ApiMessages.TrackNotFound });
-            return NoContent();
+            await _service.DeleteAsync(id);
         }
     }
 }

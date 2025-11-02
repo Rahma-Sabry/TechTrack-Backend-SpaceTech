@@ -1,7 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 using TechPathNavigator.DTOs;
 using TechPathNavigator.Services;
-using TechPathNavigator.Common.Messages;
 
 namespace TechPathNavigator.Controllers
 {
@@ -17,50 +18,33 @@ namespace TechPathNavigator.Controllers
         }
 
         [HttpGet("roadmap/{roadmapId}")]
-        public async Task<IActionResult> GetAllByRoadmapId(int roadmapId)
+        public async Task<IEnumerable<RoadmapStepGetDto>> GetAllByRoadmapId(int roadmapId)
         {
-            var steps = await _service.GetAllByRoadmapIdAsync(roadmapId);
-            return Ok(steps);
+            return await _service.GetAllByRoadmapIdAsync(roadmapId);
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetById(int id)
+        public async Task<RoadmapStepGetDto> GetById(int id)
         {
-            var step = await _service.GetByIdAsync(id);
-            if (step == null)
-                return NotFound(new { message = ApiMessages.RoadmapStepNotFound });
-            return Ok(step);
+            return await _service.GetByIdAsync(id);
         }
 
         [HttpPost]
-        public async Task<IActionResult> Create(RoadmapStepPostDto dto)
+        public async Task<RoadmapStepGetDto> Create([FromBody] RoadmapStepPostDto dto)
         {
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
-
-            var created = await _service.AddAsync(dto);
-            return CreatedAtAction(nameof(GetById), new { id = created.RoadmapStepId }, created);
+            return await _service.AddAsync(dto);
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(int id, RoadmapStepPostDto dto)
+        public async Task<RoadmapStepGetDto> Update(int id, [FromBody] RoadmapStepPostDto dto)
         {
-            if (!ModelState.IsValid)
-                return BadRequest(ModelState);
-
-            var updated = await _service.UpdateAsync(id, dto);
-            if (updated == null)
-                return NotFound(new { message = ApiMessages.RoadmapStepNotFound });
-            return Ok(updated);
+            return await _service.UpdateAsync(id, dto);
         }
 
         [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete(int id)
+        public async Task Delete(int id)
         {
-            var success = await _service.DeleteAsync(id);
-            if (!success)
-                return NotFound(new { message = ApiMessages.RoadmapStepNotFound });
-            return NoContent();
+            await _service.DeleteAsync(id);
         }
     }
 }
