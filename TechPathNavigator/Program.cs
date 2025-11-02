@@ -3,12 +3,9 @@ using Microsoft.OpenApi.Models;
 using TechPathNavigator.Data;
 using TechPathNavigator.Repositories;
 using TechPathNavigator.Services;
-<<<<<<< HEAD
-=======
 using TechPathNavigator.Service.Track;
 using TechPathNavigator.Service.Technology;
 using TechPathNavigator.Common.Middleware;
->>>>>>> osama
 
 namespace TechPathNavigator
 {
@@ -25,37 +22,26 @@ namespace TechPathNavigator
             // Roadmap & Steps
             builder.Services.AddScoped<IRoadmapRepository, RoadmapRepository>();
             builder.Services.AddScoped<IRoadmapService, RoadmapService>();
-<<<<<<< HEAD
+            builder.Services.AddScoped<RoadmapService>(); // For controllers using class directly
             builder.Services.AddScoped<IRoadmapStepRepository, RoadmapStepRepository>();
             builder.Services.AddScoped<IRoadmapStepService, RoadmapStepService>();
-=======
-            builder.Services.AddScoped<RoadmapService>(); // For controllers that use class directly
-            builder.Services.AddScoped<IRoadmapStepRepository, RoadmapStepRepository>();
-            builder.Services.AddScoped<IRoadmapStepService, RoadmapStepService>();
-            builder.Services.AddScoped<RoadmapStepService>(); // For controllers that use class directly
->>>>>>> osama
+            builder.Services.AddScoped<RoadmapStepService>(); // For controllers using class directly
+
             // User Management
             builder.Services.AddScoped<IUserRepository, UserRepository>();
             builder.Services.AddScoped<UserService>();
+
             // User Reviews
             builder.Services.AddScoped<IUserTechnologyReviewRepository, UserTechnologyReviewRepository>();
-<<<<<<< HEAD
-            builder.Services.AddScoped<UserTechnologyReviewService>();
-            // Track & Technology
-            builder.Services.AddScoped<ITrackRepository, TrackRepository>();
-            builder.Services.AddScoped<TrackService>();
-            builder.Services.AddScoped<ITechnologyRepository, TechnologyRepository>();
-            builder.Services.AddScoped<TechnologyService>();
-=======
             builder.Services.AddScoped<IUserTechnologyReviewService, UserTechnologyReviewService>();
+
             // Track & Technology
             builder.Services.AddScoped<ITrackRepository, TrackRepository>();
             builder.Services.AddScoped<ITrackService, TrackService>();
-            builder.Services.AddScoped<TrackService>(); // For controllers that use class directly
+            builder.Services.AddScoped<TrackService>(); // For controllers using class directly
             builder.Services.AddScoped<ITechnologyRepository, TechnologyRepository>();
             builder.Services.AddScoped<ITechnologyService, TechnologyService>();
-            builder.Services.AddScoped<TechnologyService>(); // For controllers that use class directly
->>>>>>> osama
+            builder.Services.AddScoped<TechnologyService>(); // For controllers using class directly
 
             // Category & Subcategory
             builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
@@ -63,24 +49,18 @@ namespace TechPathNavigator
             builder.Services.AddScoped<ISubCategoryRepository, SubCategoryRepository>();
             builder.Services.AddScoped<ISubCategoryService, SubCategoryService>();
 
-<<<<<<< HEAD
-            //Interview Questions
-            builder.Services.AddScoped<IInterviewQuestionRepository, InterviewQuestionRepository>();
-            builder.Services.AddScoped<InterviewQuestionService>();
-=======
             // Company & Company Technology
             builder.Services.AddScoped<ICompanyRepository, CompanyRepository>();
             builder.Services.AddScoped<ICompanyService, CompanyService>();
             builder.Services.AddScoped<ICompanyTechnologyRepository, CompanyTechnologyRepository>();
             builder.Services.AddScoped<ICompanyTechnologyService, CompanyTechnologyService>();
 
-            //Interview Questions
+            // Interview Questions
             builder.Services.AddScoped<IInterviewQuestionRepository, InterviewQuestionRepository>();
             builder.Services.AddScoped<IInterviewQuestionService, InterviewQuestionService>();
 
             // 🌍 CORS setup
             builder.Services.ConfigureCors();
->>>>>>> osama
 
             // 🧩 Controllers
             builder.Services.AddControllers();
@@ -97,20 +77,6 @@ namespace TechPathNavigator
                 });
             });
 
-<<<<<<< HEAD
-            // 🌍 CORS setup
-            builder.Services.AddCors(options =>
-            {
-                options.AddPolicy("AllowAll", policy =>
-                {
-                    policy.AllowAnyOrigin()
-                          .AllowAnyMethod()
-                          .AllowAnyHeader();
-                });
-            });
-
-=======
->>>>>>> osama
             var app = builder.Build();
 
             // 🧭 Swagger UI
@@ -122,18 +88,6 @@ namespace TechPathNavigator
             });
 
             // 🔐 Middlewares
-<<<<<<< HEAD
-            app.UseHttpsRedirection();
-            app.UseAuthorization();
-            app.UseCors("AllowAll");
-
-            // 🚀 Map Controllers
-            app.MapControllers();
-            using (var scope = app.Services.CreateScope())
-            {
-                SeedData.Initialize(scope.ServiceProvider);
-            }
-=======
             app.UseGlobalExceptionHandler();
             app.UseHttpsRedirection();
             app.UseAuthorization();
@@ -142,7 +96,6 @@ namespace TechPathNavigator
             // 🚀 Map Controllers
             app.MapControllers();
 
->>>>>>> osama
             app.Run();
         }
     }

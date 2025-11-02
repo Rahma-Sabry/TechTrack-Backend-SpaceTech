@@ -23,701 +23,454 @@ namespace TechPathNavigator.Migrations
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
             modelBuilder.Entity("TechPathNavigator.Models.Category", b =>
-                {
-                    b.Property<int>("CategoryId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+            {
+                b.Property<int>("CategoryId")
+                    .ValueGeneratedOnAdd()
+                    .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CategoryId"));
+                SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CategoryId"));
 
-                    b.Property<string>("CategoryName")
-                        .IsRequired()
-                        .HasMaxLength(200)
-                        .HasColumnType("nvarchar(200)");
+                b.Property<string>("CategoryName")
+                    .IsRequired()
+                    .HasMaxLength(200)
+                    .HasColumnType("nvarchar(200)");
 
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                b.Property<string>("Description")
+                    .IsRequired()
+                    .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("CategoryId");
+                b.HasKey("CategoryId");
 
-                    b.ToTable("Categories");
-<<<<<<< HEAD
-
-                    b.HasData(
-                        new
-                        {
-                            CategoryId = 1,
-                            CategoryName = "Backend Development",
-                            Description = "Server-side programming"
-                        },
-                        new
-                        {
-                            CategoryId = 2,
-                            CategoryName = "Frontend Development",
-                            Description = "Client-side development"
-                        },
-                        new
-                        {
-                            CategoryId = 3,
-                            CategoryName = "Mobile Development",
-                            Description = "Building mobile applications"
-                        });
-=======
->>>>>>> osama
-                });
+                b.ToTable("Categories");
+            });
 
             modelBuilder.Entity("TechPathNavigator.Models.Company", b =>
-                {
-                    b.Property<int>("CompanyId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+            {
+                b.Property<int>("CompanyId")
+                    .ValueGeneratedOnAdd()
+                    .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CompanyId"));
+                SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CompanyId"));
 
-                    b.Property<string>("CompanyName")
-                        .HasColumnType("nvarchar(max)");
+                b.Property<string>("CompanyName")
+                    .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Description")
-                        .HasColumnType("nvarchar(max)");
+                b.Property<string>("Description")
+                    .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Industry")
-                        .HasColumnType("nvarchar(max)");
+                b.Property<string>("Industry")
+                    .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("WebsiteUrl")
-                        .HasColumnType("nvarchar(max)");
+                b.Property<string>("WebsiteUrl")
+                    .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("CompanyId");
+                b.HasKey("CompanyId");
 
-                    b.ToTable("Companies");
-<<<<<<< HEAD
-
-                    b.HasData(
-                        new
-                        {
-                            CompanyId = 1,
-                            CompanyName = "Microsoft",
-                            Description = "Software and cloud company",
-                            Industry = "Technology",
-                            WebsiteUrl = "https://microsoft.com"
-                        },
-                        new
-                        {
-                            CompanyId = 2,
-                            CompanyName = "Google",
-                            Description = "Search and AI company",
-                            Industry = "Technology",
-                            WebsiteUrl = "https://google.com"
-                        });
-=======
->>>>>>> osama
-                });
+                b.ToTable("Companies");
+            });
 
             modelBuilder.Entity("TechPathNavigator.Models.CompanyTechnology", b =>
-                {
-                    b.Property<int>("CompanyTechnologyId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+            {
+                b.Property<int>("CompanyTechnologyId")
+                    .ValueGeneratedOnAdd()
+                    .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CompanyTechnologyId"));
+                SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CompanyTechnologyId"));
 
-                    b.Property<int>("CompanyId")
-                        .HasColumnType("int");
+                b.Property<int>("CompanyId")
+                    .HasColumnType("int");
 
-                    b.Property<string>("Notes")
-                        .HasColumnType("nvarchar(max)");
+                b.Property<string>("Notes")
+                    .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("TechnologyId")
-                        .HasColumnType("int");
+                b.Property<int>("TechnologyId")
+                    .HasColumnType("int");
 
-                    b.Property<string>("UsageLevel")
-                        .HasColumnType("nvarchar(max)");
+                b.Property<string>("UsageLevel")
+                    .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("CompanyTechnologyId");
+                b.HasKey("CompanyTechnologyId");
 
-                    b.HasIndex("CompanyId");
+                b.HasIndex("CompanyId");
 
-                    b.HasIndex("TechnologyId");
+                b.HasIndex("TechnologyId");
 
-                    b.ToTable("CompanyTechnologies");
-<<<<<<< HEAD
-
-                    b.HasData(
-                        new
-                        {
-                            CompanyTechnologyId = 1,
-                            CompanyId = 1,
-                            Notes = "Used heavily in backend systems",
-                            TechnologyId = 1,
-                            UsageLevel = "primary"
-                        },
-                        new
-                        {
-                            CompanyTechnologyId = 2,
-                            CompanyId = 2,
-                            Notes = "Used for scalable services",
-                            TechnologyId = 3,
-                            UsageLevel = "primary"
-                        });
-=======
->>>>>>> osama
-                });
+                b.ToTable("CompanyTechnologies");
+            });
 
             modelBuilder.Entity("TechPathNavigator.Models.InterviewQuestion", b =>
-                {
-                    b.Property<int>("QuestionId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+            {
+                b.Property<int>("QuestionId")
+                    .ValueGeneratedOnAdd()
+                    .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("QuestionId"));
+                SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("QuestionId"));
 
-                    b.Property<string>("DifficultyLevel")
-                        .HasColumnType("nvarchar(max)");
+                b.Property<string>("DifficultyLevel")
+                    .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("QuestionText")
-                        .HasColumnType("nvarchar(max)");
+                b.Property<string>("QuestionText")
+                    .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("QuestionType")
-                        .HasColumnType("nvarchar(max)");
+                b.Property<string>("QuestionType")
+                    .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("SampleAnswer")
-                        .HasColumnType("nvarchar(max)");
+                b.Property<string>("SampleAnswer")
+                    .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("TechnologyId")
-                        .HasColumnType("int");
+                b.Property<int>("TechnologyId")
+                    .HasColumnType("int");
 
-                    b.HasKey("QuestionId");
+                b.HasKey("QuestionId");
 
-                    b.HasIndex("TechnologyId");
+                b.HasIndex("TechnologyId");
 
-                    b.ToTable("InterviewQuestions");
-<<<<<<< HEAD
-
-                    b.HasData(
-                        new
-                        {
-                            QuestionId = 1,
-                            DifficultyLevel = "Intermediate",
-                            QuestionText = "Explain the difference between value and reference types in C#.",
-                            QuestionType = "Technical",
-                            SampleAnswer = "Value types store data directly; reference types store references.",
-                            TechnologyId = 1
-                        },
-                        new
-                        {
-                            QuestionId = 2,
-                            DifficultyLevel = "Intermediate",
-                            QuestionText = "What is the event loop in Node.js?",
-                            QuestionType = "Technical",
-                            SampleAnswer = "It manages asynchronous operations in Node.js runtime.",
-                            TechnologyId = 3
-                        });
-=======
->>>>>>> osama
-                });
+                b.ToTable("InterviewQuestions");
+            });
 
             modelBuilder.Entity("TechPathNavigator.Models.Roadmap", b =>
-                {
-                    b.Property<int>("RoadmapId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+            {
+                b.Property<int>("RoadmapId")
+                    .ValueGeneratedOnAdd()
+                    .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("RoadmapId"));
+                SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("RoadmapId"));
 
-                    b.Property<string>("Description")
-                        .HasColumnType("nvarchar(max)");
+                b.Property<string>("Description")
+                    .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("TechnologyId")
-                        .HasColumnType("int");
+                b.Property<int?>("TechnologyId")
+                    .HasColumnType("int");
 
-                    b.Property<string>("Title")
-                        .HasColumnType("nvarchar(max)");
+                b.Property<string>("Title")
+                    .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("TrackId")
-                        .HasColumnType("int");
+                b.Property<int>("TrackId")
+                    .HasColumnType("int");
 
-                    b.HasKey("RoadmapId");
+                b.HasKey("RoadmapId");
 
-                    b.HasIndex("TechnologyId");
+                b.HasIndex("TechnologyId");
 
-                    b.HasIndex("TrackId");
+                b.HasIndex("TrackId");
 
-                    b.ToTable("Roadmaps");
-<<<<<<< HEAD
-
-                    b.HasData(
-                        new
-                        {
-                            RoadmapId = 1,
-                            Description = "Steps to become backend developer",
-                            Title = "Backend Developer Roadmap",
-                            TrackId = 1
-                        });
-=======
->>>>>>> osama
-                });
+                b.ToTable("Roadmaps");
+            });
 
             modelBuilder.Entity("TechPathNavigator.Models.RoadmapStep", b =>
-                {
-                    b.Property<int>("RoadmapStepId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+            {
+                b.Property<int>("RoadmapStepId")
+                    .ValueGeneratedOnAdd()
+                    .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("RoadmapStepId"));
+                SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("RoadmapStepId"));
 
-                    b.Property<int>("RoadmapId")
-                        .HasColumnType("int");
+                b.Property<int>("RoadmapId")
+                    .HasColumnType("int");
 
-                    b.Property<string>("StepDescription")
-                        .HasColumnType("nvarchar(max)");
+                b.Property<string>("StepDescription")
+                    .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("StepOrder")
-                        .HasColumnType("int");
+                b.Property<int>("StepOrder")
+                    .HasColumnType("int");
 
-                    b.Property<string>("StepTitle")
-                        .HasColumnType("nvarchar(max)");
+                b.Property<string>("StepTitle")
+                    .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("RoadmapStepId");
+                b.HasKey("RoadmapStepId");
 
-                    b.HasIndex("RoadmapId");
+                b.HasIndex("RoadmapId");
 
-                    b.ToTable("RoadmapSteps");
-<<<<<<< HEAD
-
-                    b.HasData(
-                        new
-                        {
-                            RoadmapStepId = 1,
-                            RoadmapId = 1,
-                            StepDescription = "Understand syntax and OOP",
-                            StepOrder = 1,
-                            StepTitle = "Learn C# Basics"
-                        },
-                        new
-                        {
-                            RoadmapStepId = 2,
-                            RoadmapId = 1,
-                            StepDescription = "Build REST APIs",
-                            StepOrder = 2,
-                            StepTitle = "Learn ASP.NET Web API"
-                        });
-=======
->>>>>>> osama
-                });
+                b.ToTable("RoadmapSteps");
+            });
 
             modelBuilder.Entity("TechPathNavigator.Models.SubCategory", b =>
-                {
-                    b.Property<int>("SubCategoryId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+            {
+                b.Property<int>("SubCategoryId")
+                    .ValueGeneratedOnAdd()
+                    .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("SubCategoryId"));
+                SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("SubCategoryId"));
 
-                    b.Property<int>("CategoryId")
-                        .HasColumnType("int");
+                b.Property<int>("CategoryId")
+                    .HasColumnType("int");
 
-                    b.Property<string>("Description")
-                        .HasColumnType("nvarchar(max)");
+                b.Property<string>("Description")
+                    .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("DifficultyLevel")
-                        .HasColumnType("nvarchar(max)");
+                b.Property<string>("DifficultyLevel")
+                    .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("EstimatedDuration")
-                        .HasColumnType("int");
+                b.Property<int>("EstimatedDuration")
+                    .HasColumnType("int");
 
-                    b.Property<string>("SubCategoryName")
-                        .HasColumnType("nvarchar(max)");
+                b.Property<string>("SubCategoryName")
+                    .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("SubCategoryId");
+                b.HasKey("SubCategoryId");
 
-                    b.HasIndex("CategoryId");
+                b.HasIndex("CategoryId");
 
-                    b.ToTable("SubCategories");
-<<<<<<< HEAD
-
-                    b.HasData(
-                        new
-                        {
-                            SubCategoryId = 1,
-                            CategoryId = 1,
-                            Description = "Learn backend with .NET",
-                            DifficultyLevel = "Intermediate",
-                            EstimatedDuration = 120,
-                            SubCategoryName = "C# & .NET"
-                        },
-                        new
-                        {
-                            SubCategoryId = 2,
-                            CategoryId = 1,
-                            Description = "JavaScript backend development",
-                            DifficultyLevel = "Intermediate",
-                            EstimatedDuration = 100,
-                            SubCategoryName = "Node.js"
-                        },
-                        new
-                        {
-                            SubCategoryId = 3,
-                            CategoryId = 2,
-                            Description = "Frontend with React",
-                            DifficultyLevel = "Beginner",
-                            EstimatedDuration = 90,
-                            SubCategoryName = "React"
-                        });
-=======
->>>>>>> osama
-                });
+                b.ToTable("SubCategories");
+            });
 
             modelBuilder.Entity("TechPathNavigator.Models.Technology", b =>
-                {
-                    b.Property<int>("TechnologyId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+            {
+                b.Property<int>("TechnologyId")
+                    .ValueGeneratedOnAdd()
+                    .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("TechnologyId"));
+                SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("TechnologyId"));
 
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("datetime2");
+                b.Property<DateTime>("CreatedAt")
+                    .HasColumnType("datetime2");
 
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                b.Property<string>("Description")
+                    .IsRequired()
+                    .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("TechnologyName")
-                        .IsRequired()
-                        .HasMaxLength(200)
-                        .HasColumnType("nvarchar(200)");
+                b.Property<string>("TechnologyName")
+                    .IsRequired()
+                    .HasMaxLength(200)
+                    .HasColumnType("nvarchar(200)");
 
-                    b.Property<int>("TrackId")
-                        .HasColumnType("int");
+                b.Property<int>("TrackId")
+                    .HasColumnType("int");
 
-                    b.Property<string>("VideoUrl")
-                        .HasMaxLength(500)
-                        .HasColumnType("nvarchar(500)");
+                b.Property<string>("VideoUrl")
+                    .HasMaxLength(500)
+                    .HasColumnType("nvarchar(500)");
 
-                    b.HasKey("TechnologyId");
+                b.HasKey("TechnologyId");
 
-                    b.HasIndex("TrackId");
+                b.HasIndex("TrackId");
 
-                    b.ToTable("Technologies");
-<<<<<<< HEAD
-
-                    b.HasData(
-                        new
-                        {
-                            TechnologyId = 1,
-                            CreatedAt = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Language for .NET backend",
-                            TechnologyName = "C#",
-                            TrackId = 1
-                        },
-                        new
-                        {
-                            TechnologyId = 2,
-                            CreatedAt = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "ORM for .NET",
-                            TechnologyName = "Entity Framework Core",
-                            TrackId = 1
-                        },
-                        new
-                        {
-                            TechnologyId = 3,
-                            CreatedAt = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "JavaScript runtime",
-                            TechnologyName = "Node.js",
-                            TrackId = 2
-                        },
-                        new
-                        {
-                            TechnologyId = 4,
-                            CreatedAt = new DateTime(2025, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Frontend library",
-                            TechnologyName = "React",
-                            TrackId = 3
-                        });
-=======
->>>>>>> osama
-                });
+                b.ToTable("Technologies");
+            });
 
             modelBuilder.Entity("TechPathNavigator.Models.Track", b =>
-                {
-                    b.Property<int>("TrackId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+            {
+                b.Property<int>("TrackId")
+                    .ValueGeneratedOnAdd()
+                    .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("TrackId"));
+                SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("TrackId"));
 
-                    b.Property<string>("Description")
-                        .HasColumnType("nvarchar(max)");
+                b.Property<string>("Description")
+                    .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("DifficultyLevel")
-                        .HasColumnType("nvarchar(max)");
+                b.Property<string>("DifficultyLevel")
+                    .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("EstimatedDuration")
-                        .HasColumnType("int");
+                b.Property<int>("EstimatedDuration")
+                    .HasColumnType("int");
 
-                    b.Property<int>("SubCategoryId")
-                        .HasColumnType("int");
+                b.Property<int>("SubCategoryId")
+                    .HasColumnType("int");
 
-                    b.Property<string>("TrackName")
-                        .HasColumnType("nvarchar(max)");
+                b.Property<string>("TrackName")
+                    .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("TrackId");
+                b.HasKey("TrackId");
 
-                    b.HasIndex("SubCategoryId");
+                b.HasIndex("SubCategoryId");
 
-                    b.ToTable("Tracks");
-<<<<<<< HEAD
-
-                    b.HasData(
-                        new
-                        {
-                            TrackId = 1,
-                            Description = "RESTful APIs with .NET",
-                            DifficultyLevel = "Intermediate",
-                            EstimatedDuration = 150,
-                            SubCategoryId = 1,
-                            TrackName = "ASP.NET Web API"
-                        },
-                        new
-                        {
-                            TrackId = 2,
-                            Description = "Server-side Node.js development",
-                            DifficultyLevel = "Intermediate",
-                            EstimatedDuration = 120,
-                            SubCategoryId = 2,
-                            TrackName = "Express.js Backend"
-                        },
-                        new
-                        {
-                            TrackId = 3,
-                            Description = "Frontend development with React",
-                            DifficultyLevel = "Beginner",
-                            EstimatedDuration = 80,
-                            SubCategoryId = 3,
-                            TrackName = "React Basics"
-                        });
-=======
->>>>>>> osama
-                });
+                b.ToTable("Tracks");
+            });
 
             modelBuilder.Entity("TechPathNavigator.Models.User", b =>
-                {
-                    b.Property<int>("UserId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+            {
+                b.Property<int>("UserId")
+                    .ValueGeneratedOnAdd()
+                    .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("UserId"));
+                SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("UserId"));
 
-                    b.Property<string>("Email")
-                        .HasColumnType("nvarchar(max)");
+                b.Property<string>("Email")
+                    .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("PasswordHash")
-                        .HasColumnType("nvarchar(max)");
+                b.Property<string>("PasswordHash")
+                    .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("UserName")
-                        .HasColumnType("nvarchar(max)");
+                b.Property<string>("UserName")
+                    .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("UserId");
+                b.HasKey("UserId");
 
-                    b.ToTable("Users");
-<<<<<<< HEAD
-
-                    b.HasData(
-                        new
-                        {
-                            UserId = 1,
-                            Email = "admin@example.com",
-                            PasswordHash = "CHANGE_ME_HASH",
-                            UserName = "admin"
-                        });
-=======
->>>>>>> osama
-                });
+                b.ToTable("Users");
+            });
 
             modelBuilder.Entity("TechPathNavigator.Models.UserTechnologyReview", b =>
-                {
-                    b.Property<int>("ReviewId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
+            {
+                b.Property<int>("ReviewId")
+                    .ValueGeneratedOnAdd()
+                    .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ReviewId"));
+                SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ReviewId"));
 
-                    b.Property<int>("Rating")
-                        .HasColumnType("int");
+                b.Property<int>("Rating")
+                    .HasColumnType("int");
 
-                    b.Property<string>("ReviewText")
-                        .HasColumnType("nvarchar(max)");
+                b.Property<string>("ReviewText")
+                    .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("TechnologyId")
-                        .HasColumnType("int");
+                b.Property<int>("TechnologyId")
+                    .HasColumnType("int");
 
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
+                b.Property<int>("UserId")
+                    .HasColumnType("int");
 
-                    b.HasKey("ReviewId");
+                b.HasKey("ReviewId");
 
-                    b.HasIndex("TechnologyId");
+                b.HasIndex("TechnologyId");
 
-                    b.HasIndex("UserId");
+                b.HasIndex("UserId");
 
-                    b.ToTable("UserTechnologyReviews");
-<<<<<<< HEAD
-
-                    b.HasData(
-                        new
-                        {
-                            ReviewId = 1,
-                            Rating = 5,
-                            ReviewText = "Excellent technology for backend.",
-                            TechnologyId = 1,
-                            UserId = 1
-                        });
-=======
->>>>>>> osama
-                });
+                b.ToTable("UserTechnologyReviews");
+            });
 
             modelBuilder.Entity("TechPathNavigator.Models.CompanyTechnology", b =>
-                {
-                    b.HasOne("TechPathNavigator.Models.Company", "Company")
-                        .WithMany("CompanyTechnologies")
-                        .HasForeignKey("CompanyId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+            {
+                b.HasOne("TechPathNavigator.Models.Company", "Company")
+                    .WithMany("CompanyTechnologies")
+                    .HasForeignKey("CompanyId")
+                    .OnDelete(DeleteBehavior.Cascade)
+                    .IsRequired();
 
-                    b.HasOne("TechPathNavigator.Models.Technology", "Technology")
-                        .WithMany()
-                        .HasForeignKey("TechnologyId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                b.HasOne("TechPathNavigator.Models.Technology", "Technology")
+                    .WithMany()
+                    .HasForeignKey("TechnologyId")
+                    .OnDelete(DeleteBehavior.Cascade)
+                    .IsRequired();
 
-                    b.Navigation("Company");
+                b.Navigation("Company");
 
-                    b.Navigation("Technology");
-                });
+                b.Navigation("Technology");
+            });
 
             modelBuilder.Entity("TechPathNavigator.Models.InterviewQuestion", b =>
-                {
-                    b.HasOne("TechPathNavigator.Models.Technology", "Technology")
-                        .WithMany()
-                        .HasForeignKey("TechnologyId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+            {
+                b.HasOne("TechPathNavigator.Models.Technology", "Technology")
+                    .WithMany()
+                    .HasForeignKey("TechnologyId")
+                    .OnDelete(DeleteBehavior.Cascade)
+                    .IsRequired();
 
-                    b.Navigation("Technology");
-                });
+                b.Navigation("Technology");
+            });
 
             modelBuilder.Entity("TechPathNavigator.Models.Roadmap", b =>
-                {
-                    b.HasOne("TechPathNavigator.Models.Technology", null)
-                        .WithMany("Roadmaps")
-                        .HasForeignKey("TechnologyId");
+            {
+                b.HasOne("TechPathNavigator.Models.Technology", null)
+                    .WithMany("Roadmaps")
+                    .HasForeignKey("TechnologyId");
 
-                    b.HasOne("TechPathNavigator.Models.Track", "Track")
-                        .WithMany()
-                        .HasForeignKey("TrackId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                b.HasOne("TechPathNavigator.Models.Track", "Track")
+                    .WithMany()
+                    .HasForeignKey("TrackId")
+                    .OnDelete(DeleteBehavior.Cascade)
+                    .IsRequired();
 
-                    b.Navigation("Track");
-                });
+                b.Navigation("Track");
+            });
 
             modelBuilder.Entity("TechPathNavigator.Models.RoadmapStep", b =>
-                {
-                    b.HasOne("TechPathNavigator.Models.Roadmap", "Roadmap")
-                        .WithMany("RoadmapSteps")
-                        .HasForeignKey("RoadmapId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+            {
+                b.HasOne("TechPathNavigator.Models.Roadmap", "Roadmap")
+                    .WithMany("RoadmapSteps")
+                    .HasForeignKey("RoadmapId")
+                    .OnDelete(DeleteBehavior.Cascade)
+                    .IsRequired();
 
-                    b.Navigation("Roadmap");
-                });
+                b.Navigation("Roadmap");
+            });
 
             modelBuilder.Entity("TechPathNavigator.Models.SubCategory", b =>
-                {
-                    b.HasOne("TechPathNavigator.Models.Category", "Category")
-                        .WithMany("SubCategories")
-                        .HasForeignKey("CategoryId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+            {
+                b.HasOne("TechPathNavigator.Models.Category", "Category")
+                    .WithMany("SubCategories")
+                    .HasForeignKey("CategoryId")
+                    .OnDelete(DeleteBehavior.Cascade)
+                    .IsRequired();
 
-                    b.Navigation("Category");
-                });
+                b.Navigation("Category");
+            });
 
             modelBuilder.Entity("TechPathNavigator.Models.Technology", b =>
-                {
-                    b.HasOne("TechPathNavigator.Models.Track", "Track")
-                        .WithMany("Technologies")
-                        .HasForeignKey("TrackId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+            {
+                b.HasOne("TechPathNavigator.Models.Track", "Track")
+                    .WithMany("Technologies")
+                    .HasForeignKey("TrackId")
+                    .OnDelete(DeleteBehavior.Cascade)
+                    .IsRequired();
 
-                    b.Navigation("Track");
-                });
+                b.Navigation("Track");
+            });
 
             modelBuilder.Entity("TechPathNavigator.Models.Track", b =>
-                {
-                    b.HasOne("TechPathNavigator.Models.SubCategory", "SubCategory")
-                        .WithMany("Tracks")
-                        .HasForeignKey("SubCategoryId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+            {
+                b.HasOne("TechPathNavigator.Models.SubCategory", "SubCategory")
+                    .WithMany("Tracks")
+                    .HasForeignKey("SubCategoryId")
+                    .OnDelete(DeleteBehavior.Cascade)
+                    .IsRequired();
 
-                    b.Navigation("SubCategory");
-                });
+                b.Navigation("SubCategory");
+            });
 
             modelBuilder.Entity("TechPathNavigator.Models.UserTechnologyReview", b =>
-                {
-                    b.HasOne("TechPathNavigator.Models.Technology", "Technology")
-                        .WithMany()
-                        .HasForeignKey("TechnologyId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+            {
+                b.HasOne("TechPathNavigator.Models.Technology", "Technology")
+                    .WithMany()
+                    .HasForeignKey("TechnologyId")
+                    .OnDelete(DeleteBehavior.Cascade)
+                    .IsRequired();
 
-                    b.HasOne("TechPathNavigator.Models.User", "User")
-                        .WithMany("Reviews")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                b.HasOne("TechPathNavigator.Models.User", "User")
+                    .WithMany("Reviews")
+                    .HasForeignKey("UserId")
+                    .OnDelete(DeleteBehavior.Cascade)
+                    .IsRequired();
 
-                    b.Navigation("Technology");
+                b.Navigation("Technology");
 
-                    b.Navigation("User");
-                });
+                b.Navigation("User");
+            });
 
             modelBuilder.Entity("TechPathNavigator.Models.Category", b =>
-                {
-                    b.Navigation("SubCategories");
-                });
+            {
+                b.Navigation("SubCategories");
+            });
 
             modelBuilder.Entity("TechPathNavigator.Models.Company", b =>
-                {
-                    b.Navigation("CompanyTechnologies");
-                });
+            {
+                b.Navigation("CompanyTechnologies");
+            });
 
             modelBuilder.Entity("TechPathNavigator.Models.Roadmap", b =>
-                {
-                    b.Navigation("RoadmapSteps");
-                });
+            {
+                b.Navigation("RoadmapSteps");
+            });
 
             modelBuilder.Entity("TechPathNavigator.Models.SubCategory", b =>
-                {
-                    b.Navigation("Tracks");
-                });
+            {
+                b.Navigation("Tracks");
+            });
 
             modelBuilder.Entity("TechPathNavigator.Models.Technology", b =>
-                {
-                    b.Navigation("Roadmaps");
-                });
+            {
+                b.Navigation("Roadmaps");
+            });
 
             modelBuilder.Entity("TechPathNavigator.Models.Track", b =>
-                {
-                    b.Navigation("Technologies");
-                });
+            {
+                b.Navigation("Technologies");
+            });
 
             modelBuilder.Entity("TechPathNavigator.Models.User", b =>
-                {
-                    b.Navigation("Reviews");
-                });
+            {
+                b.Navigation("Reviews");
+            });
 #pragma warning restore 612, 618
         }
     }

@@ -18,8 +18,7 @@ namespace TechPathNavigator.Data
         public DbSet<Company> Companies { get; set; }
         public DbSet<CompanyTechnology> CompanyTechnologies { get; set; }
         public DbSet<UserTechnologyReview> UserTechnologyReviews { get; set; }
-        public DbSet<User> Users { get; set; } // if you added User
-
+        public DbSet<User> Users { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -39,10 +38,6 @@ namespace TechPathNavigator.Data
                 .HasOne(t => t.Track)
                 .WithMany(tr => tr.Technologies)
                 .HasForeignKey(t => t.TrackId);
-<<<<<<< HEAD
-
-=======
->>>>>>> osama
         }
     }
 }
