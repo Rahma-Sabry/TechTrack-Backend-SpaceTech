@@ -15,7 +15,8 @@ namespace TechPathNavigator.BLL.Mappings
             // Entity to DTO
             CreateMap<Category, CategoryGetDto>()
                 .ForMember(dest => dest.CategoryName, opt => opt.MapFrom(src => src.CategoryName))
-                .ForMember(dest => dest.Description, opt => opt.MapFrom(src => src.Description));
+                .ForMember(dest => dest.Description, opt => opt.MapFrom(src => src.Description))
+                .ForMember(dest => dest.ImageUrl, opt => opt.MapFrom(src => src.ImageUrl));
 
             // DTO to Entity
             CreateMap<CategoryPostDto, Category>()

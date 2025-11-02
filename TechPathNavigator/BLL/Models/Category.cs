@@ -14,6 +14,9 @@ namespace TechPathNavigator.Models
 
         public string Description { get; set; }
 
+        [MaxLength(500)]
+        public string? ImageUrl { get; set; }
+
         // Navigation
         public ICollection<SubCategory> SubCategories { get; set; }
     }

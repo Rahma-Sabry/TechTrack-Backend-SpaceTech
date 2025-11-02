@@ -38,6 +38,9 @@ namespace TechPathNavigator.Repositories
             existing.SubCategoryName = subCategory.SubCategoryName;
             existing.Description = subCategory.Description;
             existing.CategoryId = subCategory.CategoryId;
+            existing.DifficultyLevel = subCategory.DifficultyLevel;
+            existing.EstimatedDuration = subCategory.EstimatedDuration;
+            existing.ImageUrl = subCategory.ImageUrl;
             await _context.SaveChangesAsync();
             return existing;
         }

@@ -11,6 +11,10 @@ namespace TechPathNavigator.Models
         public string? Description { get; set; }
         public string? DifficultyLevel { get; set; }
         public int EstimatedDuration { get; set; }
+
+        [MaxLength(500)]
+        public string? ImageUrl { get; set; }
+
         public Category? Category { get; set; }
         public ICollection<Track>? Tracks { get; set; }
     }
