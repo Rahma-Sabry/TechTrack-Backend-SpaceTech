@@ -77,6 +77,18 @@ namespace TechPathNavigator
                 });
             });
 
+            //Add cores
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAll", policy =>
+                {
+                    policy
+                        .AllowAnyOrigin()    
+                        .AllowAnyMethod()    
+                        .AllowAnyHeader();  
+                });
+            });
+
             var app = builder.Build();
 
             // 🧭 Swagger UI
@@ -89,9 +101,12 @@ namespace TechPathNavigator
 
             // 🔐 Middlewares
             app.UseGlobalExceptionHandler();
+            app.UseCors("AllowAll");
             app.UseHttpsRedirection();
             app.UseAuthorization();
             app.UseCorsMiddleware();
+
+
 
             // 🚀 Map Controllers
             app.MapControllers();
