@@ -1,16 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\TechTrack-Backend-SpaceTech-main",
-    "\\TechTrack-Backend-SpaceTech-main\\TechPathNavigator",
-    "\\TechTrack-Backend-SpaceTech-main\\TechPathNavigator\\BLL",
-    "\\TechTrack-Backend-SpaceTech-main\\TechPathNavigator\\BLL\\Service",
-    "\\TechTrack-Backend-SpaceTech-main\\TechPathNavigator\\BLL\\Service\\Company",
-    "\\TechTrack-Backend-SpaceTech-main\\TechPathNavigator\\DAL",
-    "\\TechTrack-Backend-SpaceTech-main\\TechPathNavigator\\DAL\\Repo",
-    "\\TechTrack-Backend-SpaceTech-main\\TechPathNavigator\\DAL\\Repo\\Category",
-    "\\TechTrack-Backend-SpaceTech-main\\TechPathNavigator\\DAL\\Repo\\RoadmapSteps"
+    "\\TechPathNavigator"
   ],
-  "SelectedNode": "\\TechTrack-Backend-SpaceTech-main\\TechPathNavigator.slnx",
+  "SelectedNode": "\\TechPathNavigator.slnx",
   "PreviewInSolutionExplorer": false
 }
