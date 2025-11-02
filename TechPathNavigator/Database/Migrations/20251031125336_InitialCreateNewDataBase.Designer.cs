@@ -10,7 +10,7 @@ using TechPathNavigator.DAL.Data;
 #nullable disable
 
 namespace TechPathNavigator.Migrations
-{
+{   
     [DbContext(typeof(ApplicationDbContext))]
     [Migration("20251031125336_InitialCreateNewDataBase")]
     partial class InitialCreateNewDataBase

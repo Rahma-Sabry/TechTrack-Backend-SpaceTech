@@ -8,5 +8,6 @@ namespace TechPathNavigator.DTOs
         public string DifficultyLevel { get; set; }
         public int EstimatedDuration { get; set; }
         public int CategoryId { get; set; } // link to parent category
+        public string? ImageUrl { get; set; }
     }
 }
