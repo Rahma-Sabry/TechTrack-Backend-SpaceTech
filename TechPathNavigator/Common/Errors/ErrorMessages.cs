@@ -63,6 +63,19 @@ namespace TechPathNavigator.Common.Errors
         public const string User_NotFound = "User with the specified ID does not exist.";
         public const string User_PasswordRequired = "Password is required.";
         public const string User_PasswordWeak = "Password must meet complexity requirements.";
+
+        // Category Errors
+        public const string Category_NameRequired = "CategoryName is required.";
+        public const string Category_NameExists = "A category with this name already exists.";
+        public const string Category_DescriptionRequired = "Description is required.";
+        public const string Category_ImageUrlInvalid = "ImageUrl must be a valid URL.";
+        public const string Category_NotFound = "Category with the specified ID does not exist.";
+        public const string Category_CreateFailed = "Failed to create the category.";
+        public const string Category_UpdateFailed = "Failed to update the category.";
+        public const string Category_DeleteFailed = "Failed to delete the category.";
+        public const string Category_FetchFailed = "Failed to fetch categories.";
+        public const string Category_FetchByIdFailed = "Failed to fetch category by ID.";
+
     }
 }
 

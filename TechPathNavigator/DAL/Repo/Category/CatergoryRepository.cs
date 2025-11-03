@@ -40,8 +40,9 @@ namespace TechPathNavigator.Repositories
             var existing = await _context.Categories.FindAsync(category.CategoryId);
             if (existing == null) return null;
 
-            existing.CategoryName = category.CategoryName; // ? fixed
-            existing.Description = category.Description;   // ? fixed
+            existing.CategoryName = category.CategoryName;
+            existing.Description = category.Description;
+            existing.ImageUrl = category.ImageUrl;
 
             await _context.SaveChangesAsync();
             return existing;

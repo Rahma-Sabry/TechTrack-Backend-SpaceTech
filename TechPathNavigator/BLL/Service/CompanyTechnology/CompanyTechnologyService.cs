@@ -50,18 +50,20 @@ namespace TechPathNavigator.Services
 
             var existing = await _repo.GetByIdAsync(id);
             if (existing == null)
-                return ServiceResult<CompanyTechnologyGetDto>.Fail(ApiMessages.CompanyTechnologyNotFound);
+                return ServiceResult<CompanyTechnologyGetDto>.Fail(ErrorMessages.CompanyTechnology_CompanyInvalid);
 
+            // Update entity
             existing.CompanyId = dto.CompanyId;
             existing.TechnologyId = dto.TechnologyId;
             existing.UsageLevel = dto.UsageLevel;
 
             var updated = await _repo.UpdateAsync(existing);
             if (updated == null)
-                return ServiceResult<CompanyTechnologyGetDto>.Fail(ApiMessages.CompanyTechnologyNotFound);
+                return ServiceResult<CompanyTechnologyGetDto>.Fail(ErrorMessages.CompanyTechnology_CompanyInvalid);
 
             return ServiceResult<CompanyTechnologyGetDto>.Ok(updated.ToGetDto());
         }
+
 
         public async Task<bool> DeleteAsync(int id)
         {

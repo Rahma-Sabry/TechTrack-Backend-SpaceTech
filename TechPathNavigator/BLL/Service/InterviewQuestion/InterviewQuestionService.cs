@@ -33,7 +33,8 @@ namespace TechPathNavigator.Services
         public async Task<ServiceResult<InterviewQuestionGetDto>> CreateAsync(InterviewQuestionPostDto dto)
         {
             var validationErrors = await Validate(dto);
-            if (validationErrors.Any()) return ServiceResult<InterviewQuestionGetDto>.Fail(validationErrors);
+            if (validationErrors.Any()) 
+                return ServiceResult<InterviewQuestionGetDto>.Fail(validationErrors);
 
             var entity = dto.ToEntity();
             var created = await _repository.AddAsync(entity);
@@ -46,7 +47,7 @@ namespace TechPathNavigator.Services
             if (validationErrors.Any()) return ServiceResult<InterviewQuestionGetDto>.Fail(validationErrors);
 
             var updated = await _repository.UpdateAsync(dto.ToEntity(id));
-            if (updated == null) return ServiceResult<InterviewQuestionGetDto>.Fail("Interview question not found.");
+            if (updated == null) return ServiceResult<InterviewQuestionGetDto>.Fail(ErrorMessages.InterviewQuestion_TypeInvalid);
 
             return ServiceResult<InterviewQuestionGetDto>.Ok(updated.ToGetDto());
         }

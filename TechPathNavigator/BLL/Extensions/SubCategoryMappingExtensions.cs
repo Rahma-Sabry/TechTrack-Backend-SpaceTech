@@ -22,11 +22,17 @@ namespace TechPathNavigator.Extensions
         {
             return new SubCategory
             {
-                SubCategoryId = id ?? 0, // use id if updating
-                SubCategoryName = dto.SubCategoryName,
-                Description = dto.Description,
-                CategoryId = dto.CategoryId
+                SubCategoryId = id ?? 0,
+                SubCategoryName = dto.SubCategoryName ?? string.Empty,
+                Description = dto.Description ?? string.Empty,
+                CategoryId = dto.CategoryId ?? 0,           // int? -> int
+                DifficultyLevel = dto.DifficultyLevel ?? 0, // int? -> int
+                EstimatedDuration = dto.EstimatedDuration ?? 0, // int? -> int
+                ImageUrl = dto.ImageUrl
             };
         }
+
+
+
     }
 }

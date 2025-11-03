@@ -1,11 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
+using TechPathNavigator.Common.Middleware;
 using TechPathNavigator.Data;
 using TechPathNavigator.Repositories;
-using TechPathNavigator.Services;
-using TechPathNavigator.Service.Track;
 using TechPathNavigator.Service.Technology;
-using TechPathNavigator.Common.Middleware;
+using TechPathNavigator.Service.Track;
+using TechPathNavigator.Service.User;
+using TechPathNavigator.Services;
 
 namespace TechPathNavigator
 {
@@ -22,13 +23,14 @@ namespace TechPathNavigator
             // Roadmap & Steps
             builder.Services.AddScoped<IRoadmapRepository, RoadmapRepository>();
             builder.Services.AddScoped<IRoadmapService, RoadmapService>();
-            builder.Services.AddScoped<RoadmapService>(); // For controllers using class directly
+            builder.Services.AddScoped<RoadmapService>(); // For controllers that use class directly
             builder.Services.AddScoped<IRoadmapStepRepository, RoadmapStepRepository>();
             builder.Services.AddScoped<IRoadmapStepService, RoadmapStepService>();
-            builder.Services.AddScoped<RoadmapStepService>(); // For controllers using class directly
+            builder.Services.AddScoped<RoadmapStepService>(); // For controllers that use class directly
 
             // User Management
             builder.Services.AddScoped<IUserRepository, UserRepository>();
+            builder.Services.AddScoped<IUserService, UserService>();
             builder.Services.AddScoped<UserService>();
 
             // User Reviews
@@ -38,10 +40,10 @@ namespace TechPathNavigator
             // Track & Technology
             builder.Services.AddScoped<ITrackRepository, TrackRepository>();
             builder.Services.AddScoped<ITrackService, TrackService>();
-            builder.Services.AddScoped<TrackService>(); // For controllers using class directly
+            builder.Services.AddScoped<TrackService>(); // For controllers that use class directly
             builder.Services.AddScoped<ITechnologyRepository, TechnologyRepository>();
             builder.Services.AddScoped<ITechnologyService, TechnologyService>();
-            builder.Services.AddScoped<TechnologyService>(); // For controllers using class directly
+            builder.Services.AddScoped<TechnologyService>(); // For controllers that use class directly
 
             // Category & Subcategory
             builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
@@ -59,9 +61,6 @@ namespace TechPathNavigator
             builder.Services.AddScoped<IInterviewQuestionRepository, InterviewQuestionRepository>();
             builder.Services.AddScoped<IInterviewQuestionService, InterviewQuestionService>();
 
-            // 🌍 CORS setup
-            builder.Services.ConfigureCors();
-
             // 🧩 Controllers
             builder.Services.AddControllers();
 
@@ -77,17 +76,8 @@ namespace TechPathNavigator
                 });
             });
 
-            //Add cores
-            builder.Services.AddCors(options =>
-            {
-                options.AddPolicy("AllowAll", policy =>
-                {
-                    policy
-                        .AllowAnyOrigin()    
-                        .AllowAnyMethod()    
-                        .AllowAnyHeader();  
-                });
-            });
+            // 🌍 CORS setup
+            builder.Services.ConfigureCors();
 
             var app = builder.Build();
 
@@ -101,15 +91,17 @@ namespace TechPathNavigator
 
             // 🔐 Middlewares
             app.UseGlobalExceptionHandler();
-            app.UseCors("AllowAll");
             app.UseHttpsRedirection();
             app.UseAuthorization();
             app.UseCorsMiddleware();
 
-
-
             // 🚀 Map Controllers
             app.MapControllers();
+
+            using (var scope = app.Services.CreateScope())
+            {
+                SeedData.Initialize(scope.ServiceProvider);
+            }
 
             app.Run();
         }

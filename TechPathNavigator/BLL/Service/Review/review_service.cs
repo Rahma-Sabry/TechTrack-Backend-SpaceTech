@@ -6,6 +6,7 @@ using TechPathNavigator.Extensions;
 using TechPathNavigator.Models;
 using TechPathNavigator.Repositories;
 
+
 namespace TechPathNavigator.Services
 {
     public class UserTechnologyReviewService : IUserTechnologyReviewService
@@ -58,7 +59,7 @@ namespace TechPathNavigator.Services
             if (errors.Any()) return ServiceResult<UserTechnologyReviewGetDto>.Fail(errors);
 
             var updated = await _repo.UpdateAsync(dto.ToEntity(id));
-            if (updated == null) return ServiceResult<UserTechnologyReviewGetDto>.Fail("Review not found.");
+            if (updated == null) return ServiceResult<UserTechnologyReviewGetDto>.Fail(ErrorMessages.Review_RatingInvalid);
 
             return ServiceResult<UserTechnologyReviewGetDto>.Ok(updated.ToGetDto());
         }

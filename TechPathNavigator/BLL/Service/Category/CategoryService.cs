@@ -2,10 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using TechPathNavigator.Common.Errors;
 using TechPathNavigator.DTOs;
 using TechPathNavigator.Extensions;
+using TechPathNavigator.Models;
 using TechPathNavigator.Repositories;
-using TechPathNavigator.Common.Errors;
 
 namespace TechPathNavigator.Services
 {
@@ -21,45 +22,114 @@ namespace TechPathNavigator.Services
         // Get all categories
         public async Task<IEnumerable<CategoryGetDto>> GetAllCategoriesAsync()
         {
-            var categories = await _repo.GetAllAsync();
-            return categories.Select(c => c.ToGetDto());
+            try
+            {
+                var categories = await _repo.GetAllAsync();
+
+                return categories.Select(c => new CategoryGetDto
+                {
+                    CategoryId = c.CategoryId,
+                    CategoryName = c.CategoryName,
+                    Description = c.Description,
+                    ImageUrl = c.ImageUrl
+                }).ToList();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ErrorMessages.Category_FetchFailed, ex);
+            }
         }
 
         // Get category by ID
         public async Task<CategoryGetDto?> GetCategoryByIdAsync(int id)
         {
-            var category = await _repo.GetByIdAsync(id);
-            return category?.ToGetDto();
+            try
+            {
+                var category = await _repo.GetByIdAsync(id);
+                if (category == null) return null;
+
+                return new CategoryGetDto
+                {
+                    CategoryId = category.CategoryId,
+                    CategoryName = category.CategoryName,
+                    Description = category.Description,
+                    ImageUrl = category.ImageUrl
+                };
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ErrorMessages.Category_FetchByIdFailed, ex);
+            }
         }
 
         // Create a new category
         public async Task<CategoryGetDto> CreateCategoryAsync(CategoryPostDto dto)
         {
-            if (string.IsNullOrWhiteSpace(dto.Name))
-                throw new ArgumentException(ErrorMessages.Company_NameRequired);
+            try
+            {
+                var category = new Category
+                {
+                    CategoryName = dto.Name ?? string.Empty,
+                    Description = dto.Description ?? string.Empty,
+                    ImageUrl = dto.ImageUrl
+                };
 
-            var entity = dto.ToEntity();
-            var created = await _repo.AddAsync(entity);
-            return created.ToGetDto();
+                var createdCategory = await _repo.AddAsync(category);
+
+                return new CategoryGetDto
+                {
+                    CategoryId = createdCategory.CategoryId,
+                    CategoryName = createdCategory.CategoryName,
+                    Description = createdCategory.Description,
+                    ImageUrl = createdCategory.ImageUrl
+                };
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ErrorMessages.Category_CreateFailed, ex);
+            }
         }
 
         // Update an existing category
         public async Task<CategoryGetDto?> UpdateCategoryAsync(int id, CategoryPostDto dto)
         {
-            var existing = await _repo.GetByIdAsync(id);
-            if (existing == null) return null;
+            try
+            {
+                var existingCategory = await _repo.GetByIdAsync(id);
+                if (existingCategory == null) return null;
 
-            existing.CategoryName = dto.Name ?? existing.CategoryName;
-            existing.Description = dto.Description ?? existing.Description;
+                existingCategory.CategoryName = dto.Name ?? existingCategory.CategoryName;
+                existingCategory.Description = dto.Description ?? existingCategory.Description;
+                existingCategory.ImageUrl = dto.ImageUrl ?? existingCategory.ImageUrl;
 
-            var updated = await _repo.UpdateAsync(existing);
-            return updated?.ToGetDto();
+                var updatedCategory = await _repo.UpdateAsync(existingCategory);
+                if (updatedCategory == null) return null;
+
+                return new CategoryGetDto
+                {
+                    CategoryId = updatedCategory.CategoryId,
+                    CategoryName = updatedCategory.CategoryName,
+                    Description = updatedCategory.Description,
+                    ImageUrl = updatedCategory.ImageUrl
+                };
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ErrorMessages.Category_UpdateFailed, ex);
+            }
         }
 
         // Delete a category
         public async Task<bool> DeleteCategoryAsync(int id)
         {
-            return await _repo.DeleteAsync(id);
+            try
+            {
+                return await _repo.DeleteAsync(id);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ErrorMessages.Category_DeleteFailed, ex);
+            }
         }
     }
 }

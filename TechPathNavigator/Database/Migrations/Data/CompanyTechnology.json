@@ -1,61 +1,91 @@
 [
   {
+    "CompanyId": 2,
+    "TechnologyId": 4,
     "UsageLevel": "primary",
     "Notes": "Microsoft uses .NET Core for most of its backend services and Azure tools."
   },
   {
+    "CompanyId": 2,
+    "TechnologyId": 5,
     "UsageLevel": "primary",
     "Notes": "Entity Framework Core is widely used in Microsoft's internal .NET applications."
   },
   {
+    "CompanyId": 3,
+    "TechnologyId": 3,
     "UsageLevel": "primary",
     "Notes": "Meta created and maintains React for all its web interfaces (Facebook, Instagram)."
   },
   {
+    "CompanyId": 1,
+    "TechnologyId": 2,
     "UsageLevel": "primary",
     "Notes": "Google uses JavaScript extensively across its web products like Gmail and Docs."
   },
   {
+    "CompanyId": 1,
+    "TechnologyId": 18,
     "UsageLevel": "primary",
     "Notes": "Google uses Node.js for many of its scalable backend services."
   },
   {
+    "CompanyId": 4,
+    "TechnologyId": 7,
     "UsageLevel": "primary",
     "Notes": "Apple uses Swift as the main language for all iOS and macOS app development."
   },
   {
+    "CompanyId": 5,
+    "TechnologyId": 4,
     "UsageLevel": "secondary",
     "Notes": "Amazon uses .NET Core in some AWS services and enterprise solutions."
   },
   {
+    "CompanyId": 7,
+    "TechnologyId": 9,
     "UsageLevel": "primary",
     "Notes": "Unity Technologies uses its own Unity engine to build and demo games."
   },
   {
+    "CompanyId": 10,
+    "TechnologyId": 16,
     "UsageLevel": "primary",
     "Notes": "Figma is built with and designed using its own Figma tool."
   },
   {
+    "CompanyId": 8,
+    "TechnologyId": 10,
     "UsageLevel": "primary",
     "Notes": "CrowdStrike uses Wireshark for deep network traffic analysis in threat detection."
   },
   {
+    "CompanyId": 6,
+    "TechnologyId": 14,
     "UsageLevel": "primary",
     "Notes": "IBM uses Python and Pandas for data processing in its AI and analytics platforms."
   },
   {
+    "CompanyId": 9,
+    "TechnologyId": 15,
     "UsageLevel": "primary",
     "Notes": "Palantir uses Scikit-learn for machine learning models in its data platforms."
   },
   {
+    "CompanyId": 11,
+    "TechnologyId": 3,
     "UsageLevel": "secondary",
     "Notes": "Netflix uses React for parts of its frontend UI alongside other frameworks."
   },
   {
+    "CompanyId": 12,
+    "TechnologyId": 2,
     "UsageLevel": "primary",
     "Notes": "GitHub's web interface relies heavily on JavaScript for dynamic interactions."
   },
   {
+    "CompanyId": 1,
+    "TechnologyId": 12,
     "UsageLevel": "primary",
     "Notes": "Google uses SQL in BigQuery and many internal data systems."
   }

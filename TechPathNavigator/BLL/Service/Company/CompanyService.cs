@@ -52,8 +52,9 @@ namespace TechPathNavigator.Services
 
             var existing = await _repo.GetByIdAsync(id);
             if (existing == null)
-                return ServiceResult<CompanyGetDto>.Fail(ApiMessages.CompanyNotFound);
+                return ServiceResult<CompanyGetDto>.Fail(errors);
 
+            // Update fields
             existing.CompanyName = dto.CompanyName ?? existing.CompanyName;
             existing.WebsiteUrl = dto.WebsiteUrl ?? existing.WebsiteUrl;
 
