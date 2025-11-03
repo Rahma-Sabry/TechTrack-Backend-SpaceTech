@@ -1,0 +1,50 @@
+[
+  {
+    "UserId": 1,
+    "TechnologyId": 1,
+    "Rating": 5,
+    "ReviewText": "HTML & CSS were my first step into web development — clear, visual, and rewarding!"
+  },
+  {
+    "UserId": 1,
+    "TechnologyId": 2,
+    "Rating": 4,
+    "ReviewText": "JavaScript opened the door to interactivity. Took time to grasp closures, but worth it!"
+  },
+  {
+    "UserId": 2,
+    "TechnologyId": 4,
+    "Rating": 5,
+    "ReviewText": "I built my first API with .NET Core in just two weeks. Clean, fast, and well-documented!"
+  },
+  {
+    "UserId": 2,
+    "TechnologyId": 5,
+    "Rating": 4,
+    "ReviewText": "Entity Framework Core saved me from writing raw SQL. Migrations are a game-changer!"
+  },
+  {
+    "UserId": 3,
+    "TechnologyId": 3,
+    "Rating": 5,
+    "ReviewText": "React made building UIs fun! Components are intuitive, and the community is amazing."
+  },
+  {
+    "UserId": 3,
+    "TechnologyId": 16,
+    "Rating": 5,
+    "ReviewText": "Figma is perfect for designers and developers alike. Real-time collaboration changed how I work!"
+  },
+  {
+    "UserId": 4,
+    "TechnologyId": 12,
+    "Rating": 4,
+    "ReviewText": "SQL is essential. Once I got the hang of JOINs, everything clicked!"
+  },
+  {
+    "UserId": 4,
+    "TechnologyId": 14,
+    "Rating": 5,
+    "ReviewText": "Pandas made data analysis feel like magic. Cleaning data has never been this easy!"
+  }
+]
