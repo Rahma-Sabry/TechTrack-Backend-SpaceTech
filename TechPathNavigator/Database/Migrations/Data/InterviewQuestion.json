@@ -1,0 +1,107 @@
+[
+  {
+    "TechnologyId": 1,
+    "QuestionText": "What is the difference between HTML and CSS?",
+    "DifficultyLevel": "Beginner",
+    "QuestionType": "technical",
+    "SampleAnswer": "HTML defines the structure of a webpage (like headings and paragraphs), while CSS controls its appearance (like colors, fonts, and layout)."
+  },
+  {
+    "TechnologyId": 2,
+    "QuestionText": "What is a closure in JavaScript?",
+    "DifficultyLevel": "Intermediate",
+    "QuestionType": "technical",
+    "SampleAnswer": "A closure is a function that remembers variables from its outer scope, even after the outer function has finished executing."
+  },
+  {
+    "TechnologyId": 3,
+    "QuestionText": "What are React components?",
+    "DifficultyLevel": "Beginner",
+    "QuestionType": "technical",
+    "SampleAnswer": "Components are reusable pieces of UI in React. They can be functions or classes that return JSX to describe what should appear on the screen."
+  },
+  {
+    "TechnologyId": 4,
+    "QuestionText": "What is dependency injection in .NET?",
+    "DifficultyLevel": "Intermediate",
+    "QuestionType": "technical",
+    "SampleAnswer": "Dependency injection is a design pattern where objects receive their dependencies from an external source rather than creating them internally, making code more testable and maintainable."
+  },
+  {
+    "TechnologyId": 5,
+    "QuestionText": "How does Entity Framework Core handle database migrations?",
+    "DifficultyLevel": "Intermediate",
+    "QuestionType": "technical",
+    "SampleAnswer": "EF Core uses migration files to track changes to the model. You create a migration with 'dotnet ef migrations add', then apply it with 'dotnet ef database update'."
+  },
+  {
+    "TechnologyId": 6,
+    "QuestionText": "Why is Kotlin preferred for Android development?",
+    "DifficultyLevel": "Beginner",
+    "QuestionType": "technical",
+    "SampleAnswer": "Kotlin is concise, safe (null-safe by default), and fully interoperable with Java, making it the official language for Android."
+  },
+  {
+    "TechnologyId": 7,
+    "QuestionText": "What is Swift’s Optional type?",
+    "DifficultyLevel": "Intermediate",
+    "QuestionType": "technical",
+    "SampleAnswer": "Optionals in Swift represent a value that may or may not exist. They help prevent null pointer exceptions by forcing developers to handle nil cases explicitly."
+  },
+  {
+    "TechnologyId": 8,
+    "QuestionText": "What is the 'widget tree' in Flutter?",
+    "DifficultyLevel": "Intermediate",
+    "QuestionType": "technical",
+    "SampleAnswer": "The widget tree is a hierarchy of widgets that defines the UI structure. Flutter rebuilds parts of this tree when the app state changes."
+  },
+  {
+    "TechnologyId": 9,
+    "QuestionText": "How do you optimize performance in Unity?",
+    "DifficultyLevel": "Advanced",
+    "QuestionType": "technical",
+    "SampleAnswer": "Use object pooling, minimize GetComponent calls, optimize physics, and use the Profiler to identify bottlenecks."
+  },
+  {
+    "TechnologyId": 10,
+    "QuestionText": "How would you detect a man-in-the-middle attack using Wireshark?",
+    "DifficultyLevel": "Advanced",
+    "QuestionType": "technical",
+    "SampleAnswer": "Look for unexpected SSL/TLS certificate changes, duplicate IP addresses, or unusual traffic patterns between client and server."
+  },
+  {
+    "TechnologyId": 12,
+    "QuestionText": "What is a JOIN in SQL?",
+    "DifficultyLevel": "Beginner",
+    "QuestionType": "technical",
+    "SampleAnswer": "A JOIN combines rows from two or more tables based on a related column, like matching user IDs between Users and Orders tables."
+  },
+  {
+    "TechnologyId": 13,
+    "QuestionText": "How do you create a dashboard in Power BI?",
+    "DifficultyLevel": "Beginner",
+    "QuestionType": "technical",
+    "SampleAnswer": "Import data, create visualizations like charts and tables, then arrange them on a report canvas and publish to the service."
+  },
+  {
+    "TechnologyId": 14,
+    "QuestionText": "What is a DataFrame in Pandas?",
+    "DifficultyLevel": "Beginner",
+    "QuestionType": "technical",
+    "SampleAnswer": "A DataFrame is a 2D labeled data structure in Pandas, similar to a spreadsheet or SQL table, used for data manipulation and analysis."
+  },
+  {
+    "TechnologyId": 16,
+    "QuestionText": "How do you collaborate with developers as a UI designer?",
+    "DifficultyLevel": "Intermediate",
+    "QuestionType": "behavioral",
+    "SampleAnswer": "I use Figma’s developer handoff features, provide clear specs, and maintain open communication to ensure the final product matches the design."
+  },
+  {
+    "TechnologyId": 2,
+    "QuestionText": "Tell me about a time you solved a difficult bug.",
+    "DifficultyLevel": "Intermediate",
+    "QuestionType": "behavioral",
+    "SampleAnswer": "I once debugged a memory leak in a React app by using Chrome DevTools to track component re-renders and fixed it by optimizing useEffect dependencies."
+  }
+]
