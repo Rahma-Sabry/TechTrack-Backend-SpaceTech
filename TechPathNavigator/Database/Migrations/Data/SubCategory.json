@@ -2,6 +2,7 @@
   {
     "CategoryId": 1,
     "SubCategoryName": "Web Development",
+    "ImageUrl": "",
     "Description": "Build websites and web applications using HTML, CSS, JavaScript, and frameworks like React or .NET.",
     "DifficultyLevel": "Beginner",
     "EstimatedDuration": 250
@@ -9,6 +10,7 @@
   {
     "CategoryId": 1,
     "SubCategoryName": "Mobile Development",
+    "ImageUrl": "",
     "Description": "Create apps for iOS and Android using Flutter, React Native, or native tools like Swift and Kotlin.",
     "DifficultyLevel": "Beginner",
     "EstimatedDuration": 200
@@ -16,6 +18,7 @@
   {
     "CategoryId": 1,
     "SubCategoryName": "Game Development",
+    "ImageUrl": "",
     "Description": "Design and code interactive games using Unity or Unreal Engine with C# or C++.",
     "DifficultyLevel": "Beginner",
     "EstimatedDuration": 220
@@ -23,6 +26,7 @@
   {
     "CategoryId": 2,
     "SubCategoryName": "DevOps",
+    "ImageUrl": "",
     "Description": "Automate deployment, manage cloud infrastructure, and ensure smooth software delivery using Docker, Kubernetes, and CI/CD pipelines.",
     "DifficultyLevel": "Intermediate",
     "EstimatedDuration": 160
@@ -30,6 +34,7 @@
   {
     "CategoryId": 2,
     "SubCategoryName": "Cyber Security",
+    "ImageUrl": "",
     "Description": "Learn to protect systems, networks, and data from digital attacks using ethical hacking and security best practices.",
     "DifficultyLevel": "Intermediate",
     "EstimatedDuration": 200
@@ -37,6 +42,7 @@
   {
     "CategoryId": 3,
     "SubCategoryName": "Data Analysis",
+    "ImageUrl": "",
     "Description": "Turn raw data into insights using Excel, SQL, Python (Pandas), and visualization tools like Power BI.",
     "DifficultyLevel": "Beginner",
     "EstimatedDuration": 120
@@ -44,6 +50,7 @@
   {
     "CategoryId": 3,
     "SubCategoryName": "Data Science",
+    "ImageUrl": "",
     "Description": "Apply statistics and machine learning to solve real-world problems using Python, Scikit-learn, and Jupyter Notebooks.",
     "DifficultyLevel": "Intermediate",
     "EstimatedDuration": 240
@@ -51,6 +58,7 @@
   {
     "CategoryId": 3,
     "SubCategoryName": "Data Engineering",
+    "ImageUrl": "",
     "Description": "Build data pipelines and warehouses to collect, store, and process large-scale data using SQL, Spark, and cloud platforms.",
     "DifficultyLevel": "Advanced",
     "EstimatedDuration": 260
@@ -58,6 +66,7 @@
   {
     "CategoryId": 3,
     "SubCategoryName": "ML Engineering",
+    "ImageUrl": "",
     "Description": "Deploy and scale machine learning models in production using MLOps practices, APIs, and cloud services.",
     "DifficultyLevel": "Advanced",
     "EstimatedDuration": 280
@@ -65,6 +74,7 @@
   {
     "CategoryId": 4,
     "SubCategoryName": "UI/UX Design",
+    "ImageUrl": "",
     "Description": "Design user-friendly and visually appealing interfaces using Figma, user research, and design thinking principles.",
     "DifficultyLevel": "Beginner",
     "EstimatedDuration": 140

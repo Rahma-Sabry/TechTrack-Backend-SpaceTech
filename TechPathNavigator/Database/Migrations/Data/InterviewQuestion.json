@@ -7,101 +7,1508 @@
     "SampleAnswer": "HTML defines the structure of a webpage (like headings and paragraphs), while CSS controls its appearance (like colors, fonts, and layout)."
   },
   {
-    "TechnologyId": 2,
-    "QuestionText": "What is a closure in JavaScript?",
+    "TechnologyId": 1,
+    "QuestionText": "What are semantic HTML elements and why are they important?",
     "DifficultyLevel": "Intermediate",
     "QuestionType": "technical",
-    "SampleAnswer": "A closure is a function that remembers variables from its outer scope, even after the outer function has finished executing."
+    "SampleAnswer": "Semantic elements like <header>, <article>, and <footer> give meaning to content, improving accessibility and SEO by helping browsers and search engines understand the page structure."
+  },
+  {
+    "TechnologyId": 1,
+    "QuestionText": "Explain the difference between Flexbox and CSS Grid and when to use each.",
+    "DifficultyLevel": "Advanced",
+    "QuestionType": "technical",
+    "SampleAnswer": "Flexbox is best for one-dimensional layouts (rows or columns), while CSS Grid is used for two-dimensional layouts. Grid allows more complex and precise control over layout structure."
+  },
+  {
+    "TechnologyId": 2,
+    "QuestionText": "What is the difference between var, let, and const?",
+    "DifficultyLevel": "Beginner",
+    "QuestionType": "technical",
+    "SampleAnswer": "var is function-scoped and can be redeclared, let and const are block-scoped; const cannot be reassigned while let can."
+  },
+  {
+    "TechnologyId": 2,
+    "QuestionText": "What are JavaScript promises and how do they work?",
+    "DifficultyLevel": "Intermediate",
+    "QuestionType": "technical",
+    "SampleAnswer": "A Promise represents a value that may be available now, later, or never. It helps handle asynchronous operations with .then() for success and .catch() for errors."
+  },
+  {
+    "TechnologyId": 2,
+    "QuestionText": "Explain the concept of closures in JavaScript.",
+    "DifficultyLevel": "Advanced",
+    "QuestionType": "technical",
+    "SampleAnswer": "A closure gives access to an outer function’s scope from an inner function even after the outer function has executed. It’s often used for data privacy or stateful functions."
   },
   {
     "TechnologyId": 3,
-    "QuestionText": "What are React components?",
+    "QuestionText": "What is React used for?",
     "DifficultyLevel": "Beginner",
     "QuestionType": "technical",
-    "SampleAnswer": "Components are reusable pieces of UI in React. They can be functions or classes that return JSX to describe what should appear on the screen."
+    "SampleAnswer": "React is used to build reusable and interactive user interfaces using components."
+  },
+  {
+    "TechnologyId": 3,
+    "QuestionText": "What is the difference between state and props in React?",
+    "DifficultyLevel": "Intermediate",
+    "QuestionType": "technical",
+    "SampleAnswer": "Props are read-only inputs passed from a parent component, while state is local and managed within the component itself."
+  },
+  {
+    "TechnologyId": 3,
+    "QuestionText": "Explain the purpose of React hooks like useEffect and useMemo.",
+    "DifficultyLevel": "Advanced",
+    "QuestionType": "technical",
+    "SampleAnswer": "useEffect runs side effects (like API calls or event listeners), while useMemo optimizes performance by memoizing expensive computations to prevent unnecessary re-renders."
   },
   {
     "TechnologyId": 4,
-    "QuestionText": "What is dependency injection in .NET?",
+    "QuestionText": "What is Tailwind CSS and why is it called utility-first?",
+    "DifficultyLevel": "Beginner",
+    "QuestionType": "technical",
+    "SampleAnswer": "Tailwind CSS is a utility-first CSS framework that provides small, reusable classes for building custom designs directly in your HTML."
+  },
+  {
+    "TechnologyId": 4,
+    "QuestionText": "How can you customize the default Tailwind configuration?",
     "DifficultyLevel": "Intermediate",
     "QuestionType": "technical",
-    "SampleAnswer": "Dependency injection is a design pattern where objects receive their dependencies from an external source rather than creating them internally, making code more testable and maintainable."
+    "SampleAnswer": "You can modify the `tailwind.config.js` file to add custom colors, fonts, breakpoints, and extend existing design tokens."
+  },
+  {
+    "TechnologyId": 4,
+    "QuestionText": "Explain the concept of JIT (Just-in-Time) mode in Tailwind CSS.",
+    "DifficultyLevel": "Advanced",
+    "QuestionType": "technical",
+    "SampleAnswer": "JIT mode generates styles on-demand as you write HTML, drastically reducing build times and allowing dynamic class generation for better performance and flexibility."
   },
   {
     "TechnologyId": 5,
-    "QuestionText": "How does Entity Framework Core handle database migrations?",
+    "QuestionText": "What is Redux used for?",
+    "DifficultyLevel": "Beginner",
+    "QuestionType": "technical",
+    "SampleAnswer": "Redux is used for managing global application state in JavaScript apps, ensuring consistent data flow across components."
+  },
+  {
+    "TechnologyId": 5,
+    "QuestionText": "What are actions and reducers in Redux?",
     "DifficultyLevel": "Intermediate",
     "QuestionType": "technical",
-    "SampleAnswer": "EF Core uses migration files to track changes to the model. You create a migration with 'dotnet ef migrations add', then apply it with 'dotnet ef database update'."
+    "SampleAnswer": "Actions are plain objects describing what happened, while reducers specify how the application's state changes in response to those actions."
+  },
+  {
+    "TechnologyId": 5,
+    "QuestionText": "What is the difference between Redux Toolkit and traditional Redux setup?",
+    "DifficultyLevel": "Advanced",
+    "QuestionType": "technical",
+    "SampleAnswer": "Redux Toolkit simplifies Redux by reducing boilerplate code, offering built-in utilities like createSlice and createAsyncThunk for cleaner and more maintainable state logic."
   },
   {
     "TechnologyId": 6,
-    "QuestionText": "Why is Kotlin preferred for Android development?",
+    "QuestionText": "What is .NET Core and how is it different from the traditional .NET Framework?",
     "DifficultyLevel": "Beginner",
     "QuestionType": "technical",
-    "SampleAnswer": "Kotlin is concise, safe (null-safe by default), and fully interoperable with Java, making it the official language for Android."
+    "SampleAnswer": ".NET Core is a cross-platform, open-source framework for building modern apps. Unlike the .NET Framework, it runs on Windows, macOS, and Linux."
+  },
+  {
+    "TechnologyId": 6,
+    "QuestionText": "Explain the concept of middleware in ASP.NET Core.",
+    "DifficultyLevel": "Intermediate",
+    "QuestionType": "technical",
+    "SampleAnswer": "Middleware are components that process requests and responses in a pipeline. Each middleware can handle, modify, or pass the request to the next one."
+  },
+  {
+    "TechnologyId": 6,
+    "QuestionText": "How does dependency injection work in .NET Core?",
+    "DifficultyLevel": "Advanced",
+    "QuestionType": "technical",
+    "SampleAnswer": "Dependency Injection is built-in in .NET Core. It allows registering services in the `Startup.cs` file using the `IServiceCollection`, making dependencies easier to manage and test."
   },
   {
     "TechnologyId": 7,
-    "QuestionText": "What is Swift’s Optional type?",
+    "QuestionText": "What is Entity Framework Core used for?",
+    "DifficultyLevel": "Beginner",
+    "QuestionType": "technical",
+    "SampleAnswer": "Entity Framework Core is an ORM (Object-Relational Mapper) that allows developers to interact with databases using C# objects instead of writing SQL queries."
+  },
+  {
+    "TechnologyId": 7,
+    "QuestionText": "What is the difference between Code First and Database First approaches in EF Core?",
     "DifficultyLevel": "Intermediate",
     "QuestionType": "technical",
-    "SampleAnswer": "Optionals in Swift represent a value that may or may not exist. They help prevent null pointer exceptions by forcing developers to handle nil cases explicitly."
+    "SampleAnswer": "Code First lets you create the database from your C# models, while Database First generates models from an existing database structure."
+  },
+  {
+    "TechnologyId": 7,
+    "QuestionText": "Explain the purpose of migrations in EF Core.",
+    "DifficultyLevel": "Advanced",
+    "QuestionType": "technical",
+    "SampleAnswer": "Migrations track and apply schema changes to the database as your models evolve, ensuring database structure stays synchronized with your application code."
   },
   {
     "TechnologyId": 8,
-    "QuestionText": "What is the 'widget tree' in Flutter?",
+    "QuestionText": "What is Node.js and what makes it different from traditional server-side technologies?",
+    "DifficultyLevel": "Beginner",
+    "QuestionType": "technical",
+    "SampleAnswer": "Node.js is a JavaScript runtime built on Chrome's V8 engine. It uses a non-blocking, event-driven model that makes it lightweight and efficient for I/O-heavy applications."
+  },
+  {
+    "TechnologyId": 8,
+    "QuestionText": "What is the event loop in Node.js?",
     "DifficultyLevel": "Intermediate",
     "QuestionType": "technical",
-    "SampleAnswer": "The widget tree is a hierarchy of widgets that defines the UI structure. Flutter rebuilds parts of this tree when the app state changes."
+    "SampleAnswer": "The event loop allows Node.js to perform non-blocking I/O operations by offloading tasks to the system and handling callbacks asynchronously."
+  },
+  {
+    "TechnologyId": 8,
+    "QuestionText": "How does Node.js handle asynchronous operations internally?",
+    "DifficultyLevel": "Advanced",
+    "QuestionType": "technical",
+    "SampleAnswer": "Node.js uses the event loop and a thread pool (via libuv) to execute asynchronous tasks like file I/O or network requests without blocking the main thread."
   },
   {
     "TechnologyId": 9,
-    "QuestionText": "How do you optimize performance in Unity?",
+    "QuestionText": "What is Express.js used for?",
+    "DifficultyLevel": "Beginner",
+    "QuestionType": "technical",
+    "SampleAnswer": "Express.js is a minimal web framework for Node.js that simplifies building APIs and handling HTTP requests and responses."
+  },
+  {
+    "TechnologyId": 9,
+    "QuestionText": "What are middleware functions in Express.js?",
+    "DifficultyLevel": "Intermediate",
+    "QuestionType": "technical",
+    "SampleAnswer": "Middleware functions are functions that have access to the request and response objects. They can modify them, end the request, or call the next middleware."
+  },
+  {
+    "TechnologyId": 9,
+    "QuestionText": "Explain how error handling works in Express.js.",
     "DifficultyLevel": "Advanced",
     "QuestionType": "technical",
-    "SampleAnswer": "Use object pooling, minimize GetComponent calls, optimize physics, and use the Profiler to identify bottlenecks."
+    "SampleAnswer": "Error-handling middleware in Express has four parameters `(err, req, res, next)` and is used to catch and handle errors in the request-response cycle."
   },
   {
     "TechnologyId": 10,
-    "QuestionText": "How would you detect a man-in-the-middle attack using Wireshark?",
+    "QuestionText": "What does MERN stand for and what is it used for?",
+    "DifficultyLevel": "Beginner",
+    "QuestionType": "technical",
+    "SampleAnswer": "MERN stands for MongoDB, Express.js, React, and Node.js. It’s used to build full-stack JavaScript web applications."
+  },
+  {
+    "TechnologyId": 10,
+    "QuestionText": "How do the frontend and backend communicate in a MERN application?",
+    "DifficultyLevel": "Intermediate",
+    "QuestionType": "technical",
+    "SampleAnswer": "The frontend (React) sends HTTP requests to the backend (Express/Node.js) using APIs, which interact with MongoDB to fetch or store data."
+  },
+  {
+    "TechnologyId": 10,
+    "QuestionText": "Explain how you would implement authentication in a MERN stack application.",
     "DifficultyLevel": "Advanced",
     "QuestionType": "technical",
-    "SampleAnswer": "Look for unexpected SSL/TLS certificate changes, duplicate IP addresses, or unusual traffic patterns between client and server."
+    "SampleAnswer": "You can implement authentication using JWT. The backend issues a signed token upon login, and the frontend stores it to include in API requests for verification."
+  },
+  {
+    "TechnologyId": 11,
+    "QuestionText": "What is Django used for in full-stack web development?",
+    "DifficultyLevel": "Beginner",
+    "QuestionType": "technical",
+    "SampleAnswer": "Django is a Python-based web framework used for backend development. It helps handle authentication, database models, and APIs efficiently."
+  },
+  {
+    "TechnologyId": 11,
+    "QuestionText": "How can Django serve data to a React frontend?",
+    "DifficultyLevel": "Intermediate",
+    "QuestionType": "technical",
+    "SampleAnswer": "Django REST Framework can be used to create RESTful APIs that React can call using fetch or Axios to retrieve and send data."
+  },
+  {
+    "TechnologyId": 11,
+    "QuestionText": "How would you deploy a Django + React full-stack application?",
+    "DifficultyLevel": "Advanced",
+    "QuestionType": "technical",
+    "SampleAnswer": "You can deploy both with Nginx and Gunicorn: build the React app, serve it as static files via Django or a CDN, and host the backend API on the same server or separately."
   },
   {
     "TechnologyId": 12,
-    "QuestionText": "What is a JOIN in SQL?",
+    "QuestionText": "What is the role of Angular in a .NET full-stack application?",
     "DifficultyLevel": "Beginner",
     "QuestionType": "technical",
-    "SampleAnswer": "A JOIN combines rows from two or more tables based on a related column, like matching user IDs between Users and Orders tables."
+    "SampleAnswer": "Angular is used to build the frontend of the application, providing a dynamic and interactive user interface that communicates with the .NET backend."
+  },
+  {
+    "TechnologyId": 12,
+    "QuestionText": "How does data binding work between .NET APIs and Angular components?",
+    "DifficultyLevel": "Intermediate",
+    "QuestionType": "technical",
+    "SampleAnswer": "Angular uses services to make HTTP requests to the .NET API endpoints. The received data is then bound to components for display using Angular's data binding."
+  },
+  {
+    "TechnologyId": 12,
+    "QuestionText": "How would you handle authentication and authorization in a .NET + Angular application?",
+    "DifficultyLevel": "Advanced",
+    "QuestionType": "technical",
+    "SampleAnswer": "Implement JWT authentication in the .NET backend and store the token in the frontend (localStorage). Angular includes the token in API headers to verify user access."
   },
   {
     "TechnologyId": 13,
-    "QuestionText": "How do you create a dashboard in Power BI?",
+    "QuestionText": "What is the difference between 'val' and 'var' in Kotlin?",
     "DifficultyLevel": "Beginner",
     "QuestionType": "technical",
-    "SampleAnswer": "Import data, create visualizations like charts and tables, then arrange them on a report canvas and publish to the service."
+    "SampleAnswer": "val is used for immutable variables (cannot be reassigned) while var is used for mutable variables (can be changed)."
+  },
+  {
+    "TechnologyId": 13,
+    "QuestionText": "Explain what null safety means in Kotlin.",
+    "DifficultyLevel": "Intermediate",
+    "QuestionType": "technical",
+    "SampleAnswer": "Null safety in Kotlin prevents null pointer exceptions by using nullable types (e.g., String?) and safe call operators (?.)."
+  },
+  {
+    "TechnologyId": 13,
+    "QuestionText": "How does Kotlin handle coroutines for asynchronous programming?",
+    "DifficultyLevel": "Advanced",
+    "QuestionType": "technical",
+    "SampleAnswer": "Kotlin uses coroutines to simplify asynchronous programming by allowing code to be suspended and resumed without blocking threads."
   },
   {
     "TechnologyId": 14,
-    "QuestionText": "What is a DataFrame in Pandas?",
+    "QuestionText": "Which language is used to develop Flutter applications?",
     "DifficultyLevel": "Beginner",
     "QuestionType": "technical",
-    "SampleAnswer": "A DataFrame is a 2D labeled data structure in Pandas, similar to a spreadsheet or SQL table, used for data manipulation and analysis."
+    "SampleAnswer": "Flutter apps are developed using the Dart programming language."
+  },
+  {
+    "TechnologyId": 14,
+    "QuestionText": "What is the difference between StatelessWidget and StatefulWidget in Flutter?",
+    "DifficultyLevel": "Intermediate",
+    "QuestionType": "technical",
+    "SampleAnswer": "A StatelessWidget has immutable state that doesn’t change, while a StatefulWidget can rebuild when its internal state changes."
+  },
+  {
+    "TechnologyId": 14,
+    "QuestionText": "Explain how Flutter interacts with native code.",
+    "DifficultyLevel": "Advanced",
+    "QuestionType": "technical",
+    "SampleAnswer": "Flutter uses platform channels to communicate between Dart and native code (Java/Kotlin for Android, Swift/Objective-C for iOS)."
+  },
+  {
+    "TechnologyId": 15,
+    "QuestionText": "Which programming language is mainly used in React Native?",
+    "DifficultyLevel": "Beginner",
+    "QuestionType": "technical",
+    "SampleAnswer": "React Native uses JavaScript as its main programming language."
+  },
+  {
+    "TechnologyId": 15,
+    "QuestionText": "What is the purpose of the 'useState' hook in React Native?",
+    "DifficultyLevel": "Intermediate",
+    "QuestionType": "technical",
+    "SampleAnswer": "useState is a React Hook that allows functional components to manage and update state within the component."
+  },
+  {
+    "TechnologyId": 15,
+    "QuestionText": "How does React Native bridge work to interact with native modules?",
+    "DifficultyLevel": "Advanced",
+    "QuestionType": "technical",
+    "SampleAnswer": "The React Native bridge allows communication between JavaScript and native code through asynchronous message passing."
   },
   {
     "TechnologyId": 16,
-    "QuestionText": "How do you collaborate with developers as a UI designer?",
-    "DifficultyLevel": "Intermediate",
-    "QuestionType": "behavioral",
-    "SampleAnswer": "I use Figma’s developer handoff features, provide clear specs, and maintain open communication to ensure the final product matches the design."
+    "QuestionText": "What are optionals in Swift?",
+    "DifficultyLevel": "Beginner",
+    "QuestionType": "technical",
+    "SampleAnswer": "Optionals are variables that can hold either a value or nil, allowing safer handling of missing data in Swift."
   },
   {
-    "TechnologyId": 2,
-    "QuestionText": "Tell me about a time you solved a difficult bug.",
+    "TechnologyId": 16,
+    "QuestionText": "Explain the difference between struct and class in Swift.",
     "DifficultyLevel": "Intermediate",
-    "QuestionType": "behavioral",
-    "SampleAnswer": "I once debugged a memory leak in a React app by using Chrome DevTools to track component re-renders and fixed it by optimizing useEffect dependencies."
+    "QuestionType": "technical",
+    "SampleAnswer": "Structs are value types copied when assigned, while classes are reference types passed by reference."
+  },
+  {
+    "TechnologyId": 16,
+    "QuestionText": "How does Swift handle memory management?",
+    "DifficultyLevel": "Advanced",
+    "QuestionType": "technical",
+    "SampleAnswer": "Swift uses Automatic Reference Counting (ARC) to manage memory by automatically releasing unused objects."
+  },
+  {
+    "TechnologyId": 17,
+    "QuestionText": "What is SwiftUI used for?",
+    "DifficultyLevel": "Beginner",
+    "QuestionType": "technical",
+    "SampleAnswer": "SwiftUI is a framework used to build user interfaces across Apple platforms using a declarative syntax."
+  },
+  {
+    "TechnologyId": 17,
+    "QuestionText": "How does the @State property wrapper work in SwiftUI?",
+    "DifficultyLevel": "Intermediate",
+    "QuestionType": "technical",
+    "SampleAnswer": "@State allows a view to store and update its local state, triggering UI updates when the state changes."
+  },
+  {
+    "TechnologyId": 17,
+    "QuestionText": "What is the difference between @ObservedObject and @EnvironmentObject in SwiftUI?",
+    "DifficultyLevel": "Advanced",
+    "QuestionType": "technical",
+    "SampleAnswer": "@ObservedObject is used to observe specific data within a view, while @EnvironmentObject shares data globally across multiple views."
+  },
+  {
+    "TechnologyId": 18,
+    "QuestionText": "What is Core Data in iOS development?",
+    "DifficultyLevel": "Beginner",
+    "QuestionType": "technical",
+    "SampleAnswer": "Core Data is Apple’s framework for managing an app’s data model and persistent storage."
+  },
+  {
+    "TechnologyId": 18,
+    "QuestionText": "What is the role of NSManagedObject in Core Data?",
+    "DifficultyLevel": "Intermediate",
+    "QuestionType": "technical",
+    "SampleAnswer": "NSManagedObject represents a single record in the Core Data model and provides dynamic storage for its properties."
+  },
+  {
+    "TechnologyId": 18,
+    "QuestionText": "Explain how Core Data differs from SQLite.",
+    "DifficultyLevel": "Advanced",
+    "QuestionType": "technical",
+    "SampleAnswer": "Core Data is an object graph management framework, not just a database. It abstracts database operations and manages object relationships, while SQLite is a low-level relational database."
+  },
+  {
+    "TechnologyId": 19,
+    "QuestionText": "What is the purpose of the Combine framework?",
+    "DifficultyLevel": "Beginner",
+    "QuestionType": "technical",
+    "SampleAnswer": "Combine is used to handle asynchronous data streams and events in a reactive programming style."
+  },
+  {
+    "TechnologyId": 19,
+    "QuestionText": "What are Publishers and Subscribers in Combine?",
+    "DifficultyLevel": "Intermediate",
+    "QuestionType": "technical",
+    "SampleAnswer": "Publishers emit data over time, while Subscribers receive and respond to that data, allowing event-driven workflows."
+  },
+  {
+    "TechnologyId": 19,
+    "QuestionText": "How can Combine be integrated with SwiftUI?",
+    "DifficultyLevel": "Advanced",
+    "QuestionType": "technical",
+    "SampleAnswer": "Combine works with SwiftUI by connecting @Published properties in ObservableObjects to SwiftUI views for automatic UI updates."
+  },
+  {
+    "TechnologyId": 20,
+    "QuestionText": "What is Flutter and who developed it?",
+    "DifficultyLevel": "Beginner",
+    "QuestionType": "technical",
+    "SampleAnswer": "Flutter is an open-source UI toolkit developed by Google for building natively compiled applications for mobile, web, and desktop from a single codebase."
+  },
+  {
+    "TechnologyId": 20,
+    "QuestionText": "What is the role of widgets in Flutter?",
+    "DifficultyLevel": "Intermediate",
+    "QuestionType": "technical",
+    "SampleAnswer": "In Flutter, everything is a widget. Widgets describe how the UI should look, and when the state changes, Flutter rebuilds the affected widgets."
+  },
+  {
+    "TechnologyId": 20,
+    "QuestionText": "Explain the difference between StatefulWidget and StatelessWidget.",
+    "DifficultyLevel": "Advanced",
+    "QuestionType": "technical",
+    "SampleAnswer": "A StatelessWidget does not change its state once built, while a StatefulWidget maintains mutable state that can be updated using setState()."
+  },
+  {
+    "TechnologyId": 21,
+    "QuestionText": "What is React Native used for?",
+    "DifficultyLevel": "Beginner",
+    "QuestionType": "technical",
+    "SampleAnswer": "React Native is a framework that allows developers to build mobile applications for iOS and Android using JavaScript and React."
+  },
+  {
+    "TechnologyId": 21,
+    "QuestionText": "How does React Native differ from ReactJS?",
+    "DifficultyLevel": "Intermediate",
+    "QuestionType": "technical",
+    "SampleAnswer": "ReactJS is used for building web applications with HTML and CSS, while React Native uses native components to create mobile apps."
+  },
+  {
+    "TechnologyId": 21,
+    "QuestionText": "What is the purpose of the Bridge in React Native?",
+    "DifficultyLevel": "Advanced",
+    "QuestionType": "technical",
+    "SampleAnswer": "The Bridge allows JavaScript code to communicate with native modules, enabling interaction between React components and platform-specific APIs."
+  },
+  {
+    "TechnologyId": 22,
+    "QuestionText": "What is Xamarin and what language does it use?",
+    "DifficultyLevel": "Beginner",
+    "QuestionType": "technical",
+    "SampleAnswer": "Xamarin is a Microsoft framework for building cross-platform mobile apps using the C# programming language."
+  },
+  {
+    "TechnologyId": 22,
+    "QuestionText": "What are the differences between Xamarin.Forms and Xamarin.Native?",
+    "DifficultyLevel": "Intermediate",
+    "QuestionType": "technical",
+    "SampleAnswer": "Xamarin.Forms allows developers to share UI code across platforms, while Xamarin.Native provides more control with separate UI designs for each platform."
+  },
+  {
+    "TechnologyId": 22,
+    "QuestionText": "How does Xamarin achieve native performance?",
+    "DifficultyLevel": "Advanced",
+    "QuestionType": "technical",
+    "SampleAnswer": "Xamarin compiles C# code into native code for Android and iOS, and provides direct access to native APIs for performance similar to fully native apps."
+  },
+  {
+    "TechnologyId": 23,
+    "QuestionText": "What is Ionic used for?",
+    "DifficultyLevel": "Beginner",
+    "QuestionType": "technical",
+    "SampleAnswer": "Ionic is a framework for building cross-platform mobile apps using HTML, CSS, and JavaScript."
+  },
+  {
+    "TechnologyId": 23,
+    "QuestionText": "What is the role of Capacitor in Ionic projects?",
+    "DifficultyLevel": "Intermediate",
+    "QuestionType": "technical",
+    "SampleAnswer": "Capacitor provides a modern runtime that bridges web code with native device features like the camera, file system, and notifications."
+  },
+  {
+    "TechnologyId": 23,
+    "QuestionText": "Explain how Ionic apps access native device functionalities.",
+    "DifficultyLevel": "Advanced",
+    "QuestionType": "technical",
+    "SampleAnswer": "Ionic apps use Capacitor or Cordova plugins to access native APIs, allowing JavaScript code to interact with platform features securely."
+  },
+  {
+    "TechnologyId": 24,
+    "QuestionText": "What is Unity primarily used for?",
+    "DifficultyLevel": "Beginner",
+    "QuestionType": "technical",
+    "SampleAnswer": "Unity is a cross-platform game engine used to create 2D and 3D games and interactive experiences using C# scripting."
+  },
+  {
+    "TechnologyId": 24,
+    "QuestionText": "Explain the role of GameObjects and Components in Unity.",
+    "DifficultyLevel": "Intermediate",
+    "QuestionType": "technical",
+    "SampleAnswer": "GameObjects are the basic entities in Unity scenes, while Components define their behavior, appearance, and functionality."
+  },
+  {
+    "TechnologyId": 24,
+    "QuestionText": "What is the difference between Update() and FixedUpdate() methods in Unity?",
+    "DifficultyLevel": "Advanced",
+    "QuestionType": "technical",
+    "SampleAnswer": "Update() runs once per frame and is used for regular logic, while FixedUpdate() runs at a fixed interval and is used for physics calculations."
+  },
+  {
+    "TechnologyId": 25,
+    "QuestionText": "What language does Unreal Engine primarily use?",
+    "DifficultyLevel": "Beginner",
+    "QuestionType": "technical",
+    "SampleAnswer": "Unreal Engine primarily uses C++ and its visual scripting system called Blueprints."
+  },
+  {
+    "TechnologyId": 25,
+    "QuestionText": "What is the difference between Blueprints and C++ scripting in Unreal?",
+    "DifficultyLevel": "Intermediate",
+    "QuestionType": "technical",
+    "SampleAnswer": "Blueprints allow developers to create gameplay logic visually without code, while C++ scripting offers more control and performance optimization."
+  },
+  {
+    "TechnologyId": 25,
+    "QuestionText": "Explain how the Unreal Engine rendering pipeline works.",
+    "DifficultyLevel": "Advanced",
+    "QuestionType": "technical",
+    "SampleAnswer": "Unreal uses a deferred rendering pipeline, separating geometry and lighting passes for efficient high-quality graphics and real-time effects."
+  },
+  {
+    "TechnologyId": 26,
+    "QuestionText": "What programming languages can be used in Godot Engine?",
+    "DifficultyLevel": "Beginner",
+    "QuestionType": "technical",
+    "SampleAnswer": "Godot supports GDScript (its native scripting language), C#, and visual scripting."
+  },
+  {
+    "TechnologyId": 26,
+    "QuestionText": "What is the difference between Node and Scene in Godot?",
+    "DifficultyLevel": "Intermediate",
+    "QuestionType": "technical",
+    "SampleAnswer": "A Node is a single functional unit, while a Scene is a collection of Nodes that can be reused and instanced in other scenes."
+  },
+  {
+    "TechnologyId": 26,
+    "QuestionText": "How does Godot handle signals and events?",
+    "DifficultyLevel": "Advanced",
+    "QuestionType": "technical",
+    "SampleAnswer": "Godot uses a signal system that allows nodes to communicate with each other by emitting and connecting events without tight coupling."
+  },
+  {
+    "TechnologyId": 27,
+    "QuestionText": "What does 'game architecture' refer to in C# game development?",
+    "DifficultyLevel": "Beginner",
+    "QuestionType": "technical",
+    "SampleAnswer": "Game architecture refers to the structural design of the game’s codebase, including how systems, components, and logic are organized."
+  },
+  {
+    "TechnologyId": 27,
+    "QuestionText": "Explain the concept of the Entity-Component-System (ECS) pattern.",
+    "DifficultyLevel": "Intermediate",
+    "QuestionType": "technical",
+    "SampleAnswer": "ECS separates data (components) from logic (systems), allowing for reusable, efficient, and flexible game design."
+  },
+  {
+    "TechnologyId": 27,
+    "QuestionText": "How can design patterns improve large game projects in C#?",
+    "DifficultyLevel": "Advanced",
+    "QuestionType": "technical",
+    "SampleAnswer": "Design patterns like Singleton, Observer, and Factory help manage complexity, reduce coupling, and improve maintainability in large-scale games."
+  },
+  {
+    "TechnologyId": 28,
+    "QuestionText": "Why is optimizing assets important when developing Unity games for mobile devices?",
+    "DifficultyLevel": "Beginner",
+    "QuestionType": "technical",
+    "SampleAnswer": "Optimizing assets reduces the game's size and memory usage, making it run smoothly on devices with limited resources."
+  },
+  {
+    "TechnologyId": 28,
+    "QuestionText": "How can you reduce draw calls to improve performance in Unity mobile games?",
+    "DifficultyLevel": "Intermediate",
+    "QuestionType": "technical",
+    "SampleAnswer": "You can combine meshes, use texture atlases, and enable GPU instancing to reduce draw calls and boost frame rates."
+  },
+  {
+    "TechnologyId": 28,
+    "QuestionText": "Explain how to use Unity Profiler and Addressables together for performance optimization on mobile.",
+    "DifficultyLevel": "Advanced",
+    "QuestionType": "technical",
+    "SampleAnswer": "The Unity Profiler helps detect performance bottlenecks, while Addressables manage dynamic asset loading efficiently, reducing memory pressure and improving runtime performance."
+  },
+  {
+    "TechnologyId": 29,
+    "QuestionText": "What programming languages are commonly used in Cocos2d-x game development?",
+    "DifficultyLevel": "Beginner",
+    "QuestionType": "technical",
+    "SampleAnswer": "Cocos2d-x primarily supports C++, Lua, and JavaScript for cross-platform 2D game development."
+  },
+  {
+    "TechnologyId": 29,
+    "QuestionText": "How does the Scene and Layer structure help organize a Cocos2d-x game?",
+    "DifficultyLevel": "Intermediate",
+    "QuestionType": "technical",
+    "SampleAnswer": "Scenes represent game stages, while Layers contain sprites, UI, or logic elements. This separation improves readability and modularity."
+  },
+  {
+    "TechnologyId": 29,
+    "QuestionText": "Describe how to implement sprite batching and memory pooling in Cocos2d-x for performance optimization.",
+    "DifficultyLevel": "Advanced",
+    "QuestionType": "technical",
+    "SampleAnswer": "Sprite batching groups similar textures to minimize draw calls, while memory pooling reuses game objects to reduce allocation overhead and frame drops."
+  },
+  {
+    "TechnologyId": 30,
+    "QuestionText": "What are the most common monetization methods in mobile games?",
+    "DifficultyLevel": "Beginner",
+    "QuestionType": "technical",
+    "SampleAnswer": "The main monetization methods include in-app purchases, ads, and subscription models."
+  },
+  {
+    "TechnologyId": 30,
+    "QuestionText": "How can player analytics help improve monetization strategies?",
+    "DifficultyLevel": "Intermediate",
+    "QuestionType": "technical",
+    "SampleAnswer": "By analyzing player behavior, developers can identify retention patterns and optimize ad placements or pricing to maximize revenue."
+  },
+  {
+    "TechnologyId": 30,
+    "QuestionText": "Explain how to integrate rewarded video ads and in-app purchases together without hurting user experience.",
+    "DifficultyLevel": "Advanced",
+    "QuestionType": "technical",
+    "SampleAnswer": "Rewarded ads can offer small in-game benefits, while in-app purchases provide premium upgrades. Combining both allows monetization flexibility without frustrating players." 
+  },
+  {
+    "TechnologyId": 31,
+    "QuestionText": "What is Phaser.js mainly used for?",
+    "DifficultyLevel": "Beginner",
+    "QuestionType": "technical",
+    "SampleAnswer": "Phaser.js is used to create browser-based 2D games using JavaScript and HTML5 canvas."
+  },
+  {
+    "TechnologyId": 31,
+    "QuestionText": "How does the game loop work in Phaser.js?",
+    "DifficultyLevel": "Intermediate",
+    "QuestionType": "technical",
+    "SampleAnswer": "The game loop continuously updates and renders the game scene using the `update()` and `render()` functions to keep animations and logic running smoothly."
+  },
+  {
+    "TechnologyId": 31,
+    "QuestionText": "Explain how to manage physics and collisions in Phaser.js.",
+    "DifficultyLevel": "Advanced",
+    "QuestionType": "technical",
+    "SampleAnswer": "Phaser.js includes Arcade, Impact, and Matter.js physics engines. Developers define bodies, enable collisions, and handle overlap events for precise interaction between objects."
+  },
+  {
+    "TechnologyId": 32,
+    "QuestionText": "What is Three.js used for in web development?",
+    "DifficultyLevel": "Beginner",
+    "QuestionType": "technical",
+    "SampleAnswer": "Three.js is a JavaScript library for creating 3D graphics and games in the browser using WebGL."
+  },
+  {
+    "TechnologyId": 32,
+    "QuestionText": "How do you create a basic 3D scene in Three.js?",
+    "DifficultyLevel": "Intermediate",
+    "QuestionType": "technical",
+    "SampleAnswer": "You create a scene, add a camera and a renderer, then add objects like meshes and lights before rendering the scene in a loop."
+  },
+  {
+    "TechnologyId": 32,
+    "QuestionText": "Describe how lighting and materials affect rendering performance in Three.js.",
+    "DifficultyLevel": "Advanced",
+    "QuestionType": "technical",
+    "SampleAnswer": "Complex materials and dynamic lights increase GPU load. Using baked lighting, fewer shadows, and optimized shaders improves rendering speed for 3D web games."
+  },
+  {
+    "TechnologyId": 33,
+    "QuestionText": "What type of games or experiences can be built using Babylon.js?",
+    "DifficultyLevel": "Beginner",
+    "QuestionType": "technical",
+    "SampleAnswer": "Babylon.js is used to create 3D web games, simulations, and immersive experiences directly in the browser."
+  },
+  {
+    "TechnologyId": 33,
+    "QuestionText": "What role do scenes and cameras play in Babylon.js?",
+    "DifficultyLevel": "Intermediate",
+    "QuestionType": "technical",
+    "SampleAnswer": "A scene contains all 3D elements like meshes and lights, while a camera defines the viewer's perspective and controls movement and rotation in the environment."
+  },
+  {
+    "TechnologyId": 33,
+    "QuestionText": "Explain how Babylon.js supports physics and post-processing effects.",
+    "DifficultyLevel": "Advanced",
+    "QuestionType": "technical",
+    "SampleAnswer": "Babylon.js integrates physics engines like Cannon.js or Ammo.js for realistic interactions and supports post-processing pipelines for effects like bloom, motion blur, and depth of field."
+  },
+  {
+    "TechnologyId": 34,
+    "QuestionText": "What is Docker, and why is it used in modern development?",
+    "DifficultyLevel": "Beginner",
+    "QuestionType": "technical",
+    "SampleAnswer": "Docker is a platform that packages applications and their dependencies into containers, ensuring consistency across development and production environments."
+  },
+  {
+    "TechnologyId": 34,
+    "QuestionText": "Explain the difference between a Docker image and a container.",
+    "DifficultyLevel": "Intermediate",
+    "QuestionType": "technical",
+    "SampleAnswer": "A Docker image is a read-only template containing the application and its environment. A container is a running instance of that image, isolated from the system."
+  },
+  {
+    "TechnologyId": 34,
+    "QuestionText": "How do you optimize Docker images for production environments?",
+    "DifficultyLevel": "Advanced",
+    "QuestionType": "technical",
+    "SampleAnswer": "Use multi-stage builds, minimal base images (like Alpine), and `.dockerignore` files to reduce size and improve security."
+  },
+  {
+    "TechnologyId": 35,
+    "QuestionText": "What problem does Kubernetes solve?",
+    "DifficultyLevel": "Beginner",
+    "QuestionType": "technical",
+    "SampleAnswer": "Kubernetes automates the deployment, scaling, and management of containerized applications."
+  },
+  {
+    "TechnologyId": 35,
+    "QuestionText": "What are Pods and Nodes in Kubernetes?",
+    "DifficultyLevel": "Intermediate",
+    "QuestionType": "technical",
+    "SampleAnswer": "A Pod is the smallest deployable unit that runs one or more containers. Nodes are worker machines where Pods run."
+  },
+  {
+    "TechnologyId": 35,
+    "QuestionText": "Explain how Kubernetes handles load balancing and service discovery.",
+    "DifficultyLevel": "Advanced",
+    "QuestionType": "technical",
+    "SampleAnswer": "Kubernetes Services expose Pods internally or externally and automatically distribute traffic between them using label selectors and DNS-based discovery."
+  },
+  {
+    "TechnologyId": 36,
+    "QuestionText": "What does CI/CD stand for, and why is it important?",
+    "DifficultyLevel": "Beginner",
+    "QuestionType": "technical",
+    "SampleAnswer": "CI/CD stands for Continuous Integration and Continuous Deployment. It automates building, testing, and delivering code, ensuring faster and more reliable releases."
+  },
+  {
+    "TechnologyId": 36,
+    "QuestionText": "Describe the main stages of a typical CI/CD pipeline.",
+    "DifficultyLevel": "Intermediate",
+    "QuestionType": "technical",
+    "SampleAnswer": "Typical stages include source checkout, build, automated testing, deployment to staging, and production release."
+  },
+  {
+    "TechnologyId": 36,
+    "QuestionText": "How do you ensure security and rollback safety in CI/CD pipelines?",
+    "DifficultyLevel": "Advanced",
+    "QuestionType": "technical",
+    "SampleAnswer": "Use secret management, signed artifacts, automated testing, and maintain versioned rollback procedures to prevent and recover from faulty deployments."
+  },
+  {
+    "TechnologyId": 37,
+    "QuestionText": "What is GitHub Actions used for?",
+    "DifficultyLevel": "Beginner",
+    "QuestionType": "technical",
+    "SampleAnswer": "GitHub Actions automates workflows such as testing, building, and deploying code directly from a GitHub repository."
+  },
+  {
+    "TechnologyId": 37,
+    "QuestionText": "What is a YAML workflow file in GitHub Actions?",
+    "DifficultyLevel": "Intermediate",
+    "QuestionType": "technical",
+    "SampleAnswer": "A YAML file defines a workflow's triggers, jobs, and steps. It tells GitHub Actions what tasks to perform and when to execute them."
+  },
+  {
+    "TechnologyId": 37,
+    "QuestionText": "How can you reuse or modularize workflows in GitHub Actions?",
+    "DifficultyLevel": "Advanced",
+    "QuestionType": "technical",
+    "SampleAnswer": "You can use reusable workflows, composite actions, and local actions to modularize code and share workflows across repositories."
+  },
+  {
+    "TechnologyId": 38,
+    "QuestionText": "What is Jenkins, and why is it popular in CI/CD?",
+    "DifficultyLevel": "Beginner",
+    "QuestionType": "technical",
+    "SampleAnswer": "Jenkins is an open-source automation server that enables developers to build, test, and deploy code automatically, supporting plugins and integrations."
+  },
+  {
+    "TechnologyId": 38,
+    "QuestionText": "Explain the concept of a Jenkins pipeline.",
+    "DifficultyLevel": "Intermediate",
+    "QuestionType": "technical",
+    "SampleAnswer": "A Jenkins pipeline is a scripted or declarative process that defines how software is built, tested, and deployed across stages."
+  },
+  {
+    "TechnologyId": 38,
+    "QuestionText": "How can Jenkins be integrated with containerized environments?",
+    "DifficultyLevel": "Advanced",
+    "QuestionType": "technical",
+    "SampleAnswer": "You can run Jenkins in Docker containers, use Kubernetes for agent scaling, and define pipeline steps that build and deploy Docker images."
+  },
+  {
+    "TechnologyId": 39,
+    "QuestionText": "What is GitLab CI/CD, and how is it triggered?",
+    "DifficultyLevel": "Beginner",
+    "QuestionType": "technical",
+    "SampleAnswer": "GitLab CI/CD automates building, testing, and deploying code. It is triggered by changes pushed to the repository, defined in a `.gitlab-ci.yml` file."
+  },
+  {
+    "TechnologyId": 39,
+    "QuestionText": "Explain the purpose of stages and jobs in GitLab CI/CD.",
+    "DifficultyLevel": "Intermediate",
+    "QuestionType": "technical",
+    "SampleAnswer": "Stages define the order of execution (like build → test → deploy), while jobs contain the scripts and commands to run within each stage."
+  },
+  {
+    "TechnologyId": 39,
+    "QuestionText": "How do you secure secrets and environment variables in GitLab CI/CD?",
+    "DifficultyLevel": "Advanced",
+    "QuestionType": "technical",
+    "SampleAnswer": "Use GitLab’s protected variables feature or external secret managers to securely store and inject sensitive credentials during pipeline execution."
+  },
+  {
+    "TechnologyId": 40,
+    "QuestionText": "What is Docker and why is it used?",
+    "DifficultyLevel": "Beginner",
+    "QuestionType": "technical",
+    "SampleAnswer": "Docker packages applications into containers to ensure consistency across different environments."
+  },
+  {
+    "TechnologyId": 40,
+    "QuestionText": "What is the difference between a Docker image and container?",
+    "DifficultyLevel": "Intermediate",
+    "QuestionType": "technical",
+    "SampleAnswer": "An image is a template used to create containers. A container is a running instance of an image."
+  },
+  {
+    "TechnologyId": 40,
+    "QuestionText": "How can you reduce the size of Docker images?",
+    "DifficultyLevel": "Advanced",
+    "QuestionType": "technical",
+    "SampleAnswer": "Use lightweight base images like Alpine, combine layers, and remove cache files."
+  },
+  {
+    "TechnologyId": 41,
+    "QuestionText": "What is Kubernetes?",
+    "DifficultyLevel": "Beginner",
+    "QuestionType": "technical",
+    "SampleAnswer": "A container orchestration platform that manages containerized apps automatically."
+  },
+  {
+    "TechnologyId": 41,
+    "QuestionText": "What is the difference between a Pod and a Deployment?",
+    "DifficultyLevel": "Intermediate",
+    "QuestionType": "technical",
+    "SampleAnswer": "A Pod runs containers; a Deployment manages and replicates Pods for high availability."
+  },
+  {
+    "TechnologyId": 41,
+    "QuestionText": "How do you secure sensitive data in Kubernetes?",
+    "DifficultyLevel": "Advanced",
+    "QuestionType": "technical",
+    "SampleAnswer": "Use Kubernetes Secrets and external tools like Vault for encryption and secure storage."
+  },
+  {
+    "TechnologyId": 42,
+    "QuestionText": "What is Terraform and what is it used for?",
+    "DifficultyLevel": "Beginner",
+    "QuestionType": "technical",
+    "SampleAnswer": "Terraform manages cloud infrastructure using code, making deployments consistent and automated."
+  },
+  {
+    "TechnologyId": 42,
+    "QuestionText": "What is the purpose of the terraform plan command?",
+    "DifficultyLevel": "Intermediate",
+    "QuestionType": "technical",
+    "SampleAnswer": "It previews changes to infrastructure before applying them."
+  },
+  {
+    "TechnologyId": 42,
+    "QuestionText": "How do you manage Terraform state in a team?",
+    "DifficultyLevel": "Advanced",
+    "QuestionType": "technical",
+    "SampleAnswer": "Use remote backends like S3 with state locking, or Terraform Cloud, to avoid conflicts."
+  },
+  {
+    "TechnologyId": 43,
+    "QuestionText": "What is the main purpose of a firewall?",
+    "DifficultyLevel": "Beginner",
+    "QuestionType": "technical",
+    "SampleAnswer": "A firewall filters incoming and outgoing traffic to prevent unauthorized access to a network."
+  },
+  {
+    "TechnologyId": 43,
+    "QuestionText": "What is the difference between a VPN and a proxy?",
+    "DifficultyLevel": "Intermediate",
+    "QuestionType": "technical",
+    "SampleAnswer": "A VPN encrypts all network traffic, while a proxy only routes specific application traffic without full encryption."
+  },
+  {
+    "TechnologyId": 43,
+    "QuestionText": "How can intrusion detection systems (IDS) be integrated into a security architecture?",
+    "DifficultyLevel": "Advanced",
+    "QuestionType": "technical",
+    "SampleAnswer": "IDS can be placed at network entry points to monitor traffic and send alerts for suspicious activity; combined with SIEM tools for deeper analysis."
+  },
+  {
+    "TechnologyId": 44,
+    "QuestionText": "What is a vulnerability assessment?",
+    "DifficultyLevel": "Beginner",
+    "QuestionType": "technical",
+    "SampleAnswer": "It is the process of identifying and analyzing security weaknesses in systems or networks."
+  },
+  {
+    "TechnologyId": 44,
+    "QuestionText": "What is the difference between vulnerability scanning and penetration testing?",
+    "DifficultyLevel": "Intermediate",
+    "QuestionType": "technical",
+    "SampleAnswer": "Vulnerability scanning identifies potential flaws automatically, while penetration testing actively exploits them to confirm risks."
+  },
+  {
+    "TechnologyId": 44,
+    "QuestionText": "How do you prioritize vulnerabilities found in a scan?",
+    "DifficultyLevel": "Advanced",
+    "QuestionType": "technical",
+    "SampleAnswer": "By assessing their CVSS score, exploitability, asset value, and business impact."
+  },
+  {
+    "TechnologyId": 45,
+    "QuestionText": "What is incident response in cybersecurity?",
+    "DifficultyLevel": "Beginner",
+    "QuestionType": "technical",
+    "SampleAnswer": "Incident response is the process of detecting, analyzing, and responding to security breaches or attacks."
+  },
+  {
+    "TechnologyId": 45,
+    "QuestionText": "What are the main phases of the incident response lifecycle?",
+    "DifficultyLevel": "Intermediate",
+    "QuestionType": "technical",
+    "SampleAnswer": "Preparation, Detection, Containment, Eradication, Recovery, and Lessons Learned."
+  },
+  {
+    "TechnologyId": 45,
+    "QuestionText": "How would you handle a ransomware attack as part of incident response?",
+    "DifficultyLevel": "Advanced",
+    "QuestionType": "technical",
+    "SampleAnswer": "Isolate infected systems, preserve evidence, remove the malware, restore from backups, and perform a post-incident review to prevent recurrence."
+  },
+  {
+    "TechnologyId": 46,
+    "QuestionText": "What is penetration testing?",
+    "DifficultyLevel": "Beginner",
+    "QuestionType": "technical",
+    "SampleAnswer": "It’s an authorized simulated attack to identify security vulnerabilities before malicious hackers do."
+  },
+  {
+    "TechnologyId": 46,
+    "QuestionText": "What are the main phases of a penetration test?",
+    "DifficultyLevel": "Intermediate",
+    "QuestionType": "technical",
+    "SampleAnswer": "Planning, Scanning, Gaining Access, Maintaining Access, and Reporting."
+  },
+  {
+    "TechnologyId": 46,
+    "QuestionText": "How would you test an organization’s internal network security?",
+    "DifficultyLevel": "Advanced",
+    "QuestionType": "technical",
+    "SampleAnswer": "By conducting internal network scans, privilege escalation attempts, and lateral movement analysis using tools like Nmap and BloodHound."
+  },
+  {
+    "TechnologyId": 47,
+    "QuestionText": "What is Metasploit used for?",
+    "DifficultyLevel": "Beginner",
+    "QuestionType": "technical",
+    "SampleAnswer": "Metasploit is used to develop and execute exploit code against remote targets."
+  },
+  {
+    "TechnologyId": 47,
+    "QuestionText": "How do payloads and exploits differ in Metasploit?",
+    "DifficultyLevel": "Intermediate",
+    "QuestionType": "technical",
+    "SampleAnswer": "An exploit delivers the attack, while a payload defines what action occurs after exploitation, like opening a reverse shell."
+  },
+  {
+    "TechnologyId": 47,
+    "QuestionText": "How would you use Metasploit to test post-exploitation persistence?",
+    "DifficultyLevel": "Advanced",
+    "QuestionType": "technical",
+    "SampleAnswer": "By creating persistent payloads that re-establish access after reboot using Metasploit modules or scripts."
+  },
+  {
+    "TechnologyId": 48,
+    "QuestionText": "What is SQL Injection?",
+    "DifficultyLevel": "Beginner",
+    "QuestionType": "technical",
+    "SampleAnswer": "It’s an attack that manipulates SQL queries by injecting malicious input to access or modify database data."
+  },
+  {
+    "TechnologyId": 48,
+    "QuestionText": "How do you prevent Cross-Site Scripting (XSS)?",
+    "DifficultyLevel": "Intermediate",
+    "QuestionType": "technical",
+    "SampleAnswer": "By validating and encoding user input and using Content Security Policy headers."
+  },
+  {
+    "TechnologyId": 48,
+    "QuestionText": "Describe how you would perform a web app penetration test.",
+    "DifficultyLevel": "Advanced",
+    "QuestionType": "technical",
+    "SampleAnswer": "By mapping the app, testing authentication, input validation, session management, and running OWASP ZAP or Burp Suite scans."
+  },
+  {
+    "TechnologyId": 49,
+    "QuestionText": "What is SIEM and why is it important?",
+    "DifficultyLevel": "Beginner",
+    "QuestionType": "technical",
+    "SampleAnswer": "SIEM collects and analyzes security logs to detect and respond to potential threats."
+  },
+  {
+    "TechnologyId": 49,
+    "QuestionText": "What’s the difference between SIEM and SOAR?",
+    "DifficultyLevel": "Intermediate",
+    "QuestionType": "technical",
+    "SampleAnswer": "SIEM focuses on detection and correlation of events, while SOAR automates responses to those events."
+  },
+  {
+    "TechnologyId": 49,
+    "QuestionText": "How would you build effective SIEM rules?",
+    "DifficultyLevel": "Advanced",
+    "QuestionType": "technical",
+    "SampleAnswer": "By defining correlation rules based on known attack patterns (MITRE ATT&CK), false-positive tuning, and regular rule updates."
+  },
+  {
+    "TechnologyId": 50,
+    "QuestionText": "What is threat hunting?",
+    "DifficultyLevel": "Beginner",
+    "QuestionType": "technical",
+    "SampleAnswer": "It’s the proactive search for undetected cyber threats inside a network."
+  },
+  {
+    "TechnologyId": 50,
+    "QuestionText": "How do you start a hunting hypothesis?",
+    "DifficultyLevel": "Intermediate",
+    "QuestionType": "technical",
+    "SampleAnswer": "By analyzing threat intelligence, SIEM data, or anomalies to form a testable assumption of malicious activity."
+  },
+  {
+    "TechnologyId": 50,
+    "QuestionText": "Describe how you would use endpoint data in a threat hunt.",
+    "DifficultyLevel": "Advanced",
+    "QuestionType": "technical",
+    "SampleAnswer": "By analyzing EDR logs for process anomalies, command-line execution, and suspicious network activity to confirm or deny threats."
+  },
+  {
+    "TechnologyId": 51,
+    "QuestionText": "What is a Purple Team?",
+    "DifficultyLevel": "Beginner",
+    "QuestionType": "technical",
+    "SampleAnswer": "It’s a collaboration between red (offensive) and blue (defensive) teams to enhance security defenses."
+  },
+  {
+    "TechnologyId": 51,
+    "QuestionText": "How does purple teaming differ from regular penetration testing?",
+    "DifficultyLevel": "Intermediate",
+    "QuestionType": "technical",
+    "SampleAnswer": "In purple teaming, both attack and defense teams work together and share findings in real-time for better improvement."
+  },
+  {
+    "TechnologyId": 51,
+    "QuestionText": "How would you measure the success of a purple team engagement?",
+    "DifficultyLevel": "Advanced",
+    "QuestionType": "technical",
+    "SampleAnswer": "By tracking detection rates, response time, and improved defense mechanisms after each collaborative exercise."
+  },
+  {
+    "TechnologyId": 52,
+    "QuestionText": "What is the purpose of the GROUP BY clause in SQL?",
+    "DifficultyLevel": "Beginner",
+    "QuestionType": "technical",
+    "SampleAnswer": "It groups rows that have the same values in specified columns and allows aggregation like COUNT or SUM."
+  },
+  {
+    "TechnologyId": 52,
+    "QuestionText": "How do INNER JOIN and LEFT JOIN differ?",
+    "DifficultyLevel": "Intermediate",
+    "QuestionType": "technical",
+    "SampleAnswer": "INNER JOIN returns only matching rows, while LEFT JOIN returns all rows from the left table plus matches from the right."
+  },
+  {
+    "TechnologyId": 52,
+    "QuestionText": "How can you optimize slow SQL queries on large datasets?",
+    "DifficultyLevel": "Advanced",
+    "QuestionType": "technical",
+    "SampleAnswer": "By adding indexes, avoiding SELECT *, analyzing query plans, and partitioning large tables."
+  },
+  {
+    "TechnologyId": 53,
+    "QuestionText": "What is a Pivot Table used for in Excel?",
+    "DifficultyLevel": "Beginner",
+    "QuestionType": "technical",
+    "SampleAnswer": "Pivot Tables summarize and analyze data by grouping and aggregating values dynamically."
+  },
+  {
+    "TechnologyId": 53,
+    "QuestionText": "How do you use VLOOKUP in Excel?",
+    "DifficultyLevel": "Intermediate",
+    "QuestionType": "technical",
+    "SampleAnswer": "VLOOKUP searches for a value in the first column of a table and returns a corresponding value from another column."
+  },
+  {
+    "TechnologyId": 53,
+    "QuestionText": "What’s the difference between Power Query and Power Pivot?",
+    "DifficultyLevel": "Advanced",
+    "QuestionType": "technical",
+    "SampleAnswer": "Power Query is used for data cleaning and importing, while Power Pivot is used for modeling and advanced calculations using DAX."
+  },
+  {
+    "TechnologyId": 54,
+    "QuestionText": "Why is data visualization important?",
+    "DifficultyLevel": "Beginner",
+    "QuestionType": "technical",
+    "SampleAnswer": "It helps present data insights clearly and visually so decision-makers can quickly understand trends and patterns."
+  },
+  {
+    "TechnologyId": 54,
+    "QuestionText": "How do filters and slicers differ in Power BI?",
+    "DifficultyLevel": "Intermediate",
+    "QuestionType": "technical",
+    "SampleAnswer": "Filters limit data globally in reports, while slicers provide interactive visual control for users on dashboards."
+  },
+  {
+    "TechnologyId": 54,
+    "QuestionText": "How would you design an effective dashboard for executive decision-making?",
+    "DifficultyLevel": "Advanced",
+    "QuestionType": "technical",
+    "SampleAnswer": "By focusing on key KPIs, using clear visuals, maintaining consistency, and ensuring interactivity for detailed exploration."
+  },
+  {
+    "TechnologyId": 55,
+    "QuestionText": "What is pandas used for in data science?",
+    "DifficultyLevel": "Beginner",
+    "QuestionType": "technical",
+    "SampleAnswer": "Pandas is used for data manipulation and analysis through powerful data structures like DataFrames."
+  },
+  {
+    "TechnologyId": 55,
+    "QuestionText": "How do NumPy arrays differ from Python lists?",
+    "DifficultyLevel": "Intermediate",
+    "QuestionType": "technical",
+    "SampleAnswer": "NumPy arrays are more memory-efficient and support vectorized operations for numerical computing."
+  },
+  {
+    "TechnologyId": 55,
+    "QuestionText": "How would you handle large datasets that don’t fit in memory using Python?",
+    "DifficultyLevel": "Advanced",
+    "QuestionType": "technical",
+    "SampleAnswer": "By using chunking, Dask, or distributed processing frameworks to process data in parts."
+  },
+  {
+    "TechnologyId": 56,
+    "QuestionText": "What is supervised learning?",
+    "DifficultyLevel": "Beginner",
+    "QuestionType": "technical",
+    "SampleAnswer": "It’s a machine learning method where models are trained on labeled data to make predictions."
+  },
+  {
+    "TechnologyId": 56,
+    "QuestionText": "What’s the difference between overfitting and underfitting?",
+    "DifficultyLevel": "Intermediate",
+    "QuestionType": "technical",
+    "SampleAnswer": "Overfitting happens when a model learns noise, underfitting happens when it fails to learn patterns."
+  },
+  {
+    "TechnologyId": 56,
+    "QuestionText": "How do you evaluate the performance of a classification model?",
+    "DifficultyLevel": "Advanced",
+    "QuestionType": "technical",
+    "SampleAnswer": "Using metrics like accuracy, precision, recall, F1-score, and ROC-AUC depending on the dataset."
+  },
+  {
+    "TechnologyId": 57,
+    "QuestionText": "What is data cleaning?",
+    "DifficultyLevel": "Beginner",
+    "QuestionType": "technical",
+    "SampleAnswer": "It’s the process of detecting and correcting errors or inconsistencies in datasets."
+  },
+  {
+    "TechnologyId": 57,
+    "QuestionText": "How do you handle missing data?",
+    "DifficultyLevel": "Intermediate",
+    "QuestionType": "technical",
+    "SampleAnswer": "By imputation (mean, median, mode), forward fill, or removing rows/columns depending on context."
+  },
+  {
+    "TechnologyId": 57,
+    "QuestionText": "Describe a method for feature scaling.",
+    "DifficultyLevel": "Advanced",
+    "QuestionType": "technical",
+    "SampleAnswer": "Use normalization (MinMaxScaler) or standardization (StandardScaler) to align feature ranges."
+  },
+  {
+    "TechnologyId": 58,
+    "QuestionText": "What is Apache Spark used for?",
+    "DifficultyLevel": "Beginner",
+    "QuestionType": "technical",
+    "SampleAnswer": "It’s used for distributed data processing and analytics on large datasets."
+  },
+  {
+    "TechnologyId": 58,
+    "QuestionText": "Explain the difference between RDD and DataFrame in Spark.",
+    "DifficultyLevel": "Intermediate",
+    "QuestionType": "technical",
+    "SampleAnswer": "RDDs are low-level distributed objects, while DataFrames provide schema and optimizations through Catalyst."
+  },
+  {
+    "TechnologyId": 58,
+    "QuestionText": "How does Spark handle fault tolerance?",
+    "DifficultyLevel": "Advanced",
+    "QuestionType": "technical",
+    "SampleAnswer": "Through lineage graphs that allow recomputation of lost data using resilient distributed datasets (RDDs)."
+  },
+  {
+    "TechnologyId": 59,
+    "QuestionText": "What does ETL stand for?",
+    "DifficultyLevel": "Beginner",
+    "QuestionType": "technical",
+    "SampleAnswer": "ETL means Extract, Transform, and Load – a process for moving data from sources to storage."
+  },
+  {
+    "TechnologyId": 59,
+    "QuestionText": "How do you schedule ETL workflows?",
+    "DifficultyLevel": "Intermediate",
+    "QuestionType": "technical",
+    "SampleAnswer": "Using tools like Apache Airflow or cron jobs to automate task dependencies and execution timing."
+  },
+  {
+    "TechnologyId": 59,
+    "QuestionText": "How would you handle data consistency in ETL pipelines?",
+    "DifficultyLevel": "Advanced",
+    "QuestionType": "technical",
+    "SampleAnswer": "By implementing idempotent operations, checkpoints, and schema validation before loading."
+  },
+  {
+    "TechnologyId": 60,
+    "QuestionText": "What is a data warehouse?",
+    "DifficultyLevel": "Beginner",
+    "QuestionType": "technical",
+    "SampleAnswer": "It’s a centralized repository for structured data used in reporting and analysis."
+  },
+  {
+    "TechnologyId": 60,
+    "QuestionText": "What’s the difference between OLTP and OLAP systems?",
+    "DifficultyLevel": "Intermediate",
+    "QuestionType": "technical",
+    "SampleAnswer": "OLTP handles transactional data, while OLAP focuses on analytical queries and reporting."
+  },
+  {
+    "TechnologyId": 60,
+    "QuestionText": "How do you optimize queries in a data warehouse?",
+    "DifficultyLevel": "Advanced",
+    "QuestionType": "technical",
+    "SampleAnswer": "By using partitioning, materialized views, caching, and columnar storage formats."
+  },
+  {
+    "TechnologyId": 61,
+    "QuestionText": "What is TensorFlow?",
+    "DifficultyLevel": "Beginner",
+    "QuestionType": "technical",
+    "SampleAnswer": "It’s an open-source framework for building and training machine learning and deep learning models."
+  },
+  {
+    "TechnologyId": 61,
+    "QuestionText": "What’s the role of Keras in TensorFlow?",
+    "DifficultyLevel": "Intermediate",
+    "QuestionType": "technical",
+    "SampleAnswer": "Keras is a high-level API within TensorFlow used for easy model building and training."
+  },
+  {
+    "TechnologyId": 61,
+    "QuestionText": "How can TensorFlow models be optimized for production?",
+    "DifficultyLevel": "Advanced",
+    "QuestionType": "technical",
+    "SampleAnswer": "By quantization, pruning, and using TensorFlow Lite or TensorFlow Serving for efficient deployment."
+  },
+  {
+    "TechnologyId": 62,
+    "QuestionText": "What is MLOps?",
+    "DifficultyLevel": "Beginner",
+    "QuestionType": "technical",
+    "SampleAnswer": "MLOps applies DevOps principles to machine learning to streamline model lifecycle management."
+  },
+  {
+    "TechnologyId": 62,
+    "QuestionText": "What’s the difference between CI/CD and MLOps pipelines?",
+    "DifficultyLevel": "Intermediate",
+    "QuestionType": "technical",
+    "SampleAnswer": "MLOps pipelines include additional steps for data validation, model training, and retraining beyond traditional CI/CD."
+  },
+  {
+    "TechnologyId": 62,
+    "QuestionText": "How would you monitor a deployed ML model for drift?",
+    "DifficultyLevel": "Advanced",
+    "QuestionType": "technical",
+    "SampleAnswer": "By tracking prediction distributions and comparing them with training data to detect data or concept drift."
+  },
+  {
+    "TechnologyId": 63,
+    "QuestionText": "What is model deployment?",
+    "DifficultyLevel": "Beginner",
+    "QuestionType": "technical",
+    "SampleAnswer": "It’s the process of integrating a trained ML model into an application for real-world predictions."
+  },
+  {
+    "TechnologyId": 63,
+    "QuestionText": "What’s the difference between batch and real-time inference?",
+    "DifficultyLevel": "Intermediate",
+    "QuestionType": "technical",
+    "SampleAnswer": "Batch inference processes multiple records periodically, while real-time inference responds instantly to inputs."
+  },
+  {
+    "TechnologyId": 63,
+    "QuestionText": "How do you serve a model via an API?",
+    "DifficultyLevel": "Advanced",
+    "QuestionType": "technical",
+    "SampleAnswer": "By using Flask, FastAPI, or TensorFlow Serving to create REST endpoints that handle model requests."
+  },
+  {
+    "TechnologyId": 64,
+    "QuestionText": "What is Adobe XD used for?",
+    "DifficultyLevel": "Beginner",
+    "QuestionType": "technical",
+    "SampleAnswer": "It’s used for UI/UX design and prototyping interactive user interfaces."
+  },
+  {
+    "TechnologyId": 64,
+    "QuestionText": "How do you create interactive prototypes in Adobe XD?",
+    "DifficultyLevel": "Intermediate",
+    "QuestionType": "technical",
+    "SampleAnswer": "By linking artboards with transitions and triggers to simulate user flow."
+  },
+  {
+    "TechnologyId": 64,
+    "QuestionText": "How can you export assets for developers in XD?",
+    "DifficultyLevel": "Advanced",
+    "QuestionType": "technical",
+    "SampleAnswer": "By marking assets for export and using design specs to generate code-friendly outputs."
+  },
+  {
+    "TechnologyId": 65,
+    "QuestionText": "What makes Figma different from other design tools?",
+    "DifficultyLevel": "Beginner",
+    "QuestionType": "technical",
+    "SampleAnswer": "Figma is browser-based and supports real-time collaboration between designers."
+  },
+  {
+    "TechnologyId": 65,
+    "QuestionText": "What are Figma components?",
+    "DifficultyLevel": "Intermediate",
+    "QuestionType": "technical",
+    "SampleAnswer": "Components are reusable UI elements that maintain consistency across designs."
+  },
+  {
+    "TechnologyId": 65,
+    "QuestionText": "How would you organize a large Figma project efficiently?",
+    "DifficultyLevel": "Advanced",
+    "QuestionType": "technical",
+    "SampleAnswer": "By using pages, frames, styles, and consistent naming conventions with component libraries."
+  },
+  {
+    "TechnologyId": 66,
+    "QuestionText": "What is a design system?",
+    "DifficultyLevel": "Beginner",
+    "QuestionType": "technical",
+    "SampleAnswer": "It’s a collection of reusable components and design rules to ensure consistency across products."
+  },
+  {
+    "TechnologyId": 66,
+    "QuestionText": "What’s the benefit of using a design system?",
+    "DifficultyLevel": "Intermediate",
+    "QuestionType": "technical",
+    "SampleAnswer": "It improves design efficiency, consistency, and collaboration between designers and developers."
+  },
+  {
+    "TechnologyId": 66,
+    "QuestionText": "How do you maintain scalability in a design system?",
+    "DifficultyLevel": "Advanced",
+    "QuestionType": "technical",
+    "SampleAnswer": "By modularizing components, versioning updates, and maintaining documentation in tools like Storybook or Zeroheight."
+  },
+  {
+    "TechnologyId": 67,
+    "QuestionText": "What is the difference between qualitative and quantitative research methods?",
+    "DifficultyLevel": "Beginner",
+    "QuestionType": "technical",
+    "SampleAnswer": "Qualitative research explores user behaviors and motivations through interviews and observations, while quantitative research uses numerical data and statistics."
+  },
+  {
+    "TechnologyId": 67,
+    "QuestionText": "How do you define user personas, and why are they important?",
+    "DifficultyLevel": "Intermediate",
+    "QuestionType": "technical",
+    "SampleAnswer": "User personas represent typical users based on research data, helping designers make user-centered decisions throughout the design process."
+  },
+  {
+    "TechnologyId": 67,
+    "QuestionText": "Explain how to conduct a heuristic evaluation in UX research.",
+    "DifficultyLevel": "Advanced",
+    "QuestionType": "technical",
+    "SampleAnswer": "A heuristic evaluation involves reviewing a product against usability principles (heuristics) to identify usability issues without user involvement."
+  },
+  {
+    "TechnologyId": 68,
+    "QuestionText": "What tools are commonly used for wireframing and prototyping?",
+    "DifficultyLevel": "Beginner",
+    "QuestionType": "technical",
+    "SampleAnswer": "Tools like Figma, Adobe XD, and Sketch are commonly used for creating wireframes and interactive prototypes."
+  },
+  {
+    "TechnologyId": 68,
+    "QuestionText": "How does a wireframe differ from a prototype?",
+    "DifficultyLevel": "Intermediate",
+    "QuestionType": "technical",
+    "SampleAnswer": "A wireframe is a low-fidelity layout focusing on structure and content placement, while a prototype simulates user interactions and flow."
+  },
+  {
+    "TechnologyId": 68,
+    "QuestionText": "Describe how you test a prototype with users to gather feedback.",
+    "DifficultyLevel": "Advanced",
+    "QuestionType": "technical",
+    "SampleAnswer": "You create tasks for users to complete in the prototype, observe their actions, and collect qualitative feedback to identify usability issues."
+  },
+  {
+    "TechnologyId": 69,
+    "QuestionText": "What is usability testing in UX design?",
+    "DifficultyLevel": "Beginner",
+    "QuestionType": "technical",
+    "SampleAnswer": "Usability testing evaluates how easily users can use a design by observing them as they complete specific tasks."
+  },
+  {
+    "TechnologyId": 69,
+    "QuestionText": "How do you prepare a usability testing session?",
+    "DifficultyLevel": "Intermediate",
+    "QuestionType": "technical",
+    "SampleAnswer": "You define goals, recruit target users, prepare tasks, and record user behavior during the test."
+  },
+  {
+    "TechnologyId": 69,
+    "QuestionText": "How do you analyze and prioritize findings from usability tests?",
+    "DifficultyLevel": "Advanced",
+    "QuestionType": "technical",
+    "SampleAnswer": "You categorize issues by severity, frequency, and impact, then create actionable recommendations for the design team."
+  },
+  {
+    "TechnologyId": 70,
+    "QuestionText": "What is a design system, and why is it important?",
+    "DifficultyLevel": "Beginner",
+    "QuestionType": "technical",
+    "SampleAnswer": "A design system is a collection of reusable UI components and guidelines that ensure consistency across products."
+  },
+  {
+    "TechnologyId": 70,
+    "QuestionText": "How do you maintain consistency in a design system across teams?",
+    "DifficultyLevel": "Intermediate",
+    "QuestionType": "technical",
+    "SampleAnswer": "By maintaining clear documentation, enforcing naming conventions, and using shared component libraries in tools like Figma."
+  },
+  {
+    "TechnologyId": 70,
+    "QuestionText": "Explain how tokens and variables help in scalable design systems.",
+    "DifficultyLevel": "Advanced",
+    "QuestionType": "technical",
+    "SampleAnswer": "Design tokens define consistent values for color, spacing, and typography, making it easier to update themes globally."
+  },
+  {
+    "TechnologyId": 71,
+    "QuestionText": "What is Auto Layout in Figma used for?",
+    "DifficultyLevel": "Beginner",
+    "QuestionType": "technical",
+    "SampleAnswer": "Auto Layout automatically adjusts the position and size of elements when content changes, keeping the design responsive."
+  },
+  {
+    "TechnologyId": 71,
+    "QuestionText": "How do variants improve component organization in Figma?",
+    "DifficultyLevel": "Intermediate",
+    "QuestionType": "technical",
+    "SampleAnswer": "Variants allow multiple component states (like hover, active) to exist in one organized set, simplifying design updates."
+  },
+  {
+    "TechnologyId": 71,
+    "QuestionText": "Explain the benefits of using Figma plugins in a product design workflow.",
+    "DifficultyLevel": "Advanced",
+    "QuestionType": "technical",
+    "SampleAnswer": "Plugins automate repetitive tasks, improve accessibility, and integrate external tools like content or icons into Figma projects."
+  },    
+  {
+    "TechnologyId": 72,
+    "QuestionText": "What is a user journey map?",
+    "DifficultyLevel": "Beginner",
+    "QuestionType": "technical",
+    "SampleAnswer": "A user journey map is a visual representation of a user’s interaction with a product over time."
+  },
+  {
+    "TechnologyId": 72,
+    "QuestionText": "How does journey mapping differ from user flow diagrams?",
+    "DifficultyLevel": "Intermediate",
+    "QuestionType": "technical",
+    "SampleAnswer": "User flows focus on task steps, while journey maps include user emotions, touchpoints, and pain points throughout the experience."
+  },
+  {
+    "TechnologyId": 72,
+    "QuestionText": "Describe how to use journey maps to identify design opportunities.",
+    "DifficultyLevel": "Advanced",
+    "QuestionType": "technical",
+    "SampleAnswer": "By analyzing pain points and emotional highs/lows in the journey, designers can spot where new features or UX improvements are needed."
   }
 ]

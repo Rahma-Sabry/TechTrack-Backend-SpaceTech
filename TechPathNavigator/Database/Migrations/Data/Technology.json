@@ -21,6 +21,20 @@
     "CreatedAt": ""
   },
   {
+    "TrackId": 1,
+    "TechnologyName": "Tailwind CSS",
+    "Description": "A utility-first CSS framework that allows developers to rapidly build modern, responsive, and customizable user interfaces.",
+    "VideoUrl": "",
+    "CreatedAt": ""
+  },
+  {
+    "TrackId": 1,
+    "TechnologyName": "Redux",
+    "Description": "A state management library for JavaScript apps, commonly used with React to manage and share data across components efficiently.",
+    "VideoUrl": "",
+    "CreatedAt": ""
+  },
+  {
     "TrackId": 2,
     "TechnologyName": ".NET Core",
     "Description": "Microsoft's modern, cross-platform framework for building fast backend services.",
@@ -35,9 +49,58 @@
     "CreatedAt": ""
   },
   {
+    "TrackId": 2,
+    "TechnologyName": "Node.js",
+    "Description": "A JavaScript runtime built on Chrome's V8 engine that allows developers to build scalable and high-performance backend applications.",
+    "VideoUrl": "",
+    "CreatedAt": ""
+  },
+  {
+    "TrackId": 2,
+    "TechnologyName": "Express.js",
+    "Description": "A minimal and flexible Node.js web application framework that provides robust features for building APIs and web servers.",
+    "VideoUrl": "",
+    "CreatedAt": ""
+  },
+  {
+    "TrackId": 3,
+    "TechnologyName": "MERN Stack",
+    "Description": "A full-stack JavaScript framework combining MongoDB, Express, React, and Node.js for building complete web applications.",
+    "VideoUrl": "",
+    "CreatedAt": ""
+  },
+  {
+    "TrackId": 3,
+    "TechnologyName": "Django + React",
+    "Description": "A powerful combination of Django for backend and React for frontend, used to build robust and interactive full-stack applications.",
+    "VideoUrl": "",
+    "CreatedAt": ""
+  },
+  {
+    "TrackId": 3,
+    "TechnologyName": ".NET + Angular",
+    "Description": "An enterprise-level full-stack framework pairing .NET for backend APIs with Angular for building dynamic single-page applications.",
+    "VideoUrl": "",
+    "CreatedAt": ""
+  },
+  {
     "TrackId": 4,
     "TechnologyName": "Kotlin",
     "Description": "The modern programming language for Android app development.",
+    "VideoUrl": "",
+    "CreatedAt": ""
+  },
+  {
+    "TrackId": 4,
+    "TechnologyName": "Flutter App Development Bootcamp",
+    "Description": "Develop Android and iOS apps from a single codebase using Flutter and Dart, including Firebase integration.",
+    "VideoUrl": "",
+    "CreatedAt": ""
+  },
+  {
+    "TrackId": 4,
+    "TechnologyName": "React Native for Android Developers",
+    "Description": "Build cross-platform mobile apps for Android and iOS using JavaScript and React Native with hands-on projects.",
     "VideoUrl": "",
     "CreatedAt": ""
   },
@@ -49,9 +112,51 @@
     "CreatedAt": ""
   },
   {
+    "TrackId": 5,
+    "TechnologyName": "SwiftUI Essentials",
+    "Description": "Build modern and responsive UIs for iOS using Apple’s SwiftUI framework.",
+    "VideoUrl": "",
+    "CreatedAt": ""
+  },
+  {
+    "TrackId": 5,
+    "TechnologyName": "Core Data & Persistence",
+    "Description": "Learn to store, manage, and fetch local data efficiently in iOS apps.",
+    "VideoUrl": "",
+    "CreatedAt": ""
+  },
+  {
+    "TrackId": 5,
+    "TechnologyName": "Combine Framework",
+    "Description": "Handle asynchronous events and data streams with Apple’s Combine framework.",
+    "VideoUrl": "",
+    "CreatedAt": ""
+  },
+  {
     "TrackId": 6,
     "TechnologyName": "Flutter",
     "Description": "Build beautiful, natively compiled apps for mobile, web, and desktop from a single codebase.",
+    "VideoUrl": "",
+    "CreatedAt": ""
+  },
+  {
+    "TrackId": 6,
+    "TechnologyName": "React Native",
+    "Description": "Develop mobile apps for both Android and iOS using React and JavaScript.",
+    "VideoUrl": "",
+    "CreatedAt": ""
+  },
+  {
+    "TrackId": 6,
+    "TechnologyName": "Xamarin",
+    "Description": "Use C# and .NET to build cross-platform mobile apps with native performance.",
+    "VideoUrl": "",
+    "CreatedAt": ""
+  },
+  {
+    "TrackId": 6,
+    "TechnologyName": "Capacitor + Ionic",
+    "Description": "Build hybrid mobile apps with modern web technologies and native integration.",
     "VideoUrl": "",
     "CreatedAt": ""
   },
@@ -63,65 +168,338 @@
     "CreatedAt": ""
   },
   {
+    "TrackId": 7,
+    "TechnologyName": "Unreal Engine",
+    "Description": "Create high-end 3D desktop games with C++ and Blueprints.",
+    "VideoUrl": "",
+    "CreatedAt": ""
+  },
+  {
+    "TrackId": 7,
+    "TechnologyName": "Godot Engine",
+    "Description": "An open-source engine for creating 2D and 3D games using GDScript or C#.",
+    "VideoUrl": "",
+    "CreatedAt": ""
+  },
+  {
+    "TrackId": 7,
+    "TechnologyName": "C# Game Architecture",
+    "Description": "Learn to design reusable and scalable systems for large desktop games.",
+    "VideoUrl": "",
+    "CreatedAt": ""
+  },
+  {
+    "TrackId": 8,
+    "TechnologyName": "Unity for Mobile",
+    "Description": "Optimize Unity games for mobile platforms with lightweight assets and performance tuning.",
+    "VideoUrl": "",
+    "CreatedAt": ""
+  },
+  {
+    "TrackId": 8,
+    "TechnologyName": "Cocos2d-x",
+    "Description": "Build lightweight 2D mobile games using C++ and Lua.",
+    "VideoUrl": "",
+    "CreatedAt": ""
+  },
+  {
+    "TrackId": 8,
+    "TechnologyName": "Mobile Game Monetization",
+    "Description": "Learn to integrate ads, in-app purchases, and analytics into your mobile games.",
+    "VideoUrl": "",
+    "CreatedAt": ""
+  },
+  {
+    "TrackId": 9,
+    "TechnologyName": "Phaser.js",
+    "Description": "Create browser-based 2D games using the popular Phaser game framework.",
+    "VideoUrl": "",
+    "CreatedAt": ""
+  },
+  {
+    "TrackId": 9,
+    "TechnologyName": "Three.js",
+    "Description": "Build 3D games and visualizations for the web using WebGL and Three.js.",
+    "VideoUrl": "",
+    "CreatedAt": ""
+  },
+  {
+    "TrackId": 9,
+    "TechnologyName": "Babylon.js",
+    "Description": "A powerful framework for creating immersive 3D web experiences and games.",
+    "VideoUrl": "",
+    "CreatedAt": ""
+  },
+  {
+    "TrackId": 10,
+    "TechnologyName": "Docker & Containerization",
+    "Description": "Learn how to package, deploy, and manage applications in lightweight containers using Docker.",
+    "VideoUrl": "",
+    "CreatedAt": ""
+  },
+  {
+    "TrackId": 10,
+    "TechnologyName": "Kubernetes",
+    "Description": "Master container orchestration for deploying, scaling, and managing applications across clusters.",
+    "VideoUrl": "",
+    "CreatedAt": ""
+  },
+  {
+    "TrackId": 10,
+    "TechnologyName": "CI/CD Pipelines",
+    "Description": "Automate build, test, and deployment workflows to improve software delivery and reliability.",
+    "VideoUrl": "",
+    "CreatedAt": ""
+  },
+  {
+    "TrackId": 11,
+    "TechnologyName": "GitHub Actions",
+    "Description": "Automate workflows directly in GitHub for building, testing, and deploying applications.",
+    "VideoUrl": "",
+    "CreatedAt": ""
+  },
+  {
+    "TrackId": 11,
+    "TechnologyName": "Jenkins",
+    "Description": "An open-source automation server that helps automate parts of software development like building and deployment.",
+    "VideoUrl": "",
+    "CreatedAt": ""
+  },
+  {
+    "TrackId": 11,
+    "TechnologyName": "GitLab CI/CD",
+    "Description": "A built-in CI/CD tool in GitLab for automating builds, tests, and deployments efficiently.",
+    "VideoUrl": "",
+    "CreatedAt": ""
+  },
+  {
+    "TrackId": 12,
+    "TechnologyName": "Docker",
+    "Description": "Containerization platform used to package and run applications consistently across environments.",
+    "VideoUrl": "",
+    "CreatedAt": ""
+  },
+  {
+    "TrackId": 12,
+    "TechnologyName": "Kubernetes",
+    "Description": "A container orchestration platform that automates deployment, scaling, and management of containerized apps.",
+    "VideoUrl": "",
+    "CreatedAt": ""
+  },
+  {
+    "TrackId": 12,
+    "TechnologyName": "Terraform",
+    "Description": "Infrastructure as Code (IaC) tool that provisions and manages cloud infrastructure using configuration files.",
+    "VideoUrl": "",
+    "CreatedAt": ""
+  },
+  {
     "TrackId": 13,
     "TechnologyName": "Wireshark",
-    "Description": "Analyze network traffic to detect security issues and understand data flow.",
+    "Description": "A network protocol analyzer used to capture and analyze packets for troubleshooting and security testing.",
     "VideoUrl": "",
     "CreatedAt": ""
   },
   {
     "TrackId": 13,
-    "TechnologyName": "Nmap",
-    "Description": "Scan networks to discover hosts, services, and potential vulnerabilities.",
+    "TechnologyName": "Metasploit",
+    "Description": "A penetration testing framework used to identify, exploit, and validate vulnerabilities in systems.",
+    "VideoUrl": "",
+    "CreatedAt": ""
+  },
+  {
+    "TrackId": 13,
+    "TechnologyName": "Snort",
+    "Description": "An open-source intrusion detection and prevention system (IDS/IPS) that monitors network traffic for malicious activity.",
+    "VideoUrl": "",
+    "CreatedAt": ""
+  },
+  {
+    "TrackId": 14,
+    "TechnologyName": "Penetration Testing",
+    "Description": "Perform controlled attacks to identify and exploit vulnerabilities ethically.",
+    "VideoUrl": "",
+    "CreatedAt": ""
+  },
+  {
+    "TrackId": 14,
+    "TechnologyName": "Exploitation Frameworks",
+    "Description": "Use tools like Metasploit to automate exploitation and post-exploitation tasks.",
+    "VideoUrl": "",
+    "CreatedAt": ""
+  },
+  {
+    "TrackId": 14,
+    "TechnologyName": "Web Application Security",
+    "Description": "Test and secure web applications against common vulnerabilities like SQL injection and XSS.",
+    "VideoUrl": "",
+    "CreatedAt": ""
+  },
+  {
+    "TrackId": 15,
+    "TechnologyName": "Security Information and Event Management (SIEM)",
+    "Description": "Monitor and analyze security logs to detect threats using tools like Splunk or ELK Stack.",
+    "VideoUrl": "",
+    "CreatedAt": ""
+  },
+  {
+    "TrackId": 15,
+    "TechnologyName": "Threat Hunting",
+    "Description": "Proactively search for hidden cyber threats in systems and networks.",
+    "VideoUrl": "",
+    "CreatedAt": ""
+  },
+  {
+    "TrackId": 15,
+    "TechnologyName": "Purple Teaming",
+    "Description": "Collaborate between red and blue teams to improve overall security posture.",
     "VideoUrl": "",
     "CreatedAt": ""
   },
   {
     "TrackId": 16,
-    "TechnologyName": "SQL",
-    "Description": "The standard language for managing and querying relational databases.",
+    "TechnologyName": "SQL for Data Analysis",
+    "Description": "Use SQL queries to extract, filter, and aggregate data from databases for insights.",
     "VideoUrl": "",
     "CreatedAt": ""
   },
   {
     "TrackId": 16,
-    "TechnologyName": "Power BI",
-    "Description": "Transform data into stunning visual reports and dashboards.",
+    "TechnologyName": "Excel for Data Analytics",
+    "Description": "Analyze and visualize data using Excel functions, pivot tables, and charts.",
+    "VideoUrl": "",
+    "CreatedAt": ""
+  },
+  {
+    "TrackId": 16,
+    "TechnologyName": "Data Visualization Tools",
+    "Description": "Create interactive dashboards using Power BI or Tableau to communicate insights effectively.",
     "VideoUrl": "",
     "CreatedAt": ""
   },
   {
     "TrackId": 17,
-    "TechnologyName": "Python (Pandas)",
-    "Description": "Clean, analyze, and manipulate data with Python's powerful Pandas library.",
+    "TechnologyName": "Python for Data Science",
+    "Description": "Use Python libraries like NumPy, pandas, and Matplotlib for data analysis and visualization.",
     "VideoUrl": "",
     "CreatedAt": ""
   },
   {
     "TrackId": 17,
-    "TechnologyName": "Scikit-learn",
-    "Description": "A simple and efficient tool for machine learning in Python.",
+    "TechnologyName": "Machine Learning Fundamentals",
+    "Description": "Understand core ML concepts like regression, classification, and model evaluation.",
+    "VideoUrl": "",
+    "CreatedAt": ""
+  },
+  {
+    "TrackId": 17,
+    "TechnologyName": "Data Cleaning & Preprocessing",
+    "Description": "Prepare and transform raw data for analysis using tools like pandas and scikit-learn.",
+    "VideoUrl": "",
+    "CreatedAt": ""
+  },
+  {
+    "TrackId": 18,
+    "TechnologyName": "Apache Spark",
+    "Description": "Process large-scale data using distributed computing with Spark’s RDD and DataFrame APIs.",
+    "VideoUrl": "",
+    "CreatedAt": ""
+  },
+  {
+    "TrackId": 18,
+    "TechnologyName": "ETL Pipelines",
+    "Description": "Build Extract, Transform, Load pipelines for moving and cleaning data efficiently.",
+    "VideoUrl": "",
+    "CreatedAt": ""
+  },
+  {
+    "TrackId": 18,
+    "TechnologyName": "Data Warehousing",
+    "Description": "Design and manage scalable data storage systems like Snowflake, Redshift, or BigQuery.",
+    "VideoUrl": "",
+    "CreatedAt": ""
+  },
+  {
+    "TrackId": 19,
+    "TechnologyName": "TensorFlow",
+    "Description": "Build and deploy deep learning models with TensorFlow and Keras APIs.",
+    "VideoUrl": "",
+    "CreatedAt": ""
+  },
+  {
+    "TrackId": 19,
+    "TechnologyName": "MLOps",
+    "Description": "Automate ML lifecycle including training, deployment, and monitoring in production.",
+    "VideoUrl": "",
+    "CreatedAt": ""
+  },
+  {
+    "TrackId": 19,
+    "TechnologyName": "Model Deployment",
+    "Description": "Serve ML models via REST APIs or cloud services for real-time predictions.",
+    "VideoUrl": "",
+    "CreatedAt": ""
+  },
+  {
+    "TrackId": 20,
+    "TechnologyName": "Adobe XD",
+    "Description": "Design and prototype user interfaces with Adobe XD’s interactive tools.",
     "VideoUrl": "",
     "CreatedAt": ""
   },
   {
     "TrackId": 20,
     "TechnologyName": "Figma",
-    "Description": "Design, prototype, and collaborate on user interfaces in real time.",
+    "Description": "Collaborate on UI designs in real-time with Figma’s cloud-based platform.",
+    "VideoUrl": "",
+    "CreatedAt": ""
+  },
+  {
+    "TrackId": 20,
+    "TechnologyName": "Design Systems",
+    "Description": "Create consistent UI components and style guides for scalable design.",
     "VideoUrl": "",
     "CreatedAt": ""
   },
   {
     "TrackId": 21,
-    "TechnologyName": "User Research",
-    "Description": "Understand user needs through interviews, surveys, and usability testing.",
+    "TechnologyName": "User Research Fundamentals",
+    "Description": "Learn how to conduct interviews, surveys, and usability tests to understand user needs.",
     "VideoUrl": "",
     "CreatedAt": ""
   },
   {
-    "TrackId": 3,
-    "TechnologyName": "Node.js",
-    "Description": "Run JavaScript on the server to build fast and scalable backend services.",
+    "TrackId": 21,
+    "TechnologyName": "Wireframing & Prototyping",
+    "Description": "Create wireframes and prototypes to visualize user flows and test interactions early.",
+    "VideoUrl": "",
+    "CreatedAt": ""
+  },
+  {
+    "TrackId": 21,
+    "TechnologyName": "Usability Testing",
+    "Description": "Evaluate designs through user testing and analyze feedback to improve the UX.",
+    "VideoUrl": "",
+    "CreatedAt": ""
+  },
+  {
+    "TrackId": 22,
+    "TechnologyName": "Design Systems",
+    "Description": "Build consistent and scalable UI systems with reusable components and guidelines.",
+    "VideoUrl": "",
+    "CreatedAt": ""
+  },
+  {
+    "TrackId": 22,
+    "TechnologyName": "Figma Advanced Techniques",
+    "Description": "Master Figma components, auto layout, and prototyping for efficient design workflows.",
+    "VideoUrl": "",
+    "CreatedAt": ""
+  },
+  {
+    "TrackId": 22,
+    "TechnologyName": "User Journey Mapping",
+    "Description": "Visualize the entire user experience from start to finish to identify pain points and opportunities.",
     "VideoUrl": "",
     "CreatedAt": ""
   }

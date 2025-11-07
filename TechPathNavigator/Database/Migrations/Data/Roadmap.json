@@ -1,62 +1,362 @@
 [
   {
-    "TrackId": 1,
-    "Title": "Frontend Development Roadmap",
-    "Description": "A step-by-step guide to become a frontend developer, from HTML to advanced React."
+    "TechnologyId": 1,
+    "Title": "HTML & CSS Roadmap",
+    "Description": "Start with HTML structure and tags, then learn CSS fundamentals (selectors, box model, flexbox, grid) and responsive design. Build landing pages and portfolios."
   },
   {
-    "TrackId": 2,
-    "Title": ".NET Backend Developer Roadmap",
-    "Description": "Master backend development with C#, .NET Core, and Entity Framework."
+    "TechnologyId": 2,
+    "Title": "JavaScript Roadmap",
+    "Description": "Master core JavaScript (ES6+), DOM manipulation, async patterns (promises/async-await), and work with APIs. Build interactive apps and small projects."
   },
   {
-    "TrackId": 3,
-    "Title": "Full Stack Web Developer Roadmap",
-    "Description": "Combine frontend and backend skills to build complete web applications."
+    "TechnologyId": 3,
+    "Title": "React Roadmap",
+    "Description": "Learn components, props, state and hooks, routing, context, and state management. Practice building reusable components and SPA projects."
   },
   {
-    "TrackId": 4,
-    "Title": "Android Developer Roadmap",
-    "Description": "Learn Kotlin and Android Studio to build native Android apps."
+    "TechnologyId": 4,
+    "Title": "Tailwind CSS Roadmap",
+    "Description": "Learn utility classes, responsive design, customization, and using Tailwind with component libraries to build fast UI prototypes."
   },
   {
-    "TrackId": 5,
-    "Title": "iOS Developer Roadmap",
-    "Description": "Start with Swift and Xcode to create beautiful iOS applications."
+    "TechnologyId": 5,
+    "Title": "Redux Roadmap",
+    "Description": "Understand store, actions, reducers, middleware and integrate Redux (or Redux Toolkit) to manage complex app state and async flows."
   },
   {
-    "TrackId": 6,
-    "Title": "Cross-Platform Mobile Developer Roadmap",
-    "Description": "Build apps for both Android and iOS using Flutter."
+    "TechnologyId": 6,
+    "Title": ".NET Core Roadmap",
+    "Description": "Start with C# basics, then learn ASP.NET Core Web APIs, dependency injection, and Entity Framework for data access. Deploy APIs to production."
   },
   {
-    "TrackId": 7,
-    "Title": "Game Developer Roadmap (Unity)",
-    "Description": "Create 2D/3D games using Unity and C# scripting."
+    "TechnologyId": 7,
+    "Title": "Entity Framework Core Roadmap",
+    "Description": "Learn ORM concepts, modelling entities, relationships, migrations, and querying with LINQ. Build CRUD and data-driven features."
   },
   {
-    "TrackId": 13,
-    "Title": "Cybersecurity Analyst Roadmap",
-    "Description": "Learn ethical hacking, network security, and defensive techniques."
+    "TechnologyId": 8,
+    "Title": "Node.js Roadmap",
+    "Description": "Learn Node core, event loop, modules, and build servers. Use package management and integrate databases for backend services."
   },
   {
-    "TrackId": 16,
-    "Title": "Data Analyst Roadmap",
-    "Description": "Go from Excel to SQL and Power BI to tell stories with data."
+    "TechnologyId": 9,
+    "Title": "Express.js Roadmap",
+    "Description": "Master routing, middleware, RESTful API design, error handling, and authentication. Connect Express to databases and production practices."
   },
   {
-    "TrackId": 17,
-    "Title": "Data Scientist Roadmap",
-    "Description": "Master Python, statistics, and machine learning to solve real-world problems."
+    "TechnologyId": 10,
+    "Title": "MERN Stack Roadmap",
+    "Description": "Combine MongoDB, Express, React, and Node to build full-stack apps with authentication, CRUD, and deployment pipelines."
   },
   {
-    "TrackId": 20,
-    "Title": "UI Designer Roadmap",
-    "Description": "Learn visual design, typography, and Figma to create stunning interfaces."
+    "TechnologyId": 11,
+    "Title": "Django + React Roadmap",
+    "Description": "Learn Django fundamentals, Django REST Framework, serializers, and connect with React for full-stack applications."
   },
   {
-    "TrackId": 21,
-    "Title": "UX Researcher Roadmap",
-    "Description": "Understand users, conduct research, and design human-centered experiences."
+    "TechnologyId": 12,
+    "Title": ".NET + Angular Roadmap",
+    "Description": "Learn TypeScript, Angular components, services, routing, and RxJS for building large-scale SPAs."
+  },
+  {
+    "TechnologyId": 13,
+    "Title": "Kotlin Roadmap",
+    "Description": "Learn Kotlin basics, Android Studio, layouts, lifecycle, and MVVM architecture for building native Android apps."
+  },
+  {
+    "TechnologyId": 14,
+    "Title": "Flutter App Development Bootcamp Roadmap",
+    "Description": "Learn Dart, Flutter widgets, state management, navigation, and Firebase integration. Build and test cross-platform apps."
+  },
+  {
+    "TechnologyId": 15,
+    "Title": "React Native for Android Developers Roadmap",
+    "Description": "Learn core components, navigation, native modules, and performance optimizations to build cross-platform mobile apps."
+  },
+  {
+    "TechnologyId": 16,
+    "Title": "Swift Roadmap",
+    "Description": "Learn Swift syntax, Xcode setup, and UIKit. Move to SwiftUI, Combine, and Core Data to build modern iOS apps."
+  },
+  {
+    "TechnologyId": 17,
+    "Title": "SwiftUI Essentials Roadmap",
+    "Description": "Build modern, responsive UIs using SwiftUI, understand views, state, bindings, and layout system; create prototype apps."
+  },
+  {
+    "TechnologyId": 18,
+    "Title": "Core Data & Persistence Roadmap",
+    "Description": "Learn how to model local data, use Core Data for persistence, perform migrations, and fetch efficiently in iOS apps."
+  },
+  {
+    "TechnologyId": 19,
+    "Title": "Combine Framework Roadmap",
+    "Description": "Understand reactive programming with Combine: publishers, subscribers, operators, and integrating Combine with SwiftUI."
+  },
+  {
+    "TechnologyId": 20,
+    "Title": "Flutter Roadmap",
+    "Description": "Master Dart language and Flutter framework, widgets, state management, testing and deployment for cross-platform apps."
+  },
+  {
+    "TechnologyId": 21,
+    "Title": "React Native Roadmap",
+    "Description": "Learn React Native core concepts, setup environment, and work with APIs and navigation. Build apps with offline support."
+  },
+  {
+    "TechnologyId": 22,
+    "Title": "Xamarin Roadmap",
+    "Description": "Use C# and .NET to build cross-platform mobile apps, understand Xamarin.Forms, native bindings and app lifecycle."
+  },
+  {
+    "TechnologyId": 23,
+    "Title": "Capacitor + Ionic Roadmap",
+    "Description": "Build hybrid apps using web technologies, handle native plugins, and package apps for stores."
+  },
+  {
+    "TechnologyId": 24,
+    "Title": "Unity Roadmap",
+    "Description": "Learn engine basics, scripting, scene management and build small game projects while focusing on optimization and asset workflow."
+  },
+  {
+    "TechnologyId": 25,
+    "Title": "Unreal Engine Roadmap",
+    "Description": "Learn the Unreal editor, Blueprints, and C++ scripting. Create realistic 3D environments and gameplay mechanics."
+  },
+  {
+    "TechnologyId": 26,
+    "Title": "Godot Engine Roadmap",
+    "Description": "Learn Godot interface and GDScript (or C#), scene system, and build 2D/3D projects with export to desktop and mobile."
+  },
+  {
+    "TechnologyId": 27,
+    "Title": "C# Game Architecture Roadmap",
+    "Description": "Understand design patterns, modular architecture, and performance practices for large-scale game systems."
+  },
+  {
+    "TechnologyId": 28,
+    "Title": "Unity for Mobile Roadmap",
+    "Description": "Optimize Unity games for mobile: asset management, performance tuning, memory and battery considerations."
+  },
+  {
+    "TechnologyId": 29,
+    "Title": "Cocos2d-x Roadmap",
+    "Description": "Learn Cocos2d-x basics, C++/Lua scripting, scene and resource management for lightweight 2D mobile games."
+  },
+  {
+    "TechnologyId": 30,
+    "Title": "Mobile Game Monetization Roadmap",
+    "Description": "Learn monetization strategies, ads, IAP, analytics, and optimization for mobile game distribution."
+  },
+  {
+    "TechnologyId": 31,
+    "Title": "Phaser.js Roadmap",
+    "Description": "Create browser-based 2D games with Phaser: game loop, input handling, sprites, physics and simple deployment."
+  },
+  {
+    "TechnologyId": 32,
+    "Title": "Three.js Roadmap",
+    "Description": "Learn WebGL basics via Three.js: scene, camera, lighting, meshes, and building interactive 3D web experiences."
+  },
+  {
+    "TechnologyId": 33,
+    "Title": "Babylon.js Roadmap",
+    "Description": "Build immersive 3D web apps using Babylon.js, learn scene optimization, physics, and asset pipelines."
+  },
+  {
+    "TechnologyId": 34,
+    "Title": "Docker & Containerization Roadmap",
+    "Description": "Learn Docker images, containers, networking, volumes, and Docker Compose; package apps consistently across environments."
+  },
+  {
+    "TechnologyId": 35,
+    "Title": "Kubernetes Roadmap",
+    "Description": "Understand pods, deployments, services, scaling, configmaps, secrets and apply Kubernetes to run containerized apps at scale."
+  },
+  {
+    "TechnologyId": 36,
+    "Title": "CI/CD Pipelines Roadmap",
+    "Description": "Learn CI/CD principles, write pipelines or workflows to run tests, builds, and automated deploys in a reliable pipeline."
+  },
+  {
+    "TechnologyId": 37,
+    "Title": "GitHub Actions Roadmap",
+    "Description": "Automate builds and deployments. Write YAML workflows and integrate tests, builds, and cloud deploys."
+  },
+  {
+    "TechnologyId": 38,
+    "Title": "Jenkins Roadmap",
+    "Description": "Learn Jenkins concepts: jobs, pipelines, agents and how to integrate builds, tests and deploys with plugins."
+  },
+  {
+    "TechnologyId": 39,
+    "Title": "GitLab CI/CD Roadmap",
+    "Description": "Use GitLab CI: write .gitlab-ci.yml pipelines, stages, artifacts, and integrate with runners for automation."
+  },
+  {
+    "TechnologyId": 40,
+    "Title": "Docker Roadmap",
+    "Description": "Learn Docker images, containers, orchestration basics and how to containerize microservices for consistent deployment."
+  },
+  {
+    "TechnologyId": 41,
+    "Title": "Kubernetes Roadmap",
+    "Description": "Understand pods, deployments, services, scaling, configmaps, secrets and apply Kubernetes to run containerized apps at scale."
+  },
+  {
+    "TechnologyId": 42,
+    "Title": "Terraform Roadmap",
+    "Description": "Learn Infrastructure as Code basics, resource definitions, state management and provision cloud infrastructure safely."
+  },
+  {
+    "TechnologyId": 43,
+    "Title": "Wireshark Roadmap",
+    "Description": "Learn networking basics (OSI/TCP-IP, IP/MAC/ports), install Wireshark, practice capturing traffic, master display & capture filters, analyze common protocols (HTTP, DNS, TCP), detect suspicious patterns (ARP spoofing, packet sniffing), and practice with PCAP challenges and real-world case studies."
+  },
+  {
+    "TechnologyId": 44,
+    "Title": "Metasploit Roadmap",
+    "Description": "Understand penetration testing fundamentals and Linux basics, install Metasploit (use Kali/VM), learn msfconsole commands, perform reconnaissance (Nmap), practice exploiting vulnerable VMs (Metasploitable), study payloads & post-exploitation, then advanced topics: custom modules, automation, and CTF practice."
+  },
+  {
+    "TechnologyId": 45,
+    "Title": "Snort Roadmap",
+    "Description": "Learn IDS/IPS concepts, install Snort on Linux, configure snort.conf, run Snort in sniffer/IDS modes, write and test rules (alert/log/drop), analyze alerts/logs, integrate with tools like Barnyard2 or ELK, and refine rules for real network traffic and incident response workflows."
+  },
+  {
+    "TechnologyId": 46,
+    "Title": "Penetration Testing Roadmap",
+    "Description": "Study common vulnerabilities (OWASP), tools and ethical testing methodologies; practice in labs and CTFs."
+  },
+  {
+    "TechnologyId": 47,
+    "Title": "Exploitation Frameworks Roadmap",
+    "Description": "Learn Metasploit and other frameworks to automate exploitation and post-exploitation tasks in controlled environments."
+  },
+  {
+    "TechnologyId": 48,
+    "Title": "Web Application Security Roadmap",
+    "Description": "Understand OWASP Top10, secure coding practices, input validation, authentication and common mitigation techniques."
+  },
+  {
+    "TechnologyId": 49,
+    "Title": "Security Information and Event Management (SIEM) Roadmap",
+    "Description": "Learn log aggregation, correlation, alerting, and using SIEM tools to monitor and respond to security incidents."
+  },
+  {
+    "TechnologyId": 50,
+    "Title": "Threat Hunting Roadmap",
+    "Description": "Learn proactive threat detection, log analysis, indicators of compromise, and hunting methodologies."
+  },
+  {
+    "TechnologyId": 51,
+    "Title": "Purple Teaming Roadmap",
+    "Description": "Collaborate across red & blue teams to improve detection, response, and overall security posture through exercises."
+  },
+  {
+    "TechnologyId": 52,
+    "Title": "SQL for Data Analysis Roadmap",
+    "Description": "Master SQL querying, joins, aggregations and window functions to extract and analyze data efficiently."
+  },
+  {
+    "TechnologyId": 53,
+    "Title": "Excel for Data Analytics Roadmap",
+    "Description": "Learn advanced Excel functions, pivot tables, charts and data cleaning techniques for quick analytics and reporting."
+  },
+  {
+    "TechnologyId": 54,
+    "Title": "Data Visualization Tools Roadmap",
+    "Description": "Learn Power BI or Tableau fundamentals, data modelling, dashboards and storytelling with visualizations."
+  },
+  {
+    "TechnologyId": 55,
+    "Title": "Python for Data Science Roadmap",
+    "Description": "Build core skills: Python basics, NumPy, pandas, data cleaning, visualization and exploratory data analysis."
+  },
+  {
+    "TechnologyId": 56,
+    "Title": "Machine Learning Fundamentals Roadmap",
+    "Description": "Understand supervised and unsupervised learning, model evaluation, feature engineering and start with scikit-learn."
+  },
+  {
+    "TechnologyId": 57,
+    "Title": "Data Cleaning & Preprocessing Roadmap",
+    "Description": "Learn techniques for cleaning, transforming and preparing datasets for analysis and machine learning workflows."
+  },
+  {
+    "TechnologyId": 58,
+    "Title": "Apache Spark Roadmap",
+    "Description": "Learn distributed data processing with Spark: RDDs, DataFrames, Spark SQL and scaling data pipelines."
+  },
+  {
+    "TechnologyId": 59,
+    "Title": "ETL Pipelines Roadmap",
+    "Description": "Design robust ETL processes: extract from sources, transform/clean data, and load into warehouses or lakes."
+  },
+  {
+    "TechnologyId": 60,
+    "Title": "Data Warehousing Roadmap",
+    "Description": "Understand dimensional modelling, star schema, and tools like Redshift, BigQuery or Snowflake for analytics."
+  },
+  {
+    "TechnologyId": 61,
+    "Title": "TensorFlow Roadmap",
+    "Description": "Learn to build neural networks, train models, use Keras APIs, and deploy models for inference."
+  },
+  {
+    "TechnologyId": 62,
+    "Title": "MLOps Roadmap",
+    "Description": "Automate ML lifecycle: training pipelines, versioning, model serving, monitoring and reproducibility practices."
+  },
+  {
+    "TechnologyId": 63,
+    "Title": "Model Deployment Roadmap",
+    "Description": "Serve ML models via REST APIs or cloud services, manage scaling, latency and monitoring for production use."
+  },
+  {
+    "TechnologyId": 64,
+    "Title": "Adobe XD Roadmap",
+    "Description": "Learn prototyping, interactive components, and create high-fidelity UI mockups for user testing."
+  },
+  {
+    "TechnologyId": 65,
+    "Title": "Figma Roadmap",
+    "Description": "Learn Figma basics, auto layout, prototyping, components, and collaboration for design systems."
+  },
+  {
+    "TechnologyId": 66,
+    "Title": "Design Systems Roadmap",
+    "Description": "Learn how to create consistent and scalable UI systems with reusable components and guidelines."
+  },
+  {
+    "TechnologyId": 67,
+    "Title": "User Research Fundamentals Roadmap",
+    "Description": "Learn interview techniques, surveys, and usability tests to gather and analyze user insights."
+  },
+  {
+    "TechnologyId": 68,
+    "Title": "Wireframing & Prototyping Roadmap",
+    "Description": "Create wireframes and interactive prototypes to validate user flows and quickly iterate designs."
+  },
+  {
+    "TechnologyId": 69,
+    "Title": "Usability Testing Roadmap",
+    "Description": "Plan and run usability tests, collect feedback, analyze results and iterate on design improvements."
+  },
+  {
+    "TechnologyId": 70,
+    "Title": "Design Systems Roadmap",
+    "Description": "Start with UI/UX fundamentals and atomic design principles; learn how to create reusable components and document them. Study tools like Figma, Storybook, and Zeroheight for building and maintaining systems. Practice setting up a consistent design language (colors, typography, spacing). Then learn component libraries (React, Flutter, etc.), version control for design systems, and collaboration workflows between designers and developers."
+  },
+  {
+    "TechnologyId": 71,
+    "Title": "Figma Advanced Techniques Roadmap",
+    "Description": "Master components, auto layout patterns, variants, and build efficient reusable design systems in Figma."
+  },
+  {
+    "TechnologyId": 72,
+    "Title": "User Journey Mapping Roadmap",
+    "Description": "Visualize the entire user experience from start to finish to identify pain points and opportunities for improvement."
   }
 ]
